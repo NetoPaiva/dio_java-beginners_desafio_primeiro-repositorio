@@ -136,6 +136,7 @@
 
     - Atualizar repositório na plataforma
         - no terminal
+            - navegar até dentro da pasta do repositório
             - git status
                 - mostra alterações realizadas no repositório local
             - git add . (ou) git add -a

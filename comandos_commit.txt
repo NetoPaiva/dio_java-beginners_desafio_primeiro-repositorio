@@ -1,0 +1,48 @@
+
+  -                                                                         -
+   -                                                                       -
+    -                                                                     -
+     -                                                                   -
+      -                                                                 -
+       ---                                                           ---
+          |=========================================================|
+          |                                                         |
+          |           Atualizar repositório na plataforma           |
+          |                                                         |
+          |=========================================================|
+          |                                                         |
+          |   1.  Abrir terminal dentro da pasta do repositório     |
+          |       ou navegar pelo terminal até a pasta              |
+          |                                                         |
+          |   2.  Comandos                                          |
+          |                                                         |
+          |       git status                                        |
+          |           mostra se há alterações a serem atualizadas   |
+          |                                                         |
+          |       git add .   (ou)    git add -a                    |
+          |           adiciona todos as alterações realizadas       |
+          |                                                         |
+          |       git status                                        |
+          |           mostra arquivos adicionados                   |
+          |                                                         |
+          |       git commit -m "escrever descrição desta versão"   |
+          |           prepara envio da versão para GitHub           |
+          |           aparece mensagem que commit foi criado        |
+          |                                                         |
+          |       git status                                        |
+          |           mostra commit local                           |
+          |           avisa que precisa enviar (push)               |
+          |                                                         |
+          |       git push origin main                              |
+          |           envia todos os commits locais para GitHub     |
+          |                                                         |
+          |   3. Atualizações já estão no GitHub                    |
+          |                                                         |
+          |=========================================================|
+       ---                                                           ---
+      -                                                                 -
+     -                                                                   -
+    -                                                                     -
+   -                                                                       -
+  -                                                                         -
+
