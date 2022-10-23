@@ -138,7 +138,7 @@
         - no terminal
             - git status
                 - mostra alterações realizadas no repositório local
-            - git add . (ou) git add -a
+       git config     - git add . (ou) git add -a
                 - irá adicionar todos os arquivos
             - git status
                 - mostra arquivos adicionados
