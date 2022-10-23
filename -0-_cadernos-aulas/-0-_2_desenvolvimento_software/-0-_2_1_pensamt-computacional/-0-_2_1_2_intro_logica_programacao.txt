@@ -1,0 +1,202 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+02_1_introdução_programação_pensamento-computacional
+====================================================
+
+    02_1_1_pensamento_computacional
+    02_1_2_intro_logica_programacao
+    02_1_3_algoritmo_fundamentos
+    02_1_4_linguagens_progrmacao
+    02_1_5_programacao_primeiro-contato
+
+------------------------------------------------------------------
+
+02_1_2_intro_logica_programacao
+===============================
+
+    Juliana Mascarenhas
+        - Tech Education Specialist / Cientista Dados
+        - Java / Python
+        - @in/juliana-mascarenhas-ds/
+        - github/julianazanelatto
+
+------------------------------------------------------------------
+    1   O que é lógica
+    2   Técnicas de lǵica de programação
+------------------------------------------------------------------
+
+1   O que é lógica
+==================
+
+    - Lógica aplicada ao desenvolvimento / programação
+    - processo de pensamento atrelado
+        - conceito de algoritmos
+        - resolução de problemas
+
+    - lógica vem pra solucionar algum problema
+        - problema é
+            - questão
+            - prposta duvidosa
+            - objeto discussão
+            - pode ter numerosas soluções
+
+    - problema
+        - é uma questão
+        - foge a uma determinada regra
+        - é um desvio de percurso
+        - impede atingir objetivo
+        - com eficiência e eficácia
+
+    - lógica
+        - é parte da filosofia que trata
+            - das formas do pensamento em geral
+                - dedução
+                - indução
+                - hipótese
+                - interência ...
+            - e das operações intelectuais
+            - visando determinar o que é
+                - verdadeiro
+                - ou não
+        - é uma forma de pensamento estruturado
+        - auxilia na resolução de problemas
+        - determina o que é verdadeiro ou falso
+        - dentro de um contexto
+
+        - é uma organização coesa
+        - forma como desencadeiam acontecimentos
+        - forma de raciocínio
+        - ordenação que segue convenções
+
+        ---------------------------------------------------
+        - na programação é
+            - organização e planejamento das instruções
+            - asserrtivas em um algoritmo
+            - para viabilizar a implantação de um programa
+        ---------------------------------------------------
+
+        - lógica fornece organização da parte das intruções
+        - para rodar o programa
+
+
+    - sequência de instruções
+        - série de pequenas ações
+        - ligadas a uma ação maior / principal (objetivo)
+
+    - exemplo: fazer café
+        - objetivo:     tomar café
+        - processo:     preparar o café
+        - algoritmo:    série de ações ordenadas
+
+    - computador não prevê comportamentos
+        - precisa de instruções
+        - precisa de lógica na informação
+        - para executar ações
+        - e chegar ao objetivo
+
+
+------------------------------------------------------------------
+
+2   Técnicas de lǵica de programação
+====================================
+
+    - modelos de desenvolvimento e resolução
+
+        - técnica linear
+            - modelo tradicional 
+            - não tem vínculo
+            - estrutura hierárquica
+            - programação de computadores
+            - ex.:
+                - matemática
+                    - ordenação de elementos por uma única propriedade
+                    - carcterísitca linear
+                        - execução sequencial de série de operações
+                        - tem recursos limitados
+                        - e única dimensão
+
+            - exemplo café da manhã
+                    - acordar
+                    - fazer o café
+                    - tomar o café
+                - execução sequenciada
+                - única dimensão
+                - dependência entre si
+
+        - técnica estruturada
+            - estrutura não linear
+                - organiação / disposição / ordem
+                - dos elementos essenciais
+                - que compõem um corpo (concreto ou abstrato)
+            - pode ter mais de uma opção / ações
+
+            - processamento de dados com técnica estruturada
+                - parte do objetivo - solução ao problema
+                    - as ações necessárias
+                        - escrita (programa)
+                        - entendimento
+                        - validação
+                        - manutenção (facilitador)
+
+            - exemplo café da manhã
+                    - acoradar
+                    - fazer suco / fazer café
+                    - tomar café da manhã
+                - permite escolha
+                - acarreta maior complexidade
+
+        - técnica modular
+            - partes independentes
+            - controladas por conjunto de regras
+                - módulo 1
+                - módulo 2
+                - módulo 3
+                - módulo 4
+            - cada módulo tem conjunto de regras específico
+
+            - modelo padrão:
+              ----------------------------------------
+                dados          processo          dados
+                 de     >>>       de        >>>   de
+               entrada       transformação       saída
+              -----------------------------------------
+
+            - vantagens
+                - simplificação
+                    - do algoritmo
+                    - da solução do problema
+                - decompor problema
+                - verificação do módulo
+                    - ajustar partes
+
+        - exemplo café da manhã
+                - cada módulo tem suas regras específicas
+            - módulo acordar
+            - módulo preparar bebida / alimentos
+            - módulo tomar café da manhã 
+
+------------------------------------------------------------------

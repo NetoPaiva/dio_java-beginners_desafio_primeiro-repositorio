@@ -1,0 +1,207 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+02_4_criar_repositorio_gihub
+============================
+
+    Venilton Falvo JR
+        - Tech Lead - DIO
+          in@falvojr
+          github/falvojr
+
+------------------------------------------------------------------
+    1   Introdução e apresentação do projeto
+    2   Git e GitHub - relembrando algumas coias
+    3   Desafio de projeto
+    4   Entendendo o Desafio
+------------------------------------------------------------------
+
+1   Introdução e apresentação do projeto
+========================================
+
+    Desafio de Projeto
+    ------------------
+
+        --------------------------
+        Criar primeiro repositório
+        Git / GitHub
+        compartilhar conhecimento
+        --------------------------
+
+    - compartilhar
+        - outros devs / empresas visualizam
+
+    - reforçar conhecimento git/github
+
+    - Requisitos
+        - noções básicas
+        - git instalado
+            (git bash)
+        - engajamento
+
+
+------------------------------------------------------------------
+
+2   Git e GitHub - relembrando algumas coisas
+=============================================
+
+    - interação repositório
+    - baixar repositório
+    - editar no github
+
+    - Criar repositório novo GitHUb
+        - plataforma logado
+        - menu do usuário
+        - create a new repository
+        - nomear repositório
+            - dio_desafio-github_primeiro_repositorio
+        - descrição
+            - Explicar motivo do repositório
+        - deixar repositório como "público"
+            - para a comunidade ter acesso/acompanhar repositório
+        - adicionar "readme" (opcional)
+            - muito útil
+            - página inicial do repositório
+                - considerações iniciais
+                - anotações
+                - links úteis
+                - relacionados ao que representa o repositóio
+        - gitignore (opcional)
+            - faz o git ignorar alguns arquivos do repositório
+            - não publica todos na plataforma
+            - ficam só offline no computador
+            - arquivo de construção / não essenciais
+        - licensa (opcional)
+            - pode escolher a que mais se adaptar ao repositório
+        - botão "create repository"
+            - para publicar o repositório na plataforma
+
+    - Pronto, repositório criado
+
+    - Pode editar o "readme.md"
+        - formato markdown
+            - markdownguide.com
+                - todas informações/documentações
+                - sintaxe
+
+    - Atualizar as atualizações
+        - fazer "commit changes"
+            - salva todas as alterações/versões
+            - na parte principal (ranch) "main" ou master
+            - faz o commit e o push
+
+    - Clonar repositório pro computador
+        - na plataforma do GitHub
+            - clicar em "baixar code" (tecla verde)
+            - copiar o link https
+        - no computador
+            - criar pasta para o repositório
+            - abrir pasta no terminal
+            - executar o comando terminal
+                git clone link do repositório
+                - se for a primeira vez a usar
+                    - vai pedir usuário e senha
+            - irá baixar todo o repositório da plataforma
+                - com toda estrutura (pastas e arquivos)
+
+    - Organizar os estudos
+        - criar pastas para
+            - cada aula do curso
+            - anotações
+            - links
+            - referências
+
+    - Atualizar repositório na plataforma
+        - no terminal
+            - git status
+                - mostra alterações realizadas no repositório local
+            - git add . (ou) git add -a
+                - irá adicionar todos os arquivos
+            - git status
+                - mostra arquivos adicionados
+            - git commit -m "escrever descrição desta versão"
+                - irá preparar para enviar versionamento para a plataforma
+                - -m é para adicionar o comentário
+                    - importante para saber o que é cada versão/atualização
+            - já aparece mensagem que um commit foi criado
+            - git status
+                - mostra commit local
+                - avisa que precisa de push para enviar pra plataforma
+            - git push origin main
+                - envia todos os commits locais para a plataforma
+                - as atualizações já estarão no GitHub
+
+
+------------------------------------------------------------------
+
+3   Desafio de projeto
+======================
+
+    O que deve ser feito
+
+        - Criar repositório GitHub
+        - Instalar Git no computador
+        - Baixar repositório
+        - Adicionar arquivos anotações do bootcamp
+        - Enviar arquivos para GitHub
+
+    Adquirir experiência em usar Git /GitHub
+
+
+4   Entendendo o Desafio
+========================
+
+    - reforçar conhecimento
+        - Git
+        - GitHub
+
+    - projeto prático
+        - criação
+        - atualização
+        - sincornização
+            - repositório GitHub
+
+    - aplicar ensinamento
+        - dicas
+        - conhecimento
+
+    - compartilhar
+        - anotações
+        - exercícios
+
+    - criar portfolio
+        - projetos
+
+    - conhecimento básico
+        - Git
+        - GitHub
+
+    - material complementar
+        - slides
+        - links
+        - [google drive](https://drive.google.com/file/d/1IZu0qohv1JOmxjEra1lknDiiStU68bl4/view?usp=sharing)
+            
+------------------------------------------------------------------

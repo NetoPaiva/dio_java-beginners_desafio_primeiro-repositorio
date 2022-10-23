@@ -1,0 +1,217 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+01_iniciar_jornada
+==================
+
+    01_1_boas_vindas
+    01_2_oportunidades
+    01_3_protagonismo
+    01_4_intro_dev_moderno
+    01_5_live_inaugural
+
+------------------------------------------------------------------
+
+01_3_protagonismo
+=================
+
+    Venilton Falvo JR
+        - Education Tech Lead - DIO
+        - @falvojr
+
+------------------------------------------------------------------
+    Tudo que precisa saber para ser
+    protagonista em Bootcamp DIO
+------------------------------------------------------------------
+
+Bootcamp - visão geral
+----------------------
+
+    - experiência mais completa / desafiadora
+    - destacar-se na jornada
+    - maior chance de contratação
+
+
+Objetivo geral
+--------------
+    - impulsionar protagonismo
+
+    - entender metodologia educacional
+        - cursos
+        - mentorias
+        - desafios
+
+    - conhecer a plataforma
+        - estrutura dos módulos
+        - identificar elementos (visual)
+        - desafios na prática
+            - como resolver
+            - objetivos / responsabilidades
+                - de código
+                - de projeto
+
+    - dicas e conclusão
+
+
+Bootcamp DIO - 4 elementos educacionais
+---------------------------------------
+
+    - cursos - base para resolver problemas
+        - conceitos essenciais
+        - fundamentação teórica
+
+    - mentorias - ao vivo
+        - imersão interativa
+            - tecnológica
+            - cultural
+
+    - desafios - crescimento e prática
+        - código - como resolver os problemas
+            - lógica
+            - pensamento computacional
+        - projeto - resolvendo os problemas
+            - práticas reais
+            - portfolio no github
+
+
+Plataforma DIO
+--------------
+
+    - página inicial
+        - acesso rápido- últimos inscritos
+            - meus programas
+            - meus cursos
+
+    - página do bootcamp
+        - descrição do evento
+        - próximas agendas - todas as mentorias da plataforma
+        - continuar de onde parou
+        - elementos do bootcamp
+            - atividades    - módulos do evento
+            - mentorias     - encontros ao vivo
+            - fórum         - tópicos de mensagens detalhadas
+            - devs          - participantes do evento
+            - certificado   - conclusão do evento
+            - rooms         - troca de mensagens rápidas
+
+
+Desafio de código
+-----------------
+
+    - desenvolver
+        - pensamento computacional
+        - raciocínio lógico
+    - aumentar
+        - capacidade de resolução de problemas
+        - senioridade (senior)
+
+    - na prática - java / js
+        - dados do desafio
+            - descrição
+            - entrada
+            - saída
+            - exemplos
+        - corações
+            - entregas erradas - eliminam coração
+            - focar nos exercícios / analisar
+            - não enviar soluções com erro
+        - desafios
+            - opções de desafios
+            - escolher o que será resolvido
+        - editor de código
+            - área prática
+            - fazer comentários conforme linguagem
+            - to_do - descrição do que fazer
+            - limpeza do código / boas práticas
+        - testes
+            - resultado do código
+            - sucesso / erro
+        - entregar desafio
+            - todos os testes
+            - avaliação
+                - aprovado
+                - reprovado - consome coração
+
+
+Desafio de projeto
+------------------
+
+    Objetivo da atividade
+        - desenvolver algo real
+        - criar currículo / portfolio - Github
+            - histórico de crescimento
+        - destaque para proposta trabalho
+
+    Como resolver projeto prático
+        - plataforma dio
+            - aba Labs - reúne todos os desafios
+        - interface do desafio
+            - etapas do desafio
+                - aulas
+                - descrição do desafio / link referências
+                - baixar repositório / fork - github
+                - entrega do desafio - plataforma dio
+                    - enviar url do repositório github do projeto
+                    - descrição do desafio - empresas têm acesso
+        - temática
+            - solucionar um problema proposto
+            - criar uma nova solução
+
+
+Dicas finais / conclusão
+------------------------
+
+    - #contratoDeCompromisso
+        - postar linkedin
+        - criar comunidade ativa
+        - melhor experiência
+        - realizar as atividades - foco / dedicação
+            - desafios
+            - questionários
+
+    - concluir Bootcamp
+        - perfil em destaque
+        - concluiu jornada complexa
+        - empresas têm acesso
+
+    - manter currículo atualizado
+        - plataforma dio
+        - linkedin
+
+    - participar da comunidade
+        - fóruns
+        - rooms
+        - mentoriais
+        - publicar artigos
+
+    - canais comunicação
+        - central de ajuda
+            - dúvidas
+            - bugs
+        - artigos
+            - dicas
+            - curiosidades
+            - assuntos em alta
+        - rooms
+            - contato com a comunidade do bootcamp
+            - dúvidas técnicas
+        - live codings
+            - imersões práticas
+            - avançadas
+            - aprimorar / desenvolver portfolio
+
+------------------------------------------------------------------
+

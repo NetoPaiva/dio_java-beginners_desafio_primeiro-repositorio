@@ -1,0 +1,1043 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+02_2_introdução_git_github
+==========================
+
+    Otávio Reis Perkles
+        Front-end Dev
+        Foton
+        GitHub Campus Expert
+
+------------------------------------------------------------------
+    1   Introdução ao Git
+    2   Navegação via terminal 
+    3   Instalação do Git
+    4   Funcionamento do Git
+    5   Primeiros passos com Git
+    6   Ciclo de vida dos Arquivos no Git
+    7   Introdução ao GitHub
+    8   Resolvendo conflitos
+------------------------------------------------------------------
+
+1   Introdução ao Git
+=====================
+
+    O que é Git e sua importância
+    -----------------------------
+
+
+    - Por que usar o Git?
+
+        salvar diferentes versões do arquivo
+            segurança
+            histórico
+            entregar versão final
+            colaboração de outras pessoas
+            revisão /atualização
+            informações específicas
+            pastas/diretórios diferentes
+
+        compilador - editor exigente
+
+
+    - GIT
+
+        Criado em 2005
+        por Linus Torvalds (Linux)
+        open source (código aberto)
+        Sistema de versionamento de códigos distribuído
+            - já existiam outros sistemas de versionamento
+                - CVS (sistema de versionamento de código)
+            - mas não atendiam as necessidades do Linus
+            - criar algo melhor
+
+    - Motivo do GIT
+            - ao desenvolver o Linux
+                - forma colaborativa
+                - equipe no mundo inteiro
+            - precisava criar vesões do material desenvolvido
+            - complexo o suficiente para suportar
+                - multiplos usuários
+                - tarefas simultâneas
+            - para desenvolver o kernel do Linux
+                - criado há 10 anos
+
+        - Versionamento
+            - Criar
+            - Monitoriar
+            - diferentes versões do código
+            - dentro da máquina de cada um
+
+        - armazenar os versionamentos do código
+            - diversas empresas como
+                - GitHub (Microsoft)
+                    - repositório online
+                    - tipo de rede social
+                    - compartilhar
+                    - atuar na comunidade / reconhecimento
+                - GitLab
+
+        - Git e GitHub não são a mesma coisa
+            - tecnologias complementares / diferentes
+
+
+        - Foco do curso
+
+            Controle de versão
+            Armasenamento em nuvem
+            Trabalho em equipe
+            Melhorar seu código
+            Recohecimento
+
+------------------------------------------------------------------
+
+2   Navegação via terminal
+==========================
+
+    - forma gráfica (GUI)
+        - clicar e arrastar
+        - responsível
+
+    - linha de comando (CLI)
+        - escrever comandos
+        - terminal
+
+    - no curso
+        - CLI
+
+
+    Comandos básicos de navegação via terminal 
+    ------------------------------------------
+
+        - interagir com Git
+        - mudar de pasta
+        - listar pastas
+        - criar pastas/arquivos
+        - deletar pastas/arquivos
+
+        ------------------------------------------------------------
+        lista de comandos
+
+        Windows         Linux       descrição comando
+        Shel            Bash
+        -----------     --------    -------------------------------
+        cd              cd          entrar no diretório/pasta
+        dir             ls          listar conteúdo diretório/pasta
+        mkdir           mkdir       criar diretório/pasta
+        del / rmdir     rm -rf     deletar arquivo / diretório
+
+        flags           -rf         modificam / incrementam comandos
+        ------------------------------------------------------------
+
+
+    Sistemas operacionais
+    ---------------------
+
+    No Windows
+    ----------
+
+    1   abrir prompt de comando
+            - tecla windows
+            - digitar "cmd"
+            - clicar na opção "prompt de comando"
+            - abre a janela do prompt de comando
+            - na pasta padrão (c:\Users\emcasa>)
+
+    2   listar conteúdo da pasta/diretório
+            - para situar dentro do computador
+            - digitar "dir" e teclar enter
+            - mostra todos os conteúdos do diretório
+
+    3   ir para diretório raiz do sistema
+            - comando cd
+                - change directors
+                - navegar entre as pastas
+                - igual para todos os sistemas operacionais
+            - digitar "cd /" e teclar enter
+                - cd - para mudar de diretório
+                - espaço - para separar os comandos
+                - /  - caminho específico diretório raiz
+            - foi para diretório raiz (C)
+                - saiu da pasta do usuário
+                - foi pra pasta "c"
+
+    4   entrar em um diretório
+            - comando cd /nome-do-diretorio
+            - comando "dir"
+                - listar conteúdo do diretório
+            - comando "cd /home"
+                - entra no diretório "home" no computador
+
+    5   limpar a tela do terminal
+            - comando "cls"
+                - clear screen
+
+    6   uso do "tab"
+            - autocompleta nome de pastas e comandos
+
+    7   criar pasta/diretório
+            - comando "mkdir"
+                - make director
+            - digitar "mkdir" + nome-do-diretorio a ser criado
+                - mkdir curso_dio
+            - cria a pasta "curso_dio" dentro do diretório atual
+
+    8   criar arquivos
+            - comando echo
+                - printa no terminal o conteúdo escrito no comando
+            - echo hello
+                - irá mostrar no terminal a palavra "hello"
+            - echo hello > hello.tx
+                - cria o arquivo "hello.txt" (caso não tenha)
+                  para salvar a palavra "hello" dentro do arquivo.
+                - redireciona o fluxo do comando echo para o arquivo
+
+    9   deletar arquivos e pastas
+            - del workspace
+                - deleta todos os arquivos dentro da pasta wokspace
+                - pasta constinua existindo
+            - rmdir
+                - remove director
+                - rmdir workspace /s /q
+                    - apaga a pasta e todo seu conteúdo
+                    - as flags
+                        - /s - 
+                        - /q - 
+
+
+    No Linux / Mac
+    --------------
+
+    1   abrir terminal
+
+    2   listar conteúdo 
+            - digitar "ls" e teclar enter
+
+    3   uso do cd é igual para todos
+            - cd
+           não precisa do "/" para entrar no diretório
+            - cd home
+
+    4   voltar um nível do diretŕio
+            - cd ..
+
+    5   limpar a tela do terminal
+            - comando "clear"
+            - ou ctrl + l
+
+    6   uso do "tab"
+            - autocompleta nomes e comando
+
+    7   criar diretório
+            - comando "mkdir" + nome do diretório
+            - sudo mkdir workspace
+
+    8   redireciona fluxo e cria o arquivo
+            - echo hello > hello.txt
+
+    9   excluir pasta/diretório
+            - rm -rf
+                - rm - remove
+                - flags -rf
+                    -r - recursivo
+                        - excluir todas as subpastas e arquivos
+                    -f - para ão confirmar ação de excluir
+
+   10   excluir arquivo
+            - comando rm dentro do diretório que contém o arquivo
+            - rm nome-do-arquivo
+
+   11   mostra conteúdo do arquivo no terminal
+            - cat hello.txt
+
+   12   para sair do terminal
+            - comando exit
+                digitar "exit" e teclar enter
+
+
+------------------------------------------------------------------
+
+3   Instalação do Git
+=====================
+
+    - site oficial do Git
+        - git-scm.com
+            - dowload adequado ao sistema operacional da máquina
+
+    Windowns
+    --------
+
+        - baixar o instalador
+        - executar o instalador
+        - next / escolher local de instalação / next
+        - verificar se opções estão marcadas
+            - Git Bash Here
+            - Git GUI Here
+                - são importantes / facililtam uso
+                - terminal e interfac gráfica
+            - next / next
+        - escolher o editor padrão
+            - editor de texto para resolver algumas coisas
+                - recomenda o Vim
+        - next
+        - para novos reositórios determinar Branch padrão como "main"
+            - selecionar
+                - "Override the default branch name for new repositories"
+                    - na caixa de texto dee estar
+                        - main
+        - se for repositório mais antigo
+            - selecionar
+                - Let Git decide
+        - next
+        - deixar selecionado
+            - Git from the command line and also from 3rd-party software
+        - next
+        - deixar selecionado
+            - Use (Tortoise)PLink
+                - c:\Program Files\PUTTY\plink.exe
+        - next
+        - deixar
+            - Use the OpenSSL library
+        - next
+        - sobre o tipo de quebra de linha, escolher entre
+            - Windows
+            - Unix-style
+                - Mac
+                - Linux
+        - next
+        - deixar
+            - Use MinTTY (the default terminal of HSYS2)
+        - next
+        - deixar
+            - Default (fast-forward or merge)
+        - next
+        - verificar se está selecionado o novo Gerenciador de Credenciais
+            - Git Credential Manager Core
+        - next
+        - deixar marcadas as duas opções de Configurações extra
+        - next
+        - Opções de Configuração experimental
+            - deixou desmarcadas as duas opções
+        - clicar em install
+        - após instalação
+            - desmarcar a opção de visualizar notas de lançamento
+            - clicar em finish
+
+
+    - verificar se instalação bem-sucedida o Git
+        - botão Windows
+        - digitar
+            - Git
+        - deve aparecer no menu
+            - Git Bash Aplicativo
+            - Git GUI
+            - Git CMD
+            - GIT.exe com a versão correspondente a baixada
+        
+
+    Sistemas Unix-style
+    -------------------
+
+        - Linux
+        - Mac
+
+        - no site do Git
+            - clicar na versão adequada ao sistema operacional
+
+        - Linux
+        -------
+
+            - no site abrirá página
+                - comandos de instalação para cada Distro Linux
+                - instalar a versão mais recente do Git
+
+            - Linux Mint
+                - Debian/Ubuntu
+                    - For Ubuntu, this PPA provides the latest stable
+                      upstream Git version
+                - digitar no terminal os comandos
+                    - para instalar o repositório do Git
+                        - sudo add-apt-repository ppa:git-core/ppa
+                        - enter
+                        - digitar a senha de root
+                        - enter
+                            - aparecerá aviso de instalação de PPA
+                            - pedindo confirmação ou cancelamento
+                                - confirmar com "enter"
+                    - para atualizar o sistema
+                        - sudo apt update
+                        - enter
+                        - digitar a senha de root
+                        - enter                    
+                    - para instalar o Git
+                        - sudo apt install git
+                        - enter
+                        - digitar a senha de root
+                        - enter
+                        - confirmar instalação com "enter"
+                        - instalando
+
+                    - verificar a versão que foi instalada
+                        - git --version
+                            - git version 2.38.1
+
+            - Mac
+                - recomenda pelo gerenciador de pacotes
+                    - Homebrew
+                        - seguir o link da página
+                        - seguir instruções de instalação pelo terminal
+
+
+-----------------------------------------------------------------------
+
+4   Funcionamento do Git 
+========================
+
+    Entenda como o Git funciona por baixo dos panos
+
+
+    Tópico fundamentais
+    ===================
+
+        - SHA1
+        - Objetos fundamentais
+        - Sistema distribuído
+        - Segurança
+
+
+    - SHA1
+    ======
+
+        - Secure Hash Algorithm
+            - Alde Hash Seguro
+
+        - Algoritmo de encriptação
+            - "embaralha" os dados dos arquivos
+                - fotos
+                - imagens
+                - textos
+
+        - Conjunto de funções hash criptográficas
+
+            - gera conjunto de caracteres identificador de 40 dígitos
+                - é único para cada arquivo / cada versão do arquivo
+                - serve como identificação do arquivo
+                    - a cada alteração no arquivo
+                    - gera novo identificador
+                    - se alterar arquivo, voltando exatamente como era
+                        - a chave será a mesma daquela versão anterior
+
+            - Git utiliza este sistema de criptografia
+                - maior segurança
+                - identificação rápida
+                - trilha de versionamento
+                - a chave é uma forma curta de representar o arquivo
+
+        - Projetado pela NSA
+            - Agẽncia de Segurança Nacional dos EUA
+
+
+        - Demosntração
+        --------------
+
+            - Gerar um arquivo qualquer de texto (txt)
+
+            - Abrir Git Bash a partir da pasta onde está o arquivo
+                - botão direito do mouse
+                    - abrir git bash
+
+            - Passar o arquivo pelo algoritmo de encriptação / SHA1
+                - executar os comando no terminal
+                    - openssl sha1 nome-do-arquivo
+                    - enter
+                    - gerou o identificador de 40 caracteres
+
+            - Editar o arquivo de texto
+                - alterar o texto
+                - salvar o arquvo
+
+            - Passar o arquivo novamente pelo SHA1 no terminal
+                - executar o mesmo comando anterior
+                    - tecla de atalaho para repetir o comando
+                        - seta para cima até voltar no comando
+                - gerou novo indentificador de 40 caracteres
+
+            - Editar novamente o arquivo de texto
+                - alterar o texto
+                    - ficar exatamente como estava antes da alteração
+                - salvar
+
+            - Passar o arquivo novamente pelo SHA1 no terminal
+                - execuar o mesmo comando
+                    - o identificador voltou a ser igual ao primeiro
+                        - os mesmos 40 caracteres gerados na primeira vez
+
+
+
+    - Objetos fundamentais
+    ======================
+
+        - 3 tipos básicos de objetos
+        - responsveis pelo versionamento
+
+            - Blobs
+            - Trees
+            - Commits
+
+        - características básicas do Git
+            - sistema distribuído
+            - sistema seguro
+
+        - Funções do Git
+            - gerar versionamento dos arquivos
+            - gerar encriptação dos arquivos
+            - armazenar metadados
+
+
+    - Blobs
+    =======
+
+        - Objeto do Git
+            - armazena metadados dos arquivos
+
+        - estrutura básica do Blob (bolha)
+        ----------------------------------
+
+            - armazena todo tipo de arquivo
+                - texto
+                - binário
+
+            - contém metadados do objeto
+                - o tipo do objeto (blob)
+                - o tamanho do arquivo
+                - o conteúdo do arquivo
+                    - \0 conteúdo
+
+        - gera um identificador próprio do tipo SHA1
+
+            -------------------------------------------------------
+                    Blob ---> arquivo1
+                    Blob ---> arquivo2
+                    Blob ---> arquivo3
+            -------------------------------------------------------
+
+        - demonstração 1 no terminal
+        ----------------------------
+
+            - enviar um texto para o git
+            - gerar identificador pelo git
+
+                - echo 'conteudo' | git hash-object --stdin
+                    - echo
+                        - comando pega string
+                        - envia para saída
+                    - 'conteudo'
+                        - é a string
+                        - contém a infrmação "conteudo"
+                    - |
+                        - pipe - concatena um comando após o outro
+                    - git
+                        - comando para chamar o git
+                    - hash-object
+                        - função do git
+                        - 
+                    - --stdin
+                        - flag do git
+                        - sinaliza que receberá um arquivo
+                - enter
+                    - para enviar comandos
+                - gerou identificador desta string
+
+            - gerar idntificador da mesma string pelo openssl
+
+                - echo -e 'conteudo' | openssl sha1
+                - enter
+                - gerou outro identificador
+
+
+        - demonstração 2 no terminal
+        ----------------------------
+
+            - enviar texto para o git
+            - gerar identificador pelo git
+                - echo 'conteudo' | git hash-object --stdin
+                - enter
+                - gerou identificador
+
+            - enviar os metadados do git para o openssl
+                - echo -e 'blob 9\0conteudo' | openssl sha1
+                    - blob
+                        - o tipo do objeto
+                    - 9
+                        - o tamanho do arquivo
+                    - \0conteudo
+                        - o conteúdo do arquivo com o prefixo "\0"
+
+            - o identificador é o mesmo
+
+
+    - Trees
+    =======
+
+        - Árvores
+            - tipo de objeto semelhante aos diretórios do computador
+            - encaspula comportamento de diretórios
+            - aponta para diretórios/arquivos
+
+        - Armazenam Blobs e Trees
+
+        - Aponta para tipos diferentes de
+            - Blobs
+            - Trees
+
+        - Também contém metadados dos objetos
+            - \0
+                - aponta para um Blob
+            - SHA1 do Blob
+            - nome do arquivo
+                - Blob não guarda o nome do arquivo
+                - Tree reúne todas as informações
+            - tamanho do arquivo
+            - SHA1 próprio da Tree
+
+            -------------------------------------------------------
+                    |Blob ---> arquivo1.md
+                    |     
+            Tree -->|Blob ---> arqivo2.txt
+                    |
+                    |Tree ---> diretório ----> Blob --> arquivo3.rb
+            -------------------------------------------------------
+
+
+    - Commits
+    =========
+
+        - o objeto mais importante de todos
+        - garante que todas as informações estão inalteradas
+            - qualquer alteração
+                - gera novo commit
+                    - armazena dados referentes a esta nova versão
+        - junta todas as informações
+        - cria uma linha do tempo de alterações
+        - dá sentido pra alteração realizada
+            - contém caracterísitcas de cada versão
+                - autor
+                    - quem realizou a alteração
+                - mensagem
+                    - descritiva da alteração
+        - gera um SHA1 próprio
+            - com todos os metadados/informações
+                - do conteúdo
+                - do próprio commit
+
+        - Aponta para
+            - Commits anteriores
+                - chamados de Parente
+            - Trees (diretório)
+
+        - Elementos do Commit
+            - Trees
+            - Parente
+            - Autor
+                - quem realizou o commit
+            - Mensagem
+                - descreve as alterações realizadas
+            - Timestamp
+                - carimbo de tempo
+                    - data/hora do commit
+
+
+            ---------------------------------------------------------
+            Commit
+              |
+              |
+              |    
+              -Tree -->|Blob ---> arquivo4
+              |
+              |
+              |        |Blob ---> arquivo3
+              |        |     
+              -Tree -->|Blob ---> arquivo2
+              |        |
+              |        |Tree ---> diretório1 ----> Blob --> arquivo1
+              |
+              |
+            Commit
+              |
+              |        |Blob ---> arquivo3
+              |        |     
+              -Tree -->|Blob ---> arquivo2
+              |        |
+              |        |Tree ---> diretório1 ----> Blob --> arquivo1
+            ---------------------------------------------------------
+
+
+                um objeto está relacionado ao outro
+                -----------------------------------
+
+                - Blob
+                    - armazena SHA1 dos arquivos
+                    - qualquer alteração no arquivo
+                    - gera novo SHA1 do Blob
+
+                - Tree
+                    - aponta para Blobs ou Trees
+                    - tem SHA1 próprio
+                        - com metadados da Tree
+                        - qualquer alteração
+                            - na estrutura da Tree
+                            - no Blob
+                            - no arquivo
+                        - gera novo SHA1 da Tree
+
+                - Commit
+                    - aponta para Commits ou Trees
+                    - tem SHA1 próprio
+                        - com metadados do Commit
+                        - qualquer alteração
+                            - no Commit
+                            - nas Trees
+                            - nos Blobs
+                            - nos arquivos
+                        - gera novo SHA1 do Commit
+
+            ---------------------------------------------------------
+
+    - Sistema distribuído e seguro
+    ==============================
+
+        - repositório pessoal na máquina (offline)
+        - repositório pessoal na nuvem (GitHub)
+        - código na nuvem é versão final/atualizada
+        - pode ter diversos colaboradores
+            - cada um tem a sua versão do código
+                - offline (máquina)
+                - online (GitHub)
+            - todas as versões são confiáveis
+            - funcionam como backups
+             
+
+
+#################################################
+#################################################
+
+
+        |   acho que todo este trecho   |
+        |        deveria ir para        |
+        |         a parte sobre         |
+        |          G I T H U B          |
+        V          ===========          v
+
+-------------------------------------------------
+
+    - Chave SSh e Token (do GitHub)
+    ===================
+
+        - Alterações estruturais do Git
+
+        - Autenticação no GitHub
+            - usuário / senha
+                - obsoleto
+            - nova autenticação
+                - SSH
+                - Token
+
+    - Chave SSH
+    ===========
+
+        - Conexão segura/encriptada
+        - entre duas máquinas
+            - máquina pessoal
+            - servidor GitHub
+        - utiliza duas chaves
+            - pública
+                - fica no GitHub
+                    - identifica máquina pessoal
+                        - assinatura da máquina
+            - privada
+                - fica na máquina
+        - máquina fica configurada com autenticação segura
+            - não precisa login e senha para acessar GitHub
+
+    - Gerar chaves SSH
+    ------------------
+
+        - no Mac
+            - acessar GitHub Docs
+                - Gerar nova chave SSH
+                    - Selecionar a versão Mac
+                        - seguir a documentação
+
+        - Linux / Windos
+            - comandos/passos semelhantes
+            - via terminal/GitBash
+
+        - Linux
+            - Abrir o terminal
+            - digitar o comando
+                - ssh-keygen -t ed25519 -C email
+                    - ssh-keygen
+                        - comando para gerar chave ssh
+                    - -t
+                        - flag
+                    - ed25519
+                        - tipo de criptografia da chave
+                    - -C
+                        - flag
+                    - email
+                        - login do GitHub
+            - enter
+            - Bash informa
+                - que está gerando o par de chaves
+                - local onde as chaves serão armazenadas
+                    - /home/.../.ssh/id_ed25519
+            - enter
+            - pede senha 2 vezes
+            - pronto
+            - informa
+                - local onde salvou 
+                    - a identificação
+                    - a chave pública
+                        - mesmo nome da chave privada + extensão ".pub"
+                - identidade da chave (fingerprint)
+                - tipo de criptografia usada
+                    - ed25519 256
+                - nome da criptografia
+                    - SHA256
+
+    - Visualizar chave gerada
+    -------------------------
+        - navegar até local onde salvou as chaves
+            - comando
+                - cd /home/.../.ssh/
+        - listar conteúdo da pasta
+            - comando ls
+        - visualizar contéudo do arquivo da chave pública
+            - comando
+                - cat id_nome-do-arquivo.pub
+            - enter
+        - copiar a chave pública
+
+    - Informar chave no GitHub
+    --------------------------
+        - entrar no GitHub
+        - Menu pessoal (foto)
+        - Settings
+            - SSH and GPG keys
+                - New SSH key
+                    - preencher os campos
+                        - Title
+                            - identificar qual é a chave
+                                - "emcasa"
+                        - Key type
+                            - Authentication Key
+                        - Key
+                            - colar a chave copiada no terminal
+                    - Add SSH key
+                    - vai pedir senha de login na plataforma
+                    - gerou a autenticação da chave
+                    - fornece algumas informações sobre a chave
+                        - quando foi criada
+                        - quando foi usada
+                        - se supeitar de uso indevido
+                            - basta deletar a chave
+
+    - Inicializar o SSH Agent
+    -------------------------
+        - entidade encarregada de lidar com as chaves
+        - no terminal do computador
+        - dentro da pasta onde estão os arquivos das chaves
+            - digitar o comando
+                - eval $(ssh-agent -s)
+            - enter
+        - informa o identificar do processo de autenticação
+            - Agent pid *****
+        - entregar a chave privada para este agente gerado
+            - digitar comando
+                - ssh-add id_ed25519
+            - enter
+            - pede a senha
+            - enter
+            - informa entidade adicionada
+                - com nome do arquivo da chave
+                - e o email de login
+
+    -----------------------------------------------------------------
+    Pronto, processo de criação e ativação das chaves está finalizado
+    -----------------------------------------------------------------
+
+    Clonar repositório GitHub com SSH configurado
+    ---------------------------------------------
+
+        - é mais seguro
+        - é mais rápido
+        - tem que ser pela autenticação das chaves
+        - não pode ser pela URL do Repositório
+
+        - No botoão "Code"
+            - escolher a opção SSH
+            - copiar o direcionamento
+                - git@github.com:Usuário/nome-do-repositorio
+
+        - No terminal do computador
+            - navegar até a pasta onde irá salva os repositórios baixados
+            - comando
+                - git clone git@github.com:Usuario/nome-do-repositorio
+            - enter
+            - pergunta se quer salvar a digital de autenticação
+                - Yes
+                    - só pergunta no primeiro acesso
+            - enter
+            - vai copiar toda a estrutura do repositório do GitHub na máquina
+            - pronto, já clonou
+
+
+    - Token de acesso pessoal
+    =========================
+
+        - outra forma de segurança do GitHub
+        - também tem que gerar no GitHub
+        - semelhante ao processo de login
+        - não é mais seguro que a chave SSH
+            - arquivo com token fica salvo na máquina
+
+
+        - Processo de uso
+        -----------------
+
+            - Gera token no GitHub
+            - Salvar token na máquina
+            - Toda vez que fizer Commit
+            - Vai pedir usuário/senha
+                - Na hora da senha
+                    - Informar o token
+
+
+        - Gerar e salvar token
+        ----------------------
+
+            - no GitHub
+            - menu pessoal
+            - Setting
+            - Developer settings
+            - Personal access tokens
+            - Tokens (classic)
+                - Generate new token
+                    - Generate new token (classic)
+
+            - Preencher os campos / ativar opções
+                - Note
+                    - nome/descrição do token
+                - Expiration
+                    - prazo de validade e desativação do token
+                - Selecionar a opção
+                    - repo
+                        - total controle de privacidade
+                - clicar em "generate token"
+                - irá gerar token
+                - copiar o token gerado
+                    - atenção
+                        - este token não será visível novamente
+                        - copiar e salvar com segurança
+                        - caso perca, terá que gerar novo token
+                - salvar em arquivo no computador / na nuvem
+                    - garantir segurança de acesso ao arquivo
+
+
+        - Clonar Repositório com token
+        ------------------------------
+
+            - no GitHub
+                - no repositório a ser clonado
+                - botão "Code"
+                - na opção HTTPS
+                - copiar URL
+            - no terminal do computador
+                - comando
+                    - git clone URL-copiada
+                - vai pedir o token
+                    - pegar o token salvo no computador e copiar
+                    - colar o token na janela de login
+                    - enter
+                - vai mostrar mensagem de verificação realizada
+                - vai clonar o repositório na máquina
+                
+
+
+-------------------------------------------------
+
+
+        ^      final do trecho que      ^
+        |        deveria ir para        |
+        |         a parte sobre         |
+        |          G I T H U B          |
+        |          ===========          |
+
+
+#################################################
+#################################################
+
+
+
+-----------------------------------------------------------------------
+
+5   Primeiros comandos com Git
+==============================
+
+    Iniciar e commitar
+    ==================
+
+
+-----------------------------------------------------------------------
+
+6   Ciclo de vida dos arquivos no Git
+=====================================
+
+    Passo a passo no cilco de vida
+    ==============================
+
+
+-----------------------------------------------------------------------
+
+7   Introdução ao GitHub
+========================
+
+    Trabalhando com GitHub
+    ======================
+
+
+-----------------------------------------------------------------------
+
+8   Resovendo conflitos
+=======================
+
+    Como acontecem conflitos e como resolver
+    ========================================
+
+
+
+-----------------------------------------------------------------------

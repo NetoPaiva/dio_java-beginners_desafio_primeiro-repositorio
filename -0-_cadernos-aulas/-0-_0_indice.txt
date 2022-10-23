@@ -1,0 +1,103 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+01_iniciar_jornada
+==================
+
+    01-1_boas_vindas
+    01_2_oportunidades
+    01_3_protagonismo
+    01_4_intro_dev_moderno
+    01_5_live_inaugural
+
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+03_java_conhecer_linguagem_programacao
+=======================================
+
+    03_1_java_intro_plataforma
+    03_2_java_ambiente_dev
+    03_3_java_sintaxe
+    03_4_java_logica_condicional_controle_fluxo
+    03_5_java_entender_metodos
+
+------------------------------------------------------------------
+
+04_desafio_cod__algoritmos_basicos
+==================================
+
+    04_1_numeros_iguais
+    04_2_soma_multiplos
+    04_3_chamada_recursiva
+    04_4_fizzbuzz
+    04_5_busca_sequencial
+
+------------------------------------------------------------------
+
+05_java__programacao_orientada_objeto
+=====================================
+
+    05_1_prog_orientada_objeto
+    05_2_collections_java
+    05_3_debugging_java
+    05_4_excecoes_java
+    05_5_java_oop__abstrair_bootcamp
+
+------------------------------------------------------------------
+
+06_spring_framework__ganho_produtividade
+========================================
+
+    06_1_internet__protocolos_comunicacao
+    06_2_java_maven__dependencias_build
+    06_3_spring_boot__imersao
+    06_4_spring_web_swagger__api_rest_dcumentada
+    06_5_java__padroes_projeto_pratica
+
+------------------------------------------------------------------
+
+07_desafio_cod__algoritmos_intermedios
+======================================
+
+    07_1_checagem_palindromo
+    07_2_validar_parenteses
+    07_3_quadrados_perfeitos
+    07_4_classificar_matrizes
+    07_5_fatorial_desejado
+
+------------------------------------------------------------------
+
+08_profissional__fortalecer_carreira
+====================================
+
+    08_1_linkedin_atrativo
+    08_2_dio__turbinar_curriculo
+    08_3_equipes_ageis
+    08_4_conhecimento_em_artigos_tecnicos
+    08_5_entrevista
+    08_6_minha_carreira_tech
+
+------------------------------------------------------------------

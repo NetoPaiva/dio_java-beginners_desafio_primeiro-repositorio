@@ -1,0 +1,414 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+01_iniciar_jornada
+==================
+
+    01_1_boas_vindas
+    01_2_oportunidades
+    01_3_protagonismo
+    01_4_intro_dev_moderno
+    01_5_live_inaugural
+
+------------------------------------------------------------------
+
+01_4_intro_dev_moderno
+======================
+
+    Denilson Bonatti
+        - Tech Lead - DIO
+
+------------------------------------------------------------------
+Desenvolvimento Moderno de Software
+A cadeia ideal de desenvolvimento de softwares
+------------------------------------------------------------------
+
+Problema x Solução
+------------------
+
+    - Problema
+        - ponto de partida para todo desenvolvimento
+
+    - Solução
+        - programação computacional
+            -série de comandos oredenados
+        - testada / aprovada
+
+
+Sistema Desktop / Sistema Web / App Mobile
+------------------------------------------
+
+    Sistema Desktop
+        - autônomos
+        - instalados
+        - aplicativo executável
+        - sistemas operacionais específicos
+        - versões de atualização
+        - limitação mobilidade
+        - conectividade - offline
+
+    Sistema Web
+        - tecnologia web
+        - acesso navegador
+        - não instalado
+        - não atualizável
+        - mobilidade
+        - conectividade - online
+
+    App Mobile
+        - aplicação móvel
+        - dispositivos móveis
+        - aplicativo baixado / instalado
+        - sistemas operacionais específicos
+        - versões de atualização
+        - mobilidade
+        - conectividade - online / offline
+
+
+Modelo Cliente-Servidor
+-----------------------
+
+    - estrutura de aplicação
+    - distribui tarefas / cargas trabalho
+        - servidor
+            - fornecedores recurso / serviço
+        - cliente
+            - requerentes recurso / serviço
+
+    ------------------------------------
+    Cliente >>>>  Internet >>>> Servidor
+    Cliente <<<<  Internet <<<< Servidor
+    ------------------------------------
+
+------------------------------------------------------------------
+
+Cadeia ideial de desenvolvimento de software
+--------------------------------------------
+
+    1. ux-design
+    2. ui-design
+    3. front-end / framework
+    4. back-end / api
+    5. full-stack
+    6. qa
+    7. infraestrutura
+    8. cloud
+    9. mobile
+
+------------------------------------------------------------------
+
+1. UX_DESIGN
+============
+
+    - design da experiência do usuário
+        - comportamento
+
+    - processo de design
+        - produto / serviço
+        - soluções funcionais
+        - melhoria satisfação
+            - usabilidade
+            - acessibilidade
+            - interação
+        - pesquisa
+            - perfil usuário
+            - preferências
+            - opinião
+            - necessidades / desejos
+        - wireframes
+            - esquematização solução
+            - geração de modelos
+        - protótipos
+            - opções de soluções
+            - teste / validação
+        - personas
+            - perfil usuário
+            - usuário padrão
+        - objetivos
+            - atender necessidades / desejos
+            - melhorar experiência
+            - rever projeto
+
+
+2. UI_DESIGN
+============
+
+    - design da interface do usuário
+        - aparência
+
+    - processo de design
+        - produto / serviço
+        - soluções visuais - layout
+            - formas
+            - cores
+            - fontes / tipos
+            - interação
+        - melhoria utilização
+            - conforto visual
+            - hierarquia da informação
+        - seguir wireframe
+            - propor soluções de layout
+        - ferramentas
+            - figma
+            - adobe xd
+            - visio
+            - invision
+
+
+3. FRONT_END
+============
+
+    - codifica a parte Cliente
+            - visível da aplicação
+            - usuário interage
+
+    - processo de programação
+        - codifica wireframe
+        - cria interface gráfica
+        - tecnologia web
+            - html
+            - css
+            - js
+
+    - ferramentas - criação / edição códigos
+
+        - IDE - ambiente de desenvolvimento integrado
+            - interface gráfica
+            - ferramentas produtividade
+            - interpretação / desmonstração
+
+        - framework - facilitador
+            - desenvolvimento de aplicações
+            - soluções pré-definidas / automatização
+            - descomplica tarefas mecânicas / repetitivas
+            - Angular
+            - Laravel
+            - Vue
+
+
+4. BACK_END
+===========
+
+    - o que está por trás da aplicação
+    - a ponte entre
+        - cliente - navegador / dispositivo usuário
+        - servidor - banco dados / armazenamento / 
+    - ida e volta
+    - cuida das funções
+        - regras de negócio
+        - validações
+        - garantias
+        - ambiente seguro
+    - usuário não tem acesso
+    - tecnologias
+        - java
+        - php
+        - c#
+    
+    API - interface de programação de aplicativos
+        - é a ponte entre cliente-servidor
+            - permite comunicação entre 2 aplicativos
+        - desenvolvida pelo back-end
+        - funcionalidade
+            - usuário / dispositivo
+                - envia requisição
+            - api
+                - recebe
+                - interpreta
+                - envia p/ servidor
+            - servidor
+                - recebe
+                - busca banco dados
+                - envia p/ api
+            - api
+                - recebe
+                - interpreta
+                - envia p/ dispositivo
+            - usuário
+                - recebe informação
+
+    ------------------------------------------------------------
+    usuário >>> dispositivo >>> api >>> Servidor >>> banco dados
+    usuário <<< dispositivo <<< api <<< Servidor <<< banco dados
+    ------------------------------------------------------------
+
+
+5. FULL_STACK
+=============
+
+    - desenvolvedor com front-end e com back-end
+    - conhecimento / habilidades
+        - diversas linguagens de programação
+        - todas as etapas do desenvolvimento
+        - especialista em alguma linguagem / etapa
+
+
+6. Q_A - Quality Assurance
+==========================
+
+    - garantia da qualidade
+    - função / conhecimento
+        - conjunto de ações
+        - etapas do projeto
+        - análise crítica
+        - verificação pardões / requisitos
+    - objetivo
+        - máxima qualidade
+        - segurança
+        - confiança
+        - usuário final
+
+
+7. INFRAESTRUTURA
+=================
+
+    - lado Servidor
+        - data center
+        - fornece um serviço
+    - estrutura própria / alugada
+    - infraestrutura - local / externa
+        - hardware / software específicos
+        - profissionais especializados
+            - operacional - aplicação funcionando
+            - sys-admin
+            - segurança da informação
+            - sistemas operacionais
+            - cabeamentos / redes
+            - backup
+            - gerador
+            - servidor operando / ativo
+    - nuvem privada - infraestrutura local
+    - nuvem pública - infraestrutura externa
+            - cloud
+            - prestação de serviço
+
+
+8. CLOUD
+========
+
+    - nuvem pública
+        - sistemas baseados em nuvem 
+        - serviço via internet
+            - armazenamento
+            - processamento
+        - substitui a infraestrutura local / privada
+        - custo/benefício
+            - sob demanda
+            - facilidade
+                - contratação
+                - configuração
+                - operação
+                - manutenção
+            - escalabilidade de recursos
+                - ampliação
+                - redução
+            - performance
+        - empresas
+            - Amazon
+            - Google
+            - Oracle
+            - Microsoft
+        - profissional cloud computing
+            - cuida de toda infraestrutura
+                - o que é preciso para rodar aplicação
+            - planeja sistema / ambientes
+            - tecnologias / servidores
+            - operadores / fornecedores
+            - integração de todo processo 
+            - manter aplicação rodando
+
+
+9. MOBILE
+=========
+
+    - desenvolvimento para dispositivos móveis
+        - back-end
+            - o mesmo para dev web
+
+        - front-end
+            - diferente do dev web
+                - nativo
+                    - específico a cada sistema operacional
+                - híbrido
+                    - adaptável a cada sistema operacional
+
+        - desenvolvimento nativo
+            - linguagens de programação específicas
+                - android
+                    - java
+                    - kotlin
+                -ios
+                    - swift
+
+            - plataformas de desenvolvimento específicas
+                - android
+                    -  android studio
+                - ios
+                    - xcode
+                - emulam funcionalidade do dispositivo
+                - acessar recursos / bibliotecas nativos
+                    - gps
+                    - câmera
+                    - galeria fotos
+                    - armazenamento
+
+            - necessidades específicas
+                - profissionais / equipes
+                - equipamentos
+                - acesso às lojas de distribuição
+
+        - desenvolvimento híbrido
+            - não é nativo
+                - nem todos os recursos estarão disponíveis
+                - limita tipos de aplicações
+                    - não tem performance ideal
+                - reduz custos
+
+            - é baseado em web
+                - html / css / js
+                - gera app web
+                    - encapsulado no app / dispositivo móvel
+                    - mesmo código 
+                        - android
+                        - ios
+
+            - frameworks / bibliotecas específicas
+                - ionic
+                - flutter
+                - react native
+                - acessar recursos específicos
+                    - nem todos estão disponíveis
+                    - limitação
+
+
+------------------------------------------------------------------
+
+Conclusão
+=========
+
+    - compreender cada área/etapa de desenvolvimento
+    - etapas de desenvolvimento de um software
+    - principais profissionais envolvidos
+    - linguagens de programação
+    - modelo cliente-servidor
+    - local de publicação da aplicação
+    - desenvolvimento mobile
+    - nuvem pública / privada
+    - custos de produção / mão de obra necessária
+
+
+------------------------------------------------------------------
+

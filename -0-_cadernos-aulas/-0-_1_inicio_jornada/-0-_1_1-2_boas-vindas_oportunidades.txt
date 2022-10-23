@@ -1,0 +1,88 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+01_iniciar_jornada
+==================
+
+    01_1_boas_vindas
+    01_2_oportunidades
+    01_3_protagonismo
+    01_4_intro_dev_moderno
+    01_5_live_inaugural
+
+------------------------------------------------------------------
+
+01_1_boas_vindas
+================
+
+01_2_oportunidades
+==================
+
+
+Metodologia DIO
+---------------
+
+    - alavancar profissional / pessoal
+
+        - Descobrimento   conhecimento
+        - Interatividade  comunidade - pessoas / mercado
+        - Oportunidade    crescimento
+
+
+Hired - playlist - dio
+----------------------
+
+    - alunos que foram contratados
+    - vidas transformadas
+
+
+3 dicas de ouro - profissional de excelência
+--------------------------------------------
+
+    - Autonomia       ritmo próprio
+    - Protagonismo    forte / enraizado
+    - Gestão tempo    definida / diária / horas de estudo
+
+
+Profissional de excelência
+--------------------------
+
+    - realizar bons projetos
+
+        - foco
+        - resiliência
+        - persistência
+
+
+Bootcamp
+--------
+
+    - cumprir cada etapa
+    - estudo - consolidar conhecimento
+    - FAQ - tirar dúvidas
+
+
+Compartilhar - postar conquistas
+--------------------------------
+
+    #contratoDeCompromisso
+
+    - cada etapa realizada
+    - divulgar crescimento profissional
+    - linkedin / redes sociais
+
+------------------------------------------------------------------
+

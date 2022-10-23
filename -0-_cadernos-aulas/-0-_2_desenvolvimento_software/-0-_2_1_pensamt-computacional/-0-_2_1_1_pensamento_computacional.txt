@@ -1,0 +1,887 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+02_1_introdução_programação_pensamento-computacional
+====================================================
+
+    02_1_1_pensamento_computacional
+    02_1_2_intro_logica_programacao
+    02_1_3_algoritmo_fundamentos
+    02_1_4_linguagens_progrmacao
+    02_1_5_programacao_primeiro-contato
+
+------------------------------------------------------------------
+
+02_1_1_pensamento_computacional
+===============================
+
+    Juliana Mascarenhas
+        - Tech Education Specialist / Cientista Dados
+        - Java / Python
+        - @in/juliana-mascarenhas-ds/
+        - github/julianazanelatto
+
+------------------------------------------------------------------
+    1   Introdução ao pensamento computacional
+    2   Habilidades complementares
+    3   Pilares
+    4   Estudo de caso
+------------------------------------------------------------------
+
+    ---------------------------------------------------------
+          [vídeo - 14:00 - início do conteúdo do curso]
+    ---------------------------------------------------------
+
+    Primeiros passos
+        começar a programar
+        entender o pensamento computacional
+        resolver problema - objetivo / eficiente
+
+    - Objetivo geral
+        - o que significa pensar computacionalmente
+            - conceitos
+            - características
+        - entender habilidade generalista
+        - aplicar na solução de diferentes problemas
+
+
+------------------------------------------------------------------
+
+1   Introdução ao pensamento computacional
+==========================================
+
+        ---------------------------------------------------------
+        Processo de pensamento envolvido na expressão de soluções
+        em passos computacionais ou algoritmos
+        que podem ser implementados no computador.
+        (Aho, 2011; Lee, 2016)
+        ----------------------------------------------------------
+
+    - não se restringe ao computador / ciências exatas
+
+    - Processo de pensamento
+        - sistemático / eficiente
+            - formulação / resolução de problemas
+        - expressão de soluções
+        - sequência de tarefas ordenadas / algoritmos
+        - humanos / máquinas capazes de resolver
+
+    - habilidade generalista
+        - utilizada em diversas disciplinas / atividades
+        - solução de problemas
+        - identificar partes principais do conteúdo / objeto
+        - estruturação coerente / objetivo
+        - conectar informações
+        - compreender sentido
+
+
+    - bases do pensamento computacional
+        - 4 pilares 
+            - decomposição
+                - dividir problema complexo em subproblemas
+                - subproblemas
+                    - menor complexidade
+                    - maior capacidade de solução
+                    - soluções ordenas
+
+    [27:51 - vídeo]
+
+
+            - padrões
+                - identificar similaridade entre os subproblemas
+            - abstração
+                - extrapolar conceito do problema
+                - forma generalista
+                - programação orienta a objetos
+            - algoritmos
+                - desenvolver automação
+                - definir passos / etapas de solução
+
+    - processo contínuo
+        - definir solução
+        - testar solução
+        - aperfeiçoar solução
+
+            >>> teste >>> análise >>> refinamento >>> teste >>>
+
+    - habilidades
+        - humanas
+            - abstração
+                - resolução de problemas
+            - automatização
+                - expressão de solução
+        - computacionais 
+            - análise
+                - execução da solução
+                - avaliação / refinamento
+
+    - ciclo de desenvolvimento - ida e volta
+        - raciocínio lógico
+        - decomposição
+        - padrões
+        - abstração
+        - algoritmos
+        - refinamento
+        - raciocínio lógico
+
+    - áreas do conhecimento
+        - computação
+        - matemáica
+        - engenharia / ciências
+
+    - atividades
+        - computação e matemática
+            - desenvolvimento e abstração
+            - reconhecimento de padrões
+        - computação e engenharias / ciências
+            - análise dados e design de soluções
+            - definição e uso de abstrações
+            - teste e refinamento de algoritmos
+        - computação e matemática e engenharia / ciências
+            - modelagem
+            - definição de problemas
+            - definição e uso de abstrações
+            - reconhecimento de padrões
+        - matemática e engenharia / ciências
+            - desenvolvimento e abstração
+            - reconhecimento de padrões
+
+        - exemplos
+            - química
+                - algoritmo 
+                    - aperfeiçamento reações químicas
+                    - identificação de químicos
+            - engenharia
+                 - software
+                    - simulações de aeronaves
+            - biologia
+                - aplicação
+                    - modelage / mapeamento genoma humano
+            - computação
+                - supercomputadores
+                    - simulaçao de problemas
+
+    - competências profissionais
+        - pensamento sistemático
+        - colaboração em equipe
+        - criatividade e design
+        - facilitador
+
+
+------------------------------------------------------------------
+
+2   Habilidades complementares
+==============================
+
+
+    - raciocínio lógico
+    - aperfeiçoamento
+
+    - raciocícnio lógico
+        - forma de pensamento estruturado (raciocínio)
+        - diante um problema
+            - encontrar conclusão
+            - determinar resolução
+
+        - habilidade adquirida / treinamento
+
+        - classificação
+            - indução
+                - observar fenômeno
+                - concluir leis / teorias
+                - ciências experimentais
+
+            - dedução
+                - a partir de leis / teorias
+                - deduzir previsões / expicações
+                - ciências exatas
+
+            - abdução
+                - a partir do fenômeno
+                - estabelecer premissas
+                - afastar outras hióteses
+                - processos investigativos / diagnósticos
+
+            - inferência
+                - sintética
+                    - abdução
+                    - indução
+
+                - analítica
+                    - dedução
+
+            - ser capaz de solucionar o problema
+                - analisando os dados
+                - de forma lógica
+
+
+    - aperfeiçoamento - ato de aperfeiçoar
+        - mehoramento
+        - aprimoramento
+        - refinamento
+
+        - a partir de uma solução existente
+            - determinar
+                - pontos de melhora
+                - refinar solução
+
+        - estabelecer
+            - melhor uso de recursos
+                - encontrar soluções eficientes
+                - otimizar processos
+
+            - melhor desenvolvimento códigos / algoritmos
+                - simplificar linhas código
+                - redefinir (melhorar) funções
+
+
+------------------------------------------------------------------
+
+3   Pilares
+===========
+
+    - decomposiçã
+    - padrões
+    - abstração
+    - algoritmos
+
+    - objetivo geral
+        - compreender cada pilar
+        - como executar etapas do pensamento computacional
+
+
+    - Decomposição
+    --------------
+
+                ----------------------------------------
+                "Se você não pode resolver um problema,
+                 então existe um problema mais fácil
+                 que você pode resolver: encontre-o."
+                 (George Polya - professor / matemático)
+                -----------------------------------------
+
+        - pensamento computacional
+            - é primeiro passo resolução problema
+            - gerar problemas menores
+            - mais fáceis e gerenciáveis
+
+        - estratégia
+            - análise
+                - processo de quebrar / determinar
+                    - partes menores / gerenciáveis
+                    - estudar / explorar
+                    - examinar em detalhes
+                    - decompor em elementos constituíntes
+
+            - síntese
+                - processo de reconstrução
+                    - combinar elementos
+                    - recompor problema original
+                    - reunir elementos distintos em único elemento
+                    - fundir elementos com coerência
+
+            - execução
+                - tarefas ordenadas
+                    - sequêncial
+                        - dependência entre tarefas
+                        - executadas em fila
+                    - paralelo
+                        - execução concomitantes
+                        - aumenta eficiência
+                        - reduz tempo
+
+            - pequenos problemas
+                - variáveis
+                - segmentação
+                - maneiras distintas de decompor mesmo problema
+                não basta aplicar
+                desenvolver por si
+
+            - método da decomposição
+                - identificar / coletar dados
+                - agregar os dados
+                -  funcionalidade
+
+                - exemplo cozinhar
+                    - identificar ingredientes
+                    - definir etapas
+                    - executar etapas
+                        - agregar ingredientes
+                        - realizar processos
+                        - ajustar (coerência)
+                        - finalizar
+                    - servir
+                    - degustar
+
+                - exemplo bicicleta
+                    - funcionamento do sistema
+                        - identificar componentes
+                        - função componentes
+                        - interdependência das peças
+
+                - exemplo app - desenvolvimento mais eficiente
+                    - definição componentes / etapas
+                        - finalidade
+                        - interface
+                        - funcionalidade
+                        - pré-requisitos
+                    
+                - exemplo artigo
+                    - sequencial / paralelo
+                    - ordenado / desordenado
+                    - definição de componentes / etapas
+                        - tema
+                        - estrutura
+                        - tópicos
+                        - conexão textual
+
+                - exemplo movimentos do avatar
+
+                                         |-virar  - direita
+                             |-padrão    |        - esquerda
+                             |           |-mover  - cima
+                             |                    - baixo
+                      -ações |
+                             |           |-andar
+                             |           |-correr - mover perna
+                             |-movimento |        - impulsionar
+                                         |-sentar
+                                         |-levantar
+
+
+    - Padrões
+    ---------
+
+        - reconhecimento de padrões
+            - modelo base
+            - estrutura invariante
+            - repetição
+
+            - similaridades e diferenças
+                - fotos de redes sociais
+                    - curtir
+                    - nao curtir
+                    - compreensão
+                    - salvar no servidor / dados
+            - processos utilizados por plataformas diferentes
+
+            - compressão de dados
+                - por reconhecimento de padrões
+                - seres vivos x padrões
+                    - organização por similaridade
+
+            - por que determinar padrões
+                - generalizar
+                - obter resolução
+                - problemas diferentes
+                - classes
+                - categorias
+                    - tipo de media
+                    - depende do dominio
+
+            - pelo ser humano
+                - por comparração
+                    - grau de smiliridade
+                    - grupos conhecidos x objeto desconhecido
+
+            - pelo computador
+                - simular comportamento
+                - representação de atributos
+                - aprendizado
+                    - conceito associado ao objeto
+                - armazenar dados
+                - regras de decisão
+
+            resumo:
+                - abordagem
+                    - extração de caacterísticas
+                    - classificação de dados
+                - diferentes
+                    - métodos
+                    - aplicações
+                        - classificação
+                            - dados
+                            - documentos
+                        - reconhecimento
+                            - imagem
+                            - fala
+                        - análise de cenas
+
+                    - áreas da computação
+                        - redes neuraias
+                        - inteligência artificial
+                        - ciência de dados
+                        - machine learning
+
+
+    - Abstração
+    -----------
+
+            - abstração / generalização
+
+                -----------------------------------
+                abstrair_
+                    observar, um ou mais elementos,
+                    avaliando características e
+                    propriedades em separado
+                ------------------------------------
+                abstração_
+                    processo intelectual de
+                    isolamento de um objeto
+                    da realidade
+                -------------------------------------
+                generalizar_
+                    tornar-se geral,
+                    mais amplo,
+                    extenso
+                -------------------------------------
+                generalização_
+                    na lógica, operação intelectual
+                    reunir em uma classe geral,
+                    conjuntos similares de
+                    seres ou fenômenos
+                -------------------------------------
+
+            - classificação dados
+                - características
+                    - pontos essenciais
+                    - generalizar / detalhar
+
+            - exemplo de representação de dados
+                - características estudante
+                    - pontos essenciais
+                        - matrícula
+                        - campus
+                        - curso
+                        - nome
+                        - endereço
+                        - telefone
+                        - email
+                    - detalhes
+                        - trabalho
+                        - filhos
+                        - preferências
+                            - programa
+                            - livro
+                            - calçado
+
+            - conceitos baseados em abstrações
+
+                - linguagens de programação
+                    - python
+                    - java
+                    - c++
+
+                    ---------------------------------
+                    >>> input >>> operador >>> output
+                    ---------------------------------
+
+                    merge sort
+                    clusteting
+                    busca binária
+
+                    árvore
+                    lista
+                    grafos
+
+                    máquinas de estado finito
+
+                - comunicações
+                    - interlocutor
+                    - ouvinte
+                    - dados
+                    - processamento
+                    - canais de comunicação
+                    - cliente-servidor
+
+            - exemplos de conceitos baseados em abstrações
+                - limpeza de um terreno
+                    - por onde começar
+                        - calcular distância dos elementos
+                        - traçar rotas
+                        - realizar limpeza
+                    - estender para outros cenários
+
+            - abstrair conceito / generalizar problema
+                - tornar solução reutilizável
+                    - em cenários distintos
+                    - similaridades entre si
+ 
+
+    - Algoritmos
+    ------------
+
+            - sequência de passos com objetivo definido
+            - execução de tarefas específicas
+            - conjunto de operações
+                - sucessão finitas de ações
+
+
+            - energia
+            - trabalhador
+            - eficiência
+            - rapidez
+
+            - não opera sozinho
+            - segue instruções detalhadas
+
+            - processamento de dados
+                - por meio de programas / instruções
+                    - computador
+                        - recebe
+                        - manipula
+                        - armazena
+
+            - processo resolução problemas
+                - intruções
+                    - o que precisa ser feito
+                    - qual ordem execução
+                - compreendido por
+                    - humanos
+                    - máquina
+
+            - desenvolvimento de programa
+
+                - instruções detalhadas
+                    - análise
+                        - estudo / definição
+                        - dados de entrada / saída
+                    - algoritmo
+                        - descreve problema
+                            - ferramentas narrativas
+                            - fluxogramas
+                            - pseudocódigo
+                    - programa / codificação
+                            - codifica algoritmo
+                            - linguagem programação especíica 
+
+            - aplicação de algoritmos
+                - instruções executadas passo a passo
+                - objetivo concluir tarefa
+                    - preparar sanduíche
+                    - trocar lâmpada
+                    - fazer bolo
+                    - percorrer trajeto
+
+            - construção do algoritmo
+                - compreender problema
+                    - pontos mais importantes
+                - definir dados de entrada
+                   - dados fornecidos / cenário
+                - definir processamento
+                    - cálculos / restrições
+                - definir dados saída
+                    - pós processamento
+                - utilizar método construção
+                    - narrativa
+                    - fluxograma
+                    - pseudocódigo
+                - testar / avaliar
+                    - refinamento do algoritmo
+
+                - método de construção algoritmo
+                    - narrativa
+                        - utiliza linguagem natural
+                        - sem conceitos novos
+                        - diversas interpretações possíveis
+                    - fluxograma
+                        - narrativa esquematizada
+                        - utiliza símbolos pré-definidos
+                        - simples entendimento
+                        - conhecimento da estrutura e símbolos
+                    - pseudocódigo
+                        - portugol
+                        - regras definidas
+                        - passos a serem seguidos
+
+                - exemplos da aplicação do método
+
+                    - multiplicação de dois númenros
+                        - passo 1
+                            - receba valores
+                        - passo 2
+                            - multiplique
+                        - passo 3
+                            - imprima resultado
+
+                    -----------------------------------------
+
+                                    ---------
+                    ( INÍCIO ) >>> / N1, N2 /
+                                   ---------
+                                        v
+                                        v
+                                  ---------------
+                                  | M = N1 * N2 |
+                                  ---------------
+                                        v
+                                        v
+                                  ---------------
+                                  |      M      | >>> ( FIM )
+                                  |_   _--''¨¨''-
+                                    ¨¨¨
+                    -----------------------------------------
+
+                    - média de alunos
+                        - passo 1
+                            - receba valores
+                        - passo 2
+                            - calcule a média
+                        - passo 3
+                            - imprima resultado
+                        - passo 4
+                            - regra de aprovação
+                        - passo 5
+                            - imprima resultado
+
+                    -----------------------------------------
+
+                                    ---------
+                    ( INÍCIO ) >>> / N1, N2 /
+                                   ---------
+                                        v
+                                        v
+                                 -----------------
+                                 | M = (N1+N2)/2 |
+                                 -----------------
+                                        v
+                                        v
+                                  ---------------
+                                  |      M      |
+                                  |_   _--''¨¨''-
+                                    ¨¨¨
+                                        v
+                                        v
+                                        /\
+                                       /  \
+                ----------------      /    \      ----------------
+                |   APROVADO   | <<< / M>=7 \ >>> |  REPROVADO   |
+                |_   _--''¨¨¨''-     \      /     |_   _--''¨¨¨''-
+                  ¨¨¨                 \    /        ¨¨¨
+                                       \  /
+                                        \/
+                         SIM            v            NÃO
+                                        v
+                                     ( FIM )
+ 
+                   -----------------------------------------
+
+
+------------------------------------------------------------------
+
+4   Estudos de caso
+===================
+
+
+    - Caso conceitual - perdido
+    ---------------------------
+
+    - pesoa perdida floresta
+    - pensamento computacional
+        - maximizar sobrevivência
+
+    - identificar
+        - mecanismos para maxizar sobrevivência
+        - recursos comuns disponíveis
+        - detalhes mais importantes neste cenário
+
+    - sobrevivência - decomposição do problema original
+        - água
+            - chuva
+            - nascente
+                - fogo
+                - mapa
+        - comida
+            - coletar
+                - mapa
+            - caçar
+                - fogo
+                - mapa
+        - abrigo
+            - localização
+                - mapa
+            - proteção
+                - fogo
+                - lança
+            - quente/seco
+                - fogo
+
+    - repetição na decomposição
+        - determina padrão
+            - fogo
+    - dado peculiar
+        - mapa
+            - criado por abstração / observação
+
+    - foco
+        - aspectos principais
+        - não necessita detalhamento
+
+    - instruções passo a passo para
+        - cozinhar
+            - pegar peixe
+            - pegar água
+            - fazer fogo
+            - ferver água
+            - limpar peixe
+            - cozinhar peixe ou assar filé
+            - servir / comer
+
+    - atividade paralelas / concomitantes
+        - podem ser realizadas ao mesmo tempo
+        - não dependem uma da outra estarem realizadas
+            - pegar peixe / pegar água
+            - ferver água / limpar peixe
+
+    - atividades sequenciais / oredenadas
+        - próxima depende da realização da anterior
+        - só podem ser realizadas em sequência
+            - pegar água
+                - fazer fogo
+                    - ferver água
+                        - cozinhar / assar peixe
+            - pegar peixe
+                - limpar peixe
+                    - fazer fogo
+                        - ferver água
+                            - cozinha / assar peixe
+
+
+    - Caso aplicado - soma de intervalo
+    -----------------------------------
+
+    - sequência de númenros entre 1 e 200
+    - realizar a soma entre este intervalo
+        - 1+2
+        - 1+3
+        - 1+4...
+
+    - solução eficiente
+        - dado o maior númenro e o menor número
+            - decrementar o maior
+            - incrementar o menor
+
+            - somando o maior com o menor
+                - 200+1                                |
+                - 199+2                                | decomposição
+                - 198+3                                |
+
+            - estabelece um padrão
+                - 200+1 = 201                          |
+                - 199+2 = 201                          | padrão
+                - 198+3 = 201                          |
+                - valor da soma se repete
+                    - constante
+
+            - expressar de forma generalista 
+                - quantas vezes padrão repete          |
+                    - dois números a cada soma         |
+                        - então: 200 / 2 = 100         |
+            - resultado                                | abstração
+                - padrão se repete 100 vezes           |
+                - obter soma do intervalo              |  
+                    - padrão x repetição               |
+                    - 201 x 100 = 20.100               |
+
+            - expressar em variáveis
+                - tornar o específico em generalista
+                - solucionar problemas similares
+                    - soma entre os númenros x e y
+                        - [x,y] -> intervalo fechado
+                        - x+y = resultado parcial
+                    - a cada iteração
+                        - incrementar x
+                        - decrementar y
+                            - (x+1)+(y-1) = resultado parcial
+
+                - poderia criar um for
+                    - estrutura de repetição
+
+                - estabelece
+                    - resultado parcial = padrão
+
+                - quantidade de repetições
+                    - maior númenro dividido por 2
+                        - cada iteração utiliza dois números
+                        - y/2 = total
+                        - 200/2 = 100
+
+                - resultado final
+                    - total - quantidade de repetições
+                    - resultado parcial - padrão
+                    - total x resultado parcial = resultado final
+                    - 100x201 = 20.100
+
+            - transforma em uma sequência lógica de execução
+                - 1. recebe valores (x,y)              |
+                - 2. resolva:                          |
+                     y/2 = total                       |
+                - 3. resolva:                          | algoritmo
+                     x+y = resultado_parcial           |
+                - 4. ache total                        |
+                     Final = total x resultado_parcial |
+                - 5. imprima resultado                 |
+
+
+    - Caso aplicado - adivinhe número
+    ---------------------------------
+
+    - identificar númenro dentro de um intervalo
+    - respostas
+        - sim
+        - não
+    - não tem limite de tentativas
+    - estabelecer se é maior ou menor a tal númenro
+        - semelhante a uma busca binária
+            - mais eficiente que uma busca por varredura
+
+    - método da busca - algoritmo
+        1. ordenar o vetor
+            - intervalo de tanto a tanto
+        2. módulo L/2 (comprimento / 2)
+            - encontra o valor médio
+                - se L for ímpar
+                    - númenro quebrado (decimal)
+                - se L for par
+                    - número inteiro
+        3. acessar estrutura
+            - na posição encontrada por L/2 (móduo L/2)
+        4. comparar valores
+            - da posição L/2 com valor alvo
+        5. repetir até encontrar númenro
+            - é o número tal?
+        6. imprimir resultado (sucesso)
+            - o número é ...
+
+
+    - aprimorar habilidade pensamento computacional
+        - internalizar
+        - permitir explicar o raciocínio
+        - pensar sobre o problema
+        - o que poderia ser melhorado
+        - o que poderia ser diferente
+    
+------------------------------------------------------------------      

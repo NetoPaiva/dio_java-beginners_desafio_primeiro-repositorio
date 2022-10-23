@@ -1,0 +1,1015 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+02_1_introdução_programação_pensamento-computacional
+====================================================
+
+    02_1_1_pensamento_computacional
+    02_1_2_intro_logica_programacao
+    02_1_3_algoritmo_fundamentos
+    02_1_4_linguagens_progrmacao
+    02_1_5_programacao_primeiro-contato
+
+------------------------------------------------------------------
+
+02_1_3_algoritmo_fundamentos
+===============================
+
+    Juliana Mascarenhas
+        - Tech Education Specialist / Cientista Dados
+        - Java / Python
+        - @in/juliana-mascarenhas-ds/
+        - github/julianazanelatto
+
+------------------------------------------------------------------
+
+    1   Tipologia e variáveis
+    2   Instruções primitivas
+    3   Estruturas condicionais e operadores
+    4   Estruturas de repetição
+    5   Vetores e matrizes
+    6   O que são funções
+    7   Instruções de entrada / saída
+
+------------------------------------------------------------------
+
+    - objetivo
+        - compreender o que é algoritmo
+        - conhecer conceitos básicos
+            - variáveis
+            - tipos de dados
+            - instruções
+            - condições
+        - todos elemento para construir algoritmos
+
+
+------------------------------------------------------------------
+
+1   Tipologia e variáveis
+==========================
+
+    - Qual a função do computador?
+        - processar informação fornecida
+
+        - tipos de informação (por conteúdo)
+            - dados puros
+                - tratados / processados
+                - objetos de manipulação e processamento
+            - instruções
+                - são operações que irão processar os dados
+                - normativas / diretivas
+                - executar determinadas ações
+                    - processar dados
+
+    - tipos de dados
+        - numéricos
+        - caracteres
+        - lógicos
+
+        - tipo numérico
+
+            - inteiros
+                - todos os números inteiros
+                - positivos ou negativos
+                - não possuem casas decimais
+                - 0, 1, 5, 50, 60, 800, -5, -50, ...
+
+            - reais
+                - todos que compoẽm o espectro numérico
+                - positivos ou negativos
+                - possuem casas decimais
+                - 5.95, 9.32, -8.8, -0.5321, ...
+
+        - tipo caractere 
+            - tudo aquilo que não representa como númenro
+            - não é int e não é flot
+            - o número ode ser um caracter (tratado como informação)
+            - representados entre aspas duplas "A"
+            - tem limite de tamanho
+            - cada caracter é convertido para valor binário (0 e 1)
+            - se transforma em instrução
+            - string
+                - sequência de caracteres
+
+        - tipo lógico
+            - lógica booleana
+                - verdadeiro    (1 / .Verdadeiro / .V / .S)
+                - falso         (0 / . Falso     / .F / .N)
+
+    - utilização dos dados dentro do programa
+        - por meio de variáveis
+
+    - variáveis
+        - estrutura que recebe um tipo de dado
+        - não tem certeza de seu valor
+            - tipo de estrutura mutável
+            - pode variar dentro do seu valor
+            - é inconstante
+                - pode ser sobreescrita
+                - pode receber mais de um valor
+                - pode modificar seu conteúdo
+            - é instável
+            - é incerta
+            - recebe valor
+                - não sabe qual o valor do dado
+                - mas sabe o tipo do dado
+        - pode assumir qualquer um dos valores
+            - de determinado conjunto de valores
+                - a-b=d
+                    - d recebe a subtração de a e b
+                - a+b=c
+                    - c recebe a soma de a e b
+            - sabe qual o ipo
+            - não sabe o valor (pode variar)
+
+        - está restrita ao tipo de dado
+            - lógico
+            - caracter
+            - numérico
+
+        - comom se fosse
+            - uma caixa
+            - dentro de um armário
+            - que identifica
+                - um conteúdo
+                - e o tipo de dado
+
+        - nomear variáveis
+            - seguir boas práticas / regras
+            - dar sentido à variável
+                - um ou mais caracteres
+                - primeiro caracter deve ser letra e não número
+                - sem espaços em branco
+                - vetado uso de palavras reservadas
+                    - termos próprios da linguagem de programação
+            - exemplos
+                - x2
+                - Nome_usuario
+                - telefone
+                - user12
+                -z4
+
+            - funções das variáveis
+                - ação
+                    - modifica estado do algoritmo
+                - controle
+                    - vigiada / controlada 
+                        - estrutura do algoritmo
+                        - dentro de equação
+
+            - variável pode definir uma constante
+                - constante
+                    - tudo aquilo que é fixo / estável
+                        - invariável
+                        - inalterável
+                        - não muda
+                    - exemplo:
+                        - pi = 3,14
+                        - phi = 1,618
+                        - resulta = recebido * 0.10
+                            - resulta é variável
+                            - recebido é variável
+                            - 0.10 é constante
+
+------------------------------------------------------------------
+
+2    Instruções primitivas
+==========================
+
+    - Intruções
+        - determinam as ações que serão executadas sobre os dados
+
+    - Geralmente, cálculos matemáticos
+        - para isso, usa operadores
+        - os inputs são
+            - variáveis
+            - constantes
+
+        - os tipos de operadores são (pg 258)
+
+            - binário
+                - exponenciação (^)
+                    - inteiro ou real
+                - divisão (/)
+                    - real
+                - divisão (div)
+                    - inteiro
+                - multiplicação (*)
+                    - inteiro ou real
+                - adição (+)
+                    - inteiro ou real
+                - subtração (-)
+                    - inteiro ou real
+
+            - unário
+                - positivo (+)
+                    - manutenção de sinal
+                - negativo (-)
+                    - inversão de sinal
+
+        - exemplo
+            - cálculao da área da circunferência
+                - area = pi*raio²
+                    - constante ao quadrado
+                        - relacionada a variável raio
+                    - constante pi
+                    - variável area
+
+
+    - Instruções primitivas
+
+        ------------------------------------------------
+        - Instruções
+          são linguagens de palavras-chave (vocabulário)
+          de determinada programação
+          com finalidade de comandar computador
+          para tratar dados
+        -------------------------------------------------
+
+        - linguagens (sintáxes destintas)
+            - janela
+            - window
+            - ventana
+                - notação particular
+                - está relacionada aos operações
+
+        - outros conceitos
+            - entrada          -|
+            - processamento     |- de dados
+            - saída            -|
+                - dados são importados de
+                    - arquivos
+                    - diretórios
+                    - mídias
+                - levados ao ambiente computacional
+                - para serem processados
+                - e depois, impressos de alguma maneira
+                    - em tela
+                    - em dispositivos de saída
+
+        - exemplo (média escolar)
+            - algoritmo estruturado
+
+            ------------------------------------------------------
+            - início programa
+                nota1 = 5
+                nota2 = 8
+                resultado = 0
+                //!-- está zero apenas para iniciar a varável --//
+
+                resultado = (nota1 + nota2)/2
+
+                escreva resultado
+
+            - fim programa
+
+            - saída:
+                        6.5
+            -------------------------------------------------------
+
+            - vaiáveis
+                - nota1
+                - nota2
+                - resultado
+
+            - constante
+                - /2
+
+            - dados entrada / saída
+                - 5
+                - 8
+                - 6.5
+
+            - tudo dentro de
+                - estrutura sequencial
+                    - há ordenação
+                    - cada ação acontece após a outra
+
+            - para verificar se foi aprovado ou não
+                - utilizar
+                    - estruturas condicionais e operadores
+
+
+------------------------------------------------------------------
+
+3   Estruturas condicionais e operadores
+========================================
+
+    - Estrutura condicional
+        - dado um estado determinado
+        - existe uma condição para que aconteça
+
+        - condição
+            - um determinado estado
+        - condicional
+            - expressa condição / suposição
+            - contém / implica em suposição / hipótese
+
+        - há uma condição
+            - que se satisfeita
+                - executa determinada instrução
+ 
+               ----------------------------------
+                condição -->>>-- operação
+                   |        |
+                   |    satisfeita  
+                   |
+                   |-- inverdade -->>>-- exceção
+               ----------------------------------
+
+        - condição satisfeita - acarreta na operação
+                   inverdade  - acarreta na exceção
+
+
+        - Estrutura condicional simples
+
+            - apenas verifica se a condição foi satisfeita
+
+                    ----------------------------------------
+                    - condição -->>>-- operação
+                    ----------------------------------------
+                    Se (<condição>) então
+                        <instrução para condição verdadeira>
+                    fim_se
+                    ----------------------------------------
+
+            - algoritmo
+            ------------------------
+                Início programa
+
+                    A = 0
+                    B = 0
+                    X = 0
+
+                    leia A
+                    leia B
+
+                    X = A + B
+
+                    se (X > 10)
+                       escreva X
+                    Fim se
+
+                Fim programa
+            ------------------------
+
+
+####################################################################
+#                                                                  #
+#            ------------------------------------------            #
+#            estrutura condicional composta / encadeada            #
+#            ------------------------------------------            #
+#            este ponto não ficou bem explicado na áula            #
+#            ------------------------------------------            #
+#                                                                  #
+####################################################################
+
+
+        - Estrutura condicional composta
+
+            - se a condição não foi satisfeita
+                - joga para exceção
+
+                    ----------------------------------------
+                    - condição -->>>-- operação
+                         |
+                       exceção
+                    ----------------------------------------
+                    Se (<condição>) então
+                        <instrução para condição verdadeira>
+                    senão
+                        <instrução para condição falsa>
+                    fim_se
+                    ----------------------------------------
+
+            - algoritmo
+            ------------------------
+                Início programa
+
+                    A = 0
+                    B = 0
+                    X = 0
+                    R = 0
+
+                    leia A
+                    leia B
+
+                    X = A + B
+
+                    R = x >= 10
+
+                    se (X >= 10)        |
+                       escreva R        |
+                    Senão               |- dúvida ???
+                       R = 0            |
+                       escreva X        |
+                    Fim se              
+
+                Fim programa
+            ------------------------
+
+
+        - Estrutura condicional encadeada
+
+            - se / senão - um dentro do outro
+                - sucessão de estruturas condicionais
+                    - se satisfeita > acarreta operação
+                    - senão         > joga para exceção
+
+                    ----------------------------------------
+                        - condição -->>>-- operação
+                             |
+                          condição -->>>-- operação
+                             |
+                           exceção
+                    ----------------------------------------
+                    Se (<condição>) então
+                        <instrução para condição verdadeira>
+                    Senão,
+                    Se (<condição>) então
+                        <instrução para condição verdadeira>
+                    Senão
+                        <instrução para condição verdadeira>
+                    fim_se
+                    ----------------------------------------
+
+            - algoritmo
+            ------------------------
+                Início programa
+
+                    A = 0
+                    B = 0
+                    X = 0
+                    R = 0
+
+                    leia A
+                    leia B
+
+                    X = A + B
+
+                    R = x >= 10
+
+                    se (X >= 10)        |
+                       escreva R        |
+                    Senão               |
+                    se (X <= 10)        |
+                       escreva R        |- dúvida ???
+                    Senão               |
+                       R = 0            |
+                       escreva X        |
+                    Fim se              |
+
+                Fim programa
+            ------------------------
+
+
+######################################################################
+#                                                                    #
+#             ------------------------------------------             #
+#             estrutura condicional composta / encadeada             #
+#             ------------------------------------------             #
+#             este ponto não ficou bem explicado na áula             #
+#             ------------------------------------------             #
+#                                                                    #
+######################################################################
+
+
+
+        - Ordenadores Relacionais
+
+            - ajudam a definir as estruturas condicionais
+                - comparam valores
+                - verifica afirmação
+                    - se verdadeira >>> executa ação
+                    - se falsa      >>> joga para exceção
+
+                    =       igual a
+                    <>      diferente de
+                    >       maior que
+                    <       menor que
+                    >=      maior ou igual a
+                    <=      menor ou igual a
+
+
+        - Operadores lógicos
+
+            - origem na algebra booleana
+
+                - and / e   - interseção
+                - or  / ou  - união
+                - not / não - negação / inversão do resultado
+
+
+            - Utilização destes tipos de dados
+                - quando precisa de resposta simplificada
+                    - verdadeiro
+                    - falso
+
+            - Substituição destes tipos de dados
+                - encadeamento de condições
+
+
+        - Operador lógico AND
+        ---------------------
+
+            - interseção de dois dados
+
+            - verifica se as duas entradas são verdadeiras
+                - se uma for falso, resultado será falso
+                - se duas forem falsas, resultado será falso
+
+            - Condição verdadeira
+                - todas devem ser verdadeiras
+            - Condição falsa
+                - uma ou mais falsas, resultado falso
+
+                ------------------------------------
+                se (gramatica .e. conversacao) então
+                    escreva "aprovado"
+                senão
+                    escreva "reprovado"
+                ------------------------------------
+
+
+        - Operador lógico OR
+        --------------------
+
+            - união de dois dados
+
+            - verifica se uma das duas entradas são verdadeiras
+                - se as duas forem falsas, resultado falso
+                - se uma ou duas verdadeiras, resultado verdadeiro
+
+                ------------------------------------
+                se (choveu .ou. grama_molhada) então
+                    escreva "PLantas regada"
+                senão
+                    escreva "Regrar plantas"
+                ------------------------------------
+
+        - Operador lógico NOT
+        ---------------------
+
+            - operador de negação
+                - inversão do resultado
+                - separação dos dados
+
+            - inverte o valor do dado
+                - se for verdadeiro, ficará falso
+                - se for falso, ficará verdadeiro
+
+                ------------------------------------
+                    se (.não. B) então
+                        escreva "A"
+                    senão
+                        escreva "B"
+                ------------------------------------
+
+------------------------------------------------------------------
+
+4   Estruturas de repetição [ LOOP ]
+====================================
+
+[ slide 297]
+
+    ---------------------------------------------------------------
+    - repetir o mesmo processamento até certa condição
+
+    - repetem uma série de operações semelhantes
+      executadas para todos elementos de uma lista/tabela de dados
+
+            Estruturas de Repetição - IC-Unicamp
+            https://www.ic.unicamp.br
+    ---------------------------------------------------------------
+
+        - vantagem de repetir intrução
+            - reduz
+                - erro
+                - linhas de código
+            - facilita compreensão
+
+       - uma estrutura de repetição
+             irá executar um determinado trecho do programa
+             a partir de certos parâmetros pré-estabelecidos
+             até encontrar a condição de parada
+                - atingir númenro de repetições pré-fixada
+                - ou condição a ser satisfeita
+
+        - sinônimos de estruturas de repetição
+            - Laços
+            - Controle de fluxo
+            - Malhas de repetição
+            - Repetição
+            - Loop
+
+        - tipos de estruturas de repetição
+
+            - WHILE (ENQUANTO)
+                enquanto <condição> faça
+
+            - REPEAT (REPITA)
+                repita <condição> até
+
+            - FOR (PARA)
+                para <condição> de <condição> até <condição>faça
+
+
+        ------------------
+        - WHILE (ENQUANTO)
+        ------------------
+
+            - os passos dentro deste bloco do programa
+              são repetidos ENQUANTO a expressão boolena
+              (VERDADEIRO ou FALSO) resultar VERDADEIRO.
+
+            - o teste lógico é executado no início da instrução
+
+                ----------------------------------------
+                ENQUANTO    <expressão boobleana>   FAÇA
+                    <instruções a serem executadas>
+                    ENQUANTO <expressão booleana>
+                    resultar em VERDADEIRO
+                fim_ENQUANTO
+                ----------------------------------------
+
+            - também chamada de LOOP PRÉ-TESTADO
+                - expressão booleana é verificada
+                  antes da primeira execução.
+                - se já resultar FALSO
+                  as operações não serão executadas.
+
+
+            - exemplo: cortar grama
+               
+                    - enquanto a grama estiver alta
+                        - aparar a grama
+                    - continua no loop até
+                    - quando a grama não estiver alta
+                        - encerrar programa
+
+                ---------------------------------------
+
+                Enquanto                   | númenro
+                    <houverGrama>  ---->  | indefinido 
+                Cortar_grama               | repetições
+
+                ---------------------------------------
+
+                Enquanto
+                    teste lógico           | apara /
+                        <início>  ------>  | analisa 
+                número de repetições       | a grama
+                        <indefinidas>
+                fim
+
+                ---------------------------------------
+
+                - algoritmo
+                    --------------------------------
+                    grama = Falso
+
+                    Enquanto (grama == falso) faça
+
+                        <instrução de cortar grama>
+                        <atualizar grama>
+
+                    fim_enquanto
+                    --------------------------------
+
+                - explicação:
+
+                    - grama = falso
+                        - atribui a variável "grama"
+                          o valor "falso"
+
+                    - grama == falso
+                        - compara se "grama"
+                          corresponde a "falso"
+                        - se não falso, repete instrução
+
+                    - a cada iteração (execução da repetição)
+                        - compara e atualiza "grama"
+
+                    - fim_enquanto
+                        - quando comparar "grama"
+                          e for falso
+
+
+        ------------------
+        - REPEAT (REPITA)
+        ------------------
+
+            - LOOP PÓS-TESTADO
+
+            - teste lógico no final
+            - número de repetições indefinidas
+
+                - o teste lógico é executado no final da instrução,
+                  até encontrar a resultado VERDADEIRO.
+                - a instrução será executada
+                    - ao menos uma vez ou
+                    - enquanto resultar FALSO e
+                    - quando resultar VERDADEIRO
+                    - encerra instrução, sai do LOOP.
+
+                - testa ao contrário do ENQUANTO
+                    ------------------------------------------
+                    - ENQUANTO >>>  procura por >>> FALSO
+                    - REPITA   >>>  procura por >>> VERDADEIRO
+                    ------------------------------------------
+                    
+                    - evita escrever duas vezes a leitura de dados
+                      como na Estrutura ENQUANTO
+                    - torna o código mais limpo/simples
+
+                        ---------------------------------
+                        REPITA
+                            <instrução>
+                        ATÉ
+                            <expressão boolena> retornar
+                        VERDADEIRO
+                        --------------------------------
+
+                - exemplo:
+                    - procurar algo dentro de uma estrutura
+                        - percorrer toda estrutura até encontrar
+                            - encontrou = não
+                            - repita busca
+                            - encontrou = sim
+                                - fim do programa
+
+        ------------
+        - FOR (PARA)
+        ------------
+
+            - teste lógico é realizado no início
+            - número de repetições definidas
+
+            - pode ser usado com outras Estruturas de Repetição
+
+            - Quantidade de repetição pré-definida
+            - precisa de um contador
+                - uma variável com intervalo de valor
+                    - contará quantas iterações executou
+                - até atingir valor final
+
+            - algoritmo
+                -----------------------------------
+                PARA <variável contadora>
+                DE <valor inicial>
+                ATÉ <valor final>
+                    [PASSO <valor de incremento>]
+                FAÇA <instruções a serem executadas
+                     repetidas vezes>
+                ATÉ <variável controladora>
+                    <atingir valor final>
+                FIM_PARA
+                -----------------------------------
+
+                - VARIÁVEL CONTADORA
+                    - inicia implicitamente
+                      ao informar o VALOR INICIAL
+
+                - VALOR INCIAL 
+                    - início do intervalo a ser repetido
+
+                - VALOR FINAL
+                    - final do intervalo a ser repetido
+
+                - FAÇA
+                    - a cada iteração (execução)
+                      o valor da VARIÁVEL CONTROLADORA
+                      é incrementado conforme o valor do PASSO
+
+                - PASSO
+                    - é opcional
+                    - define fator do incremento
+                        - se de
+                            - 1 em 1
+                            - 2 em 2
+                            - 5 em 5
+                    - quatidades de vezes executadas
+
+                - ATÉ
+                    - executa condição
+                      enquanto valor da VARIÁVEL CONTROLADORA
+                      não atingir o VALOR FINAL
+
+
+                - algoritmo
+
+                        ----------------------------------
+                        somatorio = 0
+
+                        para início = 1 até 10
+
+                            somatorio = somatorio + inicio
+                            escreva somatorio
+
+                        fim_para
+                        ----------------------------------
+
+        - é possível mesclar 
+            - Condicionais
+            - Repetições
+        - conforme necessidade do código
+
+
+------------------------------------------------------------------
+
+5   Vetores e matrizes [ ARRAYS ]
+=================================
+
+        - Estruturas de dados muito simples
+        - auxiliam quando se tem muitas vriáveis do mesmo tipo
+        - são acessadas por índices
+            - posições determinadas dentro da estrutura de dados
+        - é um container
+
+        - VETOR
+            - array uni-dimensional
+            - armazena diversas variáveis do mesmo tipo
+            - com tantas posições (índices) forem necessárias
+              para armazenar todos os dados deste mesmo tipo
+            - tamanho pré-fixado
+
+
+        - MATRIZ
+            - array multi-dimensional
+            - é um vetor de vetores
+                - uma coleção de variáveis / vetores
+            - em cada índice do vetor
+                - armazena um item
+                    - um outro vetor
+                - o índice é composto de informação
+                    - da linha e
+                    - da coluna
+            - é uma tabela
+                - organizada em
+                    - linhas
+                        m = númenro de linhas (horizontal)
+                    - colunas
+                        n = númenro de colunas (vertical)
+
+        - exemplo:
+
+            - vetor de Nomes
+
+                índice      nome
+                ------      ------
+                0           João
+                1           Pedro
+                2           José
+                50          Noel
+
+            - matriz de Notas
+
+                índice      0       1       2       3
+                ------      ---     ---     ---     ---
+                0           9.5     10      8       7.5
+                1           10      9       9       5.5
+                2           9       8.5     9.5     7
+                50          10      9.5     9.5     10
+
+
+            - arrays podem ser associadas a repetição PARA
+              quando algoritmo precisa de muitas variáveis
+              do mesmo tipo
+
+            - economiza
+                - linhas de código
+                - memória do computador
+
+
+        - Outras Estruturas de dados
+            cada estrutura
+                - adequada a necessidade do programa.
+
+
+------------------------------------------------------------------
+
+6   O que são funções   [ FUNCTION ]
+====================================
+
+    - baseada na matemática
+        - similar ao conceito de função na matemática
+            - a partir do argumento que recebe
+            - retorna um determinado valor
+
+    - Função também é conhecida como
+        - Bloco
+        - Subprograma
+        - Subalgoritmo
+        - Sub-rotina
+        - Método
+
+
+    - São blocos de instruções
+      que realizam tarefas específicas
+        - decomposição do algoritmo
+        - modularização do problema
+    - Estes blocos de instruções são
+        identificados ṕor
+            - NOMES
+            - PARÂMENTROS
+                - que definem a ASSINATURA DA FUNÇÃO
+
+    - Estão atrelados a FUNÇÂO
+        - definição         (objetivo)
+        - nome              (id)
+        - invocação         (o que pede)
+        - variável local    (o tipo de dado que usará)
+            - as varíáveis armazenam os dados
+              apenas enquanto a função está rodando
+            - ao encerrar a função, os dados são destruídos
+
+
+        -------------------------------------------------
+        dados       >>>     função      >>>     resultado
+        -------------------------------------------------
+
+            - os dados são enviados para função
+            - a função retorna o resultado esperado
+
+    - A função altera o estado do programa
+
+    - Benefícios
+        - código mais claro / conciso
+        - reutilização de instruções
+        - programação em módulos
+
+    - Se a função não retornar um resultado
+        - é chamada de  PROCEDIMENTO
+
+    - exemplo - média escolar
+
+            -----------------------------------------
+            funcao mediaescolar(nota1,nota2)
+
+                resultado = 0
+                resultado = (Nota1 + Nota2)/2
+                retorne resultado
+
+            fim funcao
+            ------------------------------------------
+
+            aluno1 = mediaescolar(nota11,nota21)
+            aluno2 = mediaescolar(nota12,nota22)
+            aluno13 = mediaescolar(nota13,nota23)
+            -----------------------------------------
+
+            - dada a função média escolar
+            - inicia variável com valor igual a 0
+            - o resultado será a soma de 2 notas dividido por 2
+            - e retorna o resultado
+            - encerra a função
+
+            - para não ter que escrever o código
+              que irá calcular a média de cada aluno
+
+            - aplica a função do cálculo para cada aluno
+                - na variável aluno1 
+                    - atriui a função mediaescolar
+                      com notas do aluno1
+                - na variável aluno2 
+                    - atribui a função mediaescolar
+                      com notas do aluno2
+                - na variável aluno3 
+                    - atribui a função mediaescolar
+                      com notas do aluno3
+
+
+------------------------------------------------------------------
+
+7   Instruções de entrada / saída
+=================================
+
+
+
+
+
+------------------------------------------------------------------
+

@@ -1,0 +1,66 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+02_1_introdução_programação_pensamento-computacional
+====================================================
+
+    02_1_1_pensamento_computacional
+    02_1_2_intro_logica_programacao
+    02_1_3_algoritmo_fundamentos
+    02_1_4_linguagens_progrmacao
+    02_1_5_programacao_primeiro-contato
+
+------------------------------------------------------------------
+
+02_1_5_programacao_primeiro-contato
+===================================
+
+    Juliana Mascarenhas
+        - Tech Education Specialist / Cientista Dados
+        - Java / Python
+        - @in/juliana-mascarenhas-ds/
+        - github/julianazanelatto
+
+------------------------------------------------------------------
+    1   O que é lógica
+    2   Técnicas de lógica de programação
+------------------------------------------------------------------
+
+1   O que é lógica
+==================
+
+
+
+------------------------------------------------------------------
+
+2   Técnicas de lógica de programação
+=====================================
+
+
+
+------------------------------------------------------------------
+
+
