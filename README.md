@@ -14,7 +14,7 @@
 ### Proposta deste desafio
 
   - Criar primeiro repositório
-  - Utilizar as ferramentaas Git / GitHub
+  - Utilizar as ferramentas Git / GitHub
   - Compartilhar conhecimento
 
 ---
