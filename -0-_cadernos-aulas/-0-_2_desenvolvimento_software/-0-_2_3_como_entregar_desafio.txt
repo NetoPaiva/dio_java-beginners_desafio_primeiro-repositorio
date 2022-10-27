@@ -1,0 +1,94 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+02_desenvolvimento_software
+===========================
+
+    02_1_introdução_programação_pensamento-computacional
+    02_2_introdução_git_github
+    02_3_como_entregar_desafio_projeto
+    02_4_criar_primeiro_repositório_github
+
+------------------------------------------------------------------
+
+02_3_como_entregar_desafio_projeto
+==================================
+
+    Venilton Falvo JR
+        - Tech Lead - DIO
+          in@falvojr
+          github/falvojr
+
+------------------------------------------------------------------
+    1   Dinâmica Desafio Projeto 
+    2   Interface do Desafio Projeto 
+    3   Entrega do Desafio
+    4   Metodologia Projetos-Problemas
+------------------------------------------------------------------
+
+1   Dinâmica Desafio Projeto
+============================
+
+    - Conteúdos / módulos
+        - Cursos
+        - Desafios
+            - Códigos
+            - Projetos
+
+
+2   Interface do Desafio Projeto
+================================
+
+    - Interface
+
+        - Conteúdos
+            - Conjunto de vídeos
+            - Descrição do desafio
+                - o que precisa saber
+                    - sobre o desafio
+                    - para entregar desafio
+                        - pelo GitHub
+
+        - Informações
+            - sobre o desafio
+            - skill a desenvolver
+
+
+3   Entrega do Desafio
+======================
+
+    - Todo desafio é entregue pelo GitHub
+        - URL do repositório criado para o desafio
+        - descrição do desafio
+        - maiores detalhes no README
+    - Entregar / atualizar
+        - entregar
+            - quando for enviar pela primeira vez
+        - atualizar
+            - envios posteriores
+
+
+4   Metodologia Projetos-Problemas
+==================================
+
+    - Importância dos projetos para criar portfolio
+
+
+
+
+
+
+-----------------------------------------------------------------------

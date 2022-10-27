@@ -1008,8 +1008,129 @@
 5   Primeiros comandos com Git
 ==============================
 
-    Iniciar e commitar
-    ==================
+        -------------------------------------------
+            git init      Iniciar Git
+            git add       Iniciar versionamento
+            git commit    Criar commit
+        -------------------------------------------
+
+    - comandos via terminal
+    -----------------------
+
+        - sempre inicia com
+            - comando genérico
+
+        - seguido por
+            - comando específico
+
+         --------------------------------------------
+               git   init
+               ---   ----
+                |     |
+                |     |----> comando específico
+                |
+                |----------> comando genérico
+         --------------------------------------------
+
+        - git init
+            - iniciar repositório do Git
+
+        - git add
+            - adicionar arquivos/pastas da versão
+
+        - git commit
+            - criar o commit
+
+
+    - Criando repositório
+    ---------------------
+
+        - Workspace
+            - diretóro padrão no computador
+                - c:
+                - /home
+
+        - Criar o diretório
+            - Abrir terminal (git bash)
+            - onde será criado o diretório padrão
+            - comandos
+                - ls
+                    - visualizar conteúdo do diretório corrente
+                - mkdir workspace
+                    - criar o diretório padrão para os repositórios
+                - cd workspace
+                    - entrar no diretório padrão
+                - ls
+                    - visualizar conteúdo do diretório padrão
+                - clear
+                    - limpar a tela do terminal
+                - mkdir nome-novo-repositorio
+                    - criar pasta para novo diretório
+                - ls
+                    - visualizar conteúdo
+                - cd nome-novo-diretorio
+                    - entrar no novo diretorio
+                - clear
+                    - limpar tela do terminal
+
+
+    - Iniciar Git
+    -------------
+
+        - ainda no terminal
+        - dentro do novo diretório
+            - comandos
+                - git init
+                    - iniciar o git neste novo diretório
+                        - avisa que
+                            - iniciou repositório vazio
+                                - pasta oculta (.git)
+                                    - pasta gerencial do Git
+                            - dentro do diretório corrente
+                - ls -a
+                    - visualizar arquivos ocultos
+
+        - Se for a primeira vez
+            - configurar usuário/email
+            - comandos
+                - git config --global user.email "digitar-email"
+                    - configura login do Git de forma global
+                        - email
+                - git config --global user.name "digitar-nome"
+                    - configura login do Git de forma global
+                        - usuário
+
+
+    - Arquivos no diretório
+    -----------------------
+
+        - rotina de trabalho (ambiente gráfico)
+            - arquivos / pastas
+                - criar
+                - editar
+
+        - Dicas de Markdown
+            - opção para criação de arquivos de texto
+                - formatação web
+                - mais intuitiva
+
+
+    - Adicionar arquivos/pastas no Git
+    ----------------------------------
+
+        - sempre que for criar/atualizar o conteúdo do repositório
+            - comandos
+                - git add *
+                    - adiciona tudo que está no diretório corrente
+                - git status
+                    - mostra tudo que foi adicionado
+                - git commit -m "descrição da versão"
+                    - cria pacote para enviar
+                    - com a descrição desta versão
+                    - mostra informações deste commit
+                        - início da chave SHA1
+                        - descrição
+                        - arquivos modificados/inseridos
 
 
 -----------------------------------------------------------------------
@@ -1017,8 +1138,238 @@
 6   Ciclo de vida dos arquivos no Git
 =====================================
 
-    Passo a passo no cilco de vida
-    ==============================
+    Tracked / Untracked
+    -------------------
+
+        - Estados dos arquivos nos repositórios
+
+        - Tracked
+        ---------
+            - arquivos rastreados pelo Git
+            - organizados 3 estágios diferentes e cíclicos
+
+
+                - Unmodified
+                ------------
+                    - arquivos não modificados
+                    - se forem editados
+                        - irão para Modified
+                    - se forem removidos
+                        - irão para Untracked
+
+                - Modified
+                ----------
+                    - arquivos modificados
+                    - foram editados
+                    - Git muda automaticamente
+                        - irão para Staged
+
+                - Staged
+                --------
+                    - arquivos que irão para o respositório
+                        - serão "commitados"
+                        - irão para Unmodified
+
+                    - conceito chave do Git
+                        - backstage
+                            - por traz do palco
+                            - estrutura do show
+                            - a espera para entrar no palco
+                        - stage
+                            - o palco
+                            - onde acontece o show
+
+        - Untracked
+        -----------
+            - arquivos não rastreados pelo Git
+            - que serão adicionados
+                - irão para o Staged
+            - ou foram removidos
+                - saíram do Unmodified
+
+
+       ==============================================      =========
+                           Tracked                         Untracked
+       ==============================================      =========
+       ------------        ----------        --------          |
+        Unmodified          Modified          Staged           |
+       ------------        ----------        --------          |
+            |                  |                |         ----------- 
+            |                  |                X <<<<<<-| adicionar |
+            |                  |                |        |  arquivo  |
+            |                  |                |         -----------
+            |                  |                |              | 
+            |                  |           ------------        | 
+            X <<<<<<<<<<<<<<<<<<<<<<<<<<<-|  Commitar  |       | 
+            |                  |          |  arquivos  |       | 
+            |                  |           ------------        |
+       -----------             |                |              |
+      |  editar   |->>>>>>>>>> X                |              |
+      |  arquivo  |            |                |              |
+       -----------             |                |              |
+            |             -----------           |              |
+            |            | adicionar |->>>>>>>> X              |
+            |            |  arquivo  |          |              |
+            |             -----------           |              |
+       -----------                              |              |
+      |  remover  |->>>>>>>>>>>>>>>>>>>>>>>>>>> X->>>>>>>>>>>> X
+      |  arquivo  |                             |               
+       -----------                              |               
+            |                                   |               
+            |                              ------------          
+            X <<<<<<<<<<<<<<<<<<<<<<<<<<<-|  Commitar  |         
+                                          |  arquivos  |         
+                                           ------------
+
+       =============================================================
+  
+
+    - Adicionar arquivo
+    -------------------
+
+        - Untracked >>> Staged
+
+        - Git não sabia da existcência do arquivo
+            - estava Untracked
+
+        - git add
+            - arquivo saiu do Untracked
+            - foi para Staged
+                - área para entrar no Git
+
+    - Editar arquivo
+        - está no Unmodified
+            - sem alteração
+        - ao ser alterado
+        - muda automaticamente para Modified
+            - Git compara SHA1 dos arquivos
+            - SHA1 diferente para mesmo arquivo
+                - indica que arquivo teve modificação
+
+    - Adicionar arquivo modificado
+        - git add
+            - saiu do Modified
+            - foi para Staged
+
+    - Remover arquivo sem ser modificado
+        - deletado do diretório no computador
+            - saiu de Unmodified
+            - foi para Untracked
+???         - registra informação no Staged ????
+
+    - Commit do repositório
+        - como se guardasse uma foto do diretório
+            - um commit do repositório
+        - todas as alterações
+        - serão adicionadas ao repositório
+            - empacota todas as informações
+                - arquivos
+                - autor
+                - data
+                - SHA1
+            - cria descrição da versão
+        - sai do Staged
+        - vai para Unmodified
+
+
+    Ambientes do Repositório
+    ------------------------
+
+        - 2 Ambientes
+        -------------
+
+            - Desenvolvimento
+            - Servidor
+
+
+        - Desenvolvimento
+        -----------------
+
+            - computador
+                - Diretório de trabalho
+                - Staging Area
+                - Repositório local
+
+            - os arquivos circulam entre
+                - diretório de trabalho
+                - Staging Area
+
+            - novas alteraçãos
+                - precisam ser enviadas ao servidor
+
+            - Ao fazer um Commit
+                - move os arquivos
+                    - da Staging Area
+                    - para Unmodified
+                - faz a "foto" do diretório de trabalho
+                - salva no repositório local
+                    - guarda apenas commits
+                - precisa ser enviada para repositório remoto
+
+
+        - Servidor
+        ----------
+
+            - repositório remoto
+                - GitHub
+            - armazena todas as versões que foram enviadas
+                - comando para enviar
+                    - git push
+
+
+    - Rotina de trabalho no Ambiente de Desenvolvimento
+    ---------------------------------------------------
+
+        - git status
+            - monitorar os estados dos arquivos
+                - em que ciclo está
+                    - Untracked
+                    - Tracked
+                        - Unmodified
+                        - Modified
+                        - Staged
+
+        - no caso de mover um arquivo para uma pasta nova
+        - no comando git status aparecerá
+            - que o arquivo foi deletado
+                 - saiu de Unmodified e não está em Staged
+            - que uma pasta foi criada
+                - está em Untracked
+                - precisa adicionar
+            - só após adicionar o arquivo voltará a aparecer no commit
+
+
+    ----------------------------------------------------------------------------
+        
+        $ git status
+
+        No ramo main
+        Your branch is up to date with 'origin/main'.
+
+        Changes not staged for commit:
+        (utilize "git add <arquivo>..." para atualizar o que será submetido)
+        (use "git restore <file>..." to discard changes in working directory)
+        modified:   -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_2_intro_git_github.txt
+
+        Arquivos não monitorados:
+        (utilize "git add <arquivo>..." para incluir o que será submetido)
+        -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_3_como_entregar_desafio.txt
+
+        nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+
+    ----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+    -------------------------------------------------------------------
+        
 
 
 -----------------------------------------------------------------------
