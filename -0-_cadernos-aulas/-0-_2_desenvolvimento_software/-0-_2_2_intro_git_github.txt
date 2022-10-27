@@ -1349,7 +1349,6 @@
     ----------------------------------------------------------------------------
         
     $ git status
-    ------------
 
         No ramo main
         Your branch is up to date with 'origin/main'.
@@ -1368,7 +1367,6 @@
 
 
     $ git add .
-    -----------
 
 
     $ git status
@@ -1432,6 +1430,8 @@
           (use "git push" to publish your local commits)
 
         nothing to commit, working tree clean
+
+
 
     ----------------------------------------------------------------------------
 
