@@ -1278,21 +1278,36 @@
         - 2 Ambientes
         -------------
 
-            - Desenvolvimento
             - Servidor
+            - Desenvolvimento
 
 
-        - Desenvolvimento
-        -----------------
+        - Ambiente do Servidor
+        ----------------------
+
+            - repositório remoto
+                - GitHub
+            - armazena todas as versões que foram enviadas
+                - comando para enviar
+                    - git push
+
+
+        - Ambiente de Desenvolvimento
+        -----------------------------
 
             - computador
-                - Diretório de trabalho
-                - Staging Area
-                - Repositório local
+                - 3 ambientes locais
+                    - Diretório de trabalho
+                    - Staging Area
+                    - Repositório local
 
             - os arquivos circulam entre
                 - diretório de trabalho
                 - Staging Area
+
+            - o repositório local
+                - armazena todos os commits
+                - conecta com repositório remoto
 
             - novas alteraçãos
                 - precisam ser enviadas ao servidor
@@ -1306,22 +1321,28 @@
                     - guarda apenas commits
                 - precisa ser enviada para repositório remoto
 
+            - Comandos para adicionar arquivos a serem enviados ao repositório
+                - git add nome-arquivo
+                - git add *
+                - git add .
+                    - move para Staged
+                        - arquivos que estavam como
+                            - Untracked
+                            - Modified
 
-        - Servidor
-        ----------
-
-            - repositório remoto
-                - GitHub
-            - armazena todas as versões que foram enviadas
-                - comando para enviar
-                    - git push
+            - Comando para enviar arquivos para o repositório
+                - git commit -m "descrição"
+                    - empacota todos os arquivos e a descrição
+                    - move para Unmodified
+                        - arquivos que estavam como
+                            - Staged
 
 
     - Rotina de trabalho no Ambiente de Desenvolvimento
     ---------------------------------------------------
 
         - git status
-            - monitorar os estados dos arquivos
+            - monitora os estados dos arquivos
                 - em que ciclo está
                     - Untracked
                     - Tracked
@@ -1337,113 +1358,145 @@
                 - está em Untracked
                 - precisa adicionar
             - só após adicionar o arquivo voltará a aparecer no commit
+
         - git add .
-            - com este comando
-                - modificações estão porntas para commit
-                - volta a aparecer
+            - modificações estão porntas para commit
+
         - git commit -m "descrição do commit"
             - comando cria o commit com todas as alterações
             - ainda precisa ser enviado ao repositório remoto
 
-
-    ----------------------------------------------------------------------------
-        
-    $ git status
-
-        No ramo main
-        Your branch is up to date with 'origin/main'.
-
-        Changes not staged for commit:
-          (utilize "git add <arquivo>..." para atualizar o que será submetido)
-          (use "git restore <file>..." to discard changes in working directory)
-            modified:   -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-   _2_2_intro_git_github.txt
-
-        Arquivos não monitorados:
-          (utilize "git add <arquivo>..." para incluir o que será submetido)
-            -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_2_mindmap_traked-untracked.txt
-            -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_3_como_entregar_desafio.txt
-
-        nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
-
-
-    $ git add .
-
-
-    $ git status
-
-        No ramo main
-        Your branch is up to date with 'origin/main'.
-
-        Mudanças a serem submetidas:
-          (use "git restore --staged <file>..." to unstage)
-	        modified:   -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_2_intro_git_github.txt
-	        new file:   -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_2_mindmap_traked-untracked.txt
-	        new file:   -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_3_como_entregar_desafio.txt
-
-
-    $ git commit -m "inclusão e edição de arquivos de anotações das aulas -0-_2_2 e -0-_2_3" 
-
-        [main e43bc59] inclusão e edição de arquivos de anotações das aulas -0-_2_2 e -0-_2_3
-         3 files changed, 522 insertions(+), 4 deletions(-)
-         create mode 100644 -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_2_mindmap_traked-untracked.txt
-         create mode 100644 -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_3_como_entregar_desafio.txt
-
-
-     $ git status
-
-        No ramo main
-        Seu ramo está à frente de 'origin/main' por 1 submissão.
-          (use "git push" to publish your local commits)
-
-        Changes not staged for commit:
-          (utilize "git add <arquivo>..." para atualizar o que será submetido)
-          (use "git restore <file>..." to discard changes in working directory)
-	        modified:   -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_2_intro_git_github.txt
-
-        nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
-
-
-    $ git add .
-
-
-    $ git status
-
-        No ramo main
-        Seu ramo está à frente de 'origin/main' por 1 submissão.
-          (use "git push" to publish your local commits)
-
-        Mudanças a serem submetidas:
-          (use "git restore --staged <file>..." to unstage)
-	        modified:   -0-_cadernos-aulas/-0-_2_desenvolvimento_software/-0-_2_2_intro_git_github.txt
-
-
-    $ git commit -m "modificação de arquivos de anotações das aulas -0-_2_2"
-
-        [main 6ac88ce] modificação de arquivos de anotações das aulas -0-_2_2
-         1 file changed, 38 insertions(+), 7 deletions(-)
-
-
-    $ git status
-
-        No ramo main
-        Seu ramo está à frente de 'origin/main' por 2 submissões.
-          (use "git push" to publish your local commits)
-
-        nothing to commit, working tree clean
-
+        - git status
+            - mostra que está tudo atualizado
 
 
     ----------------------------------------------------------------------------
 
-
-
-
-
-
-
-    -------------------------------------------------------------------
+    Comandos no terminal
+    --------------------
         
+    1.  git status
 
+            No ramo main
+            Your branch is up to date with 'origin/main'.
+
+            Changes not staged for commit:
+                (utilize "git add <arquivo>..."
+                para atualizar o que será submetido)
+                (use "git restore <file>..." 
+                to discard changes in working directory)
+
+            modified:
+                diretório/arquivo-existente
+
+            Arquivos não monitorados:
+                (utilize "git add <arquivo>..."
+                para incluir o que será submetido)
+                    diretorio/arquivo-novo-1
+                    diretorio/arquivo-novo-2
+
+            nenhuma modificação adicionada à submissão
+                (utilize "git add" e/ou "git commit -a")
+
+
+    2.  git add .
+
+
+    3.  git status
+
+            No ramo main
+            Your branch is up to date with 'origin/main'.
+
+            Mudanças a serem submetidas:
+            (use "git restore --staged <file>..." to unstage)
+
+            modified:
+                diretório/arquivo-existente
+            new file:
+                diretorio/arquivo-novo-1
+            new file:
+                diretorio/arquivo-novo-2
+
+
+    4.  git commit -m "descrição deste commit" 
+
+            [main e43bc59] descrição deste commit
+
+            3 files changed, 522 insertions(+), 4 deletions(-)
+
+            create mode 100644 diretorio/arquivo-novo-1
+            create mode 100644 diretorio/arquivo-novo-2
+
+
+    5.  git status
+
+            No ramo main
+            Seu ramo está à frente de 'origin/main' por 1 submissão.
+            (use "git push" to publish your local commits)
+
+            Changes not staged for commit:
+                (utilize "git add <arquivo>..."
+                para atualizar o que será submetido)
+                (use "git restore <file>..."
+                to discard changes in working directory)
+
+                modified:
+                    diretório/arquivo-existente
+
+            nenhuma modificação adicionada à submissão
+            (utilize "git add" e/ou "git commit -a")
+
+
+    6.  git add .
+
+
+    7.  git status
+
+            No ramo main
+            Seu ramo está à frente de 'origin/main' por 1 submissão.
+            (use "git push" to publish your local commits)
+
+            Mudanças a serem submetidas:
+                (use "git restore --staged <file>..." to unstage)
+
+            modified:
+                diretório/arquivo-existente
+
+
+    8.  git commit -m "nova descrição atualização 2"
+
+            [main 6ac88ce] nova descrição atualização 2
+            1 file changed, 38 insertions(+), 7 deletions(-)
+
+
+    9.  git status
+
+            No ramo main
+            Seu ramo está à frente de 'origin/main' por 2 submissões.
+            (use "git push" to publish your local commits)
+
+            nothing to commit, working tree clean
+
+
+    10. git push origin main
+
+            Enumerating objects: 21, done.
+            Counting objects: 100% (21/21), done.
+            Delta compression using up to 4 threads
+            Compressing objects: 100% (17/17), done.
+            Writing objects: 100% (17/17), 6.15 KiB | 1.54 MiB/s, done.
+
+            Total 17 (delta 12), reused 0 (delta 0), pack-reused 0
+
+            remote:
+                Resolving deltas:
+                    100% (12/12), completed with 3 local objects.
+
+            To github.com:usuario/repositorio.git
+
+            e73c7c0..0585cb1  main -> main  
+
+    ----------------------------------------------------------------------------
 
 -----------------------------------------------------------------------
 
