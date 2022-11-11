@@ -1,0 +1,705 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+05_java__programacao_orientada_objeto
+=====================================
+
+    05_1_prog_orientada_objeto
+    05_2_collections_java
+    05_3_debugging_java
+    05_4_excecoes_java
+    05_5_java_oop__abstrair_bootcamp
+
+------------------------------------------------------------------
+
+05_5_java_oop__abstrair_bootcamp
+==================================
+
+    Camila Cavalcante
+        Tech Teacher
+        DIO
+
+------------------------------------------------------------------
+    05_5_1_apresenta_desafio-projeto
+    05_5_2_configura_ambiente
+    05_5_3_abstrair_encapsular
+    05_5_4_herança_polimorfismo
+    05_5_5_concluir_classes_domínio
+    05_5_6_interligar_classes_domiínio
+    05_5_7_descrição_desafio
+    05_5_8_link_github
+    05_5_9_informações_desafio
+------------------------------------------------------------------
+
+    Herança e Polimorfismo
+    ======================
+
+        Construir as Classes Bootcamp e Dev 
+
+    1   Atributos de Dev
+    2   Métodos de Dev
+    3   Getter Setter de Dev
+    4   Equals() Hashcode() de Dev
+    5   Atributos de Bootcamp
+    6   Getter Setter de Bootcamp
+    7   Equals() Hashcode() de Bootcamp
+    8   Revisando os conceitos utilizados
+    9   Códigos até este ponto
+    10  Saída do programa até aqui (Run)
+
+------------------------------------------------------------------
+
+1   Atributos de Dev
+====================
+
+    - regras do negócio
+        - dev se inscreve nos conteúdos
+            - cursos
+            - mentorias
+        - conclui conteúdos ao longo do tempo
+
+
+    - Atributos
+    -----------
+        - nome
+            - do tipo String
+
+        - conteúdos inscritos
+            - do tipo Set
+                - um grupo de conteúdos inscritos
+        - conteúdos concluídos
+            - do tipo Set
+                - um grupo de conteúdos concluídos
+
+        - conteúdos inscritos / concluídos
+            - conceito de herança é bem importante
+
+
+    - instanciar os atributos
+    -------------------------
+
+        - nome
+            private String nome;
+
+        - conteúdos inscritos
+            private Set<Conteudo> conteudosInscritos;
+
+        - conteúdos concluídos
+            private Set<Conteudo> conteudosConcluidos;
+
+
+    - criar local na memória para guardar conteúdos
+    -----------------------------------------------
+
+        - utiliza os conceitos de Herança / Polimorfismo
+
+        - usar LinkedHashSet
+            - salvar o conteúdo na ordem de inscrição
+
+    private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
+
+    private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
+        - LinkedHashSet ou ArrayList
+            - lógica
+                - só pode se inscrever uma vez em um Curso / Mentoria
+            - LinkedHashSet
+                - permite adicionar uma única vez
+            - ArrayList
+                - poderia mais de uma vez
+
+
+2   Métodos de Dev
+==================
+
+    - inscrever
+    - progredir
+    - calcularTotalXp
+
+    - método inscrever
+    ------------------
+
+        - quando chamar o método inscreverBootcamp
+        - e passar o parâmentro Bootcamp
+        - dev estará inscrito neste Bootacamp
+            - falta implementar a lógica
+                - dentro das chaves do método
+
+        public void inscreverBootcamp(Bootcamp bootcamp){}
+
+            - public
+                - visibilidade pública
+
+            - void
+                - sem retorno
+
+            - inscreverBootcamp
+                - nome do método
+
+            - (Bootcamp bootcamp)
+                - parâmetro do método
+
+            - {}
+                - abre e fecha método
+
+
+    - método progredir
+    ------------------
+
+        - quando chamar o método progredir
+        - mostrará o progesso de conteúdos do dev
+            - falta implentar a lógica
+
+        public void progredir(){}
+
+            - public
+                - visibilidade pública
+
+            - void
+                - sem retorno
+
+            - progredir
+                - nome do método
+
+            - ()
+                - parâmetro do método vazio
+
+            - {}
+                - abre e fecha método
+
+
+    - método calcularTotalXp
+    ------------------------
+
+        - quando chamar o método calcularTotalXp
+        - mostrará a quantidade total de XP
+        - de acordo com a progreção de conteúdo
+            - falta implementar a lógica
+
+        public double calcularTotalXp(){}
+
+            - public
+                - visibilidade pública
+
+            - double
+                - retorna valor numérico
+
+            - calcularTotalXp
+                - nome do método
+
+            - ()
+                - parâmetro do método vazio
+
+            - {}
+                - abre e fecha método
+
+
+3   Getter Setter
+=================
+
+    - criar (alt + insert)
+    - seleciona os 3 métodos
+    - ok
+
+
+4   Equals() and Hashcode()
+===========================
+
+    - por trabalhar com Set / HashSet
+        - implementar os métodos
+            - equals
+            - hashcode
+
+    - alt + insert
+    - selecionar
+        - Equals() hashCode()
+    - next / next / next / create
+
+    @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Dev dev = (Dev) o;
+            return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+        }
+
+
+
+5   Atributos de Bootcamp
+=========================
+
+    - regras do negócio Bootcamp
+    -------------------
+
+        - nomear e descrever o evento
+
+        - determinar a data de início e fim
+
+        - criar os conteúdos
+            - curso
+            - mentoria
+        
+            - dev ao se inscrever no conteúdo
+                - automaticamente
+                    - estará inscrito em
+                        - conteudosInscritos
+
+            - dev conforme progredir no Bootcamp
+                - automaticamente
+                    - será incluído em
+                        - conteudosConcluidos
+
+        - Bootcamp não tem métodos
+
+
+    - Atributos
+    -----------
+
+        - todos com visibilidade privada
+
+        - nome
+            - do tipo Sitring
+
+        - descrição
+            - do tipo String
+
+        - dataInicio
+            - do tipo LocalDate
+            - do tipo constante (final)
+            - valor atribuído
+                - do momento que é instanciado o objeto Bootcamp
+
+        - dataFim
+            - do tipo LocalDate
+            - do tipo constante (final)
+            - visibilidade privada
+            - valor atribuído
+                - data inicial mais 45 dias
+
+        - conteudos
+            - do tipo Set (grupo)
+            - iniciando LinkedhashSet
+                - precisa ordenar por inscrição de conteúdo
+
+        - devs
+            - do tipo Set (grupo)
+            - iniciando HashSet
+                - não precisa ordenar por inscrição de devs
+
+
+    - código dos atributos ficou assim
+    ----------------------------------
+
+    private String nome;
+    private String descricao;
+    private final LocalDate dataInicial = LocalDate.now();
+    private final LocalDate dataFinal = dataInicial.plusDays(45);
+    private Set<Dev> devsInscritos = new HashSet<>();
+    private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
+
+6   Getter Setter de Bootcamp
+=============================
+
+    - alt + insert
+    - getters setters
+    - selecionar todos os atributos
+    - ok
+
+
+7   Equals() Hashcode() de Bootcamp
+===================================
+
+    - é necessário
+        - por estar usando
+            - HashSet
+            - LinkedHashSet
+        - pra fazer comparações
+
+    - alt + insert
+    - equals() hashcode()
+    - next / next / next / create
+
+
+8   Revisando os conceitos utilizados
+=====================================
+
+    - Polimorfismo
+    --------------
+
+        - iniciou o HashSet
+            - a partir de um Set
+
+        private Set<Dev> devsInscritos = new HashSet<>();
+
+        - o LinkedHashSet
+            - poderia ser uma Collection
+            - mas aqui será um Set
+                - por causa do Polimorfismo
+
+        private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
+
+    - o que já foi criado
+    ---------------------
+
+        - Classes de Domínio
+            - Bootcamp
+            - Dev
+            - Conteudo
+
+        - Classes derivadas
+            - Curso
+            - Mentoria
+
+
+9   Códigos até este ponto
+==========================
+
+
+    código Main.java
+    --------------------------------------------------------
+        import br.com.dio.desafio.dominio.Curso;
+        import br.com.dio.desafio.dominio.Mentoria;
+
+        import java.time.LocalDate;
+
+        public class Main {
+            public static void main(String[] args) {
+
+                Curso curso1 = new Curso();
+                curso1.setTitulo("curso java");
+                curso1.setDescricao("descrição curso java");
+                curso1.setCargaHoraria(8);
+
+                Curso curso2 = new Curso();
+                curso2.setTitulo("curso poo");
+                curso2.setDescricao("descrição curso poo");
+                curso2.setCargaHoraria(6);
+
+                Mentoria mentoria = new Mentoria();
+                mentoria.setTitulo("mentoria Java");
+                mentoria.setDescricao("descrição mentoria java");
+                mentoria.setData(LocalDate.now());
+
+                System.out.println(curso1);
+                System.out.println(curso2);
+                System.out.println(mentoria);
+            }
+
+        }
+    --------------------------------------------------------
+
+
+    código Bootcamp.java
+    --------------------------------------------------------
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+        import java.util.HashSet;
+        import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Set;
+
+        public class Bootcamp {
+            private String nome;
+            private String descricao;
+            private final LocalDate dataInicial = LocalDate.now();
+            private final LocalDate dataFinal = dataInicial.plusDays(45);
+            private Set<Dev> devsInscritos = new HashSet<>();
+            private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+
+            public LocalDate getDataInicial() {
+                return dataInicial;
+            }
+
+            public LocalDate getDataFinal() {
+                return dataFinal;
+            }
+
+            public Set<Dev> getDevsInscritos() {
+                return devsInscritos;
+            }
+
+            public void setDevsInscritos(Set<Dev> devsInscritos) {
+                this.devsInscritos = devsInscritos;
+            }
+
+            public Set<Conteudo> getConteudos() {
+                return conteudos;
+            }
+
+            public void setConteudos(Set<Conteudo> conteudos) {
+                this.conteudos = conteudos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Bootcamp bootcamp = (Bootcamp) o;
+                return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+            }
+        }
+    --------------------------------------------------------
+
+
+    código Conteudo.java
+    --------------------------------------------------------
+        package br.com.dio.desafio.dominio;
+
+        public abstract class Conteudo {
+
+            protected static final double XP_PADRAO = 10d;
+
+            private String titulo;
+            private String descricao;
+
+            public abstract double calcularXP();
+
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+        }
+    --------------------------------------------------------
+
+
+    código Curso.java
+    --------------------------------------------------------
+        package br.com.dio.desafio.dominio;
+
+        public class Curso {
+            private String titulo;
+            private String descricao;
+            private int cargaHoraria;
+
+            public Curso() {
+            }
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+
+            public int getCargaHoraria() {
+                return cargaHoraria;
+            }
+
+            public void setCargaHoraria(int cargaHoraria) {
+                this.cargaHoraria = cargaHoraria;
+            }
+
+            @Override
+            public String toString() {
+                return "Curso{" +
+                        "titulo='" + titulo + '\'' +
+                        ", descricao='" + descricao + '\'' +
+                        ", cargaHoraria=" + cargaHoraria +
+                        '}';
+            }
+        }
+    --------------------------------------------------------
+
+
+    código Dev.java
+    --------------------------------------------------------
+        package br.com.dio.desafio.dominio;
+
+        import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Set;
+
+        public class Dev {
+            private String nome;
+            private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
+            private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
+            public void inscreverBootcamp(Bootcamp bootcamp) {}
+
+            public void progredir() {}
+
+            public double calcularTotalXp() {}
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public Set<Conteudo> getConteudosInscritos() {
+                return conteudosInscritos;
+            }
+
+            public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
+                this.conteudosInscritos = conteudosInscritos;
+            }
+
+            public Set<Conteudo> getConteudosConcluidos() {
+                return conteudosConcluidos;
+            }
+
+            public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
+                this.conteudosConcluidos = conteudosConcluidos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Dev dev = (Dev) o;
+                return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+            }
+        }
+    --------------------------------------------------------
+
+
+    código Mentoria.java
+    --------------------------------------------------------
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+
+        public class Mentoria {
+            private String titulo;
+            private String descricao;
+            private LocalDate data;
+
+            public Mentoria() {
+            }
+            public String getTitulo() {
+                return titulo;
+            }
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+            public String getDescricao() {
+                return descricao;
+            }
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+            public LocalDate getData() {
+                return data;
+            }
+            public void setData(LocalDate data) {
+                this.data = data;
+            }
+
+            @Override
+            public String toString() {
+                return "Mentoria{" +
+                        "titulo='" + titulo + '\'' +
+                        ", descricao='" + descricao + '\'' +
+                        ", data=" + data +
+                        '}';
+            }
+        }
+    --------------------------------------------------------
+
+
+10  Saída do programa até aqui (Run)
+====================================
+
+    /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java 
+    -javaagent:/usr/lib/idea-IC-222.4345.14/lib/idea_rt.jar=34563:
+    /usr/lib/idea-IC-222.4345.14/bin 
+    -Dfile.encoding=UTF-8 
+    -classpath 
+    /home/emcasa/Documentos/ _cursos_hd2/dio_ifood__java_beginners
+    /0_repositorio-git/dio_java-beginners_desafio_abstrair-bootcamp
+    /desafio-bootcamp_dio/out/production/desafio-bootcamp_dio
+    Main
+
+    Curso{
+        titulo='curso java',
+        descricao='descrição curso java', 
+        cargaHoraria=8
+    }
+
+    Curso{
+        titulo='curso poo', 
+        descricao='descrição curso poo', 
+        cargaHoraria=6
+    }
+
+    Mentoria{
+        titulo='mentoria Java', 
+        descricao='descrição mentoria java', 
+        data=2022-11-09
+    }
+
+    Process finished with exit code 0
+                
+
+
+------------------------------------------------------------------

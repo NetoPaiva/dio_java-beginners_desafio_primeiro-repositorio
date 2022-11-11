@@ -26,19 +26,315 @@
 ------------------------------------------------------------------
 
 07_3_quadrados_perfeitos
+=======================
+
+        - nível intermediário
+        - matemática
+
+------------------------------------------------------------------
+    1   Descrição
+    2   Instruções
+    3   Dúvidas
+    4   Testes oferecidos
+    5   Código básico fornecido
+    6   Código final
+------------------------------------------------------------------
+
+1   Descrição
+=============
+
+   - Desafio
+        - dado número inteiro N
+        - retorne
+            - o menor númenro de números quadrados perfeitos
+                - cuja soma seja N
+
+        - quadrado perfeito
+            - é um inteiro
+            - é o uadrado de um inteiro
+            - é o produto de
+                - um inteiro consigo mesmo
+
+            - exemplo:
+                - são quadrados perfeitos:
+                    1, 4, 9 e 16
+                - não são quadrados perfeitos
+                    3, 11
+
+
+    - Entrada
+        - número inteiro N
+        - representa o valor total
+
+    - Saída
+        - retorna
+            - menor númenro de númenros quadrados perfeitos
+
+    - Exemplos
+
+        - entrada            
+            12
+        - saída
+            3
+
+        - entrada            
+            13
+        - saída
+            2
+
+        - entrada            
+            10
+        - saída
+            2
+ 
+
+------------------------------------------------------------------
+
+2   Instruções
+==============
+
+    - Todas as entradas e saídas dos algoritmos
+        - Utilizar de acordo com a linguagem
+            - STDIN
+            - STDOUT
+
+    - Linguagem JAVA
+
+        - várias formas de implementar
+
+        - recomendação
+            - STDIN
+                - BufferedReader
+            - STDOUT
+                - System.out.println
+
+        - exemplo
+            
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            // Lê a linha de entrada
+
+            int a = Integer.parseInt(st.nextToken());
+            
+            System.out.println(a);
+            // Imprime o dado
+            
+
+    - Linguagem JavaScript
+
+        Em JavaScript as funções de STDIN e STDOUT respectivamente são
+
+            gets
+            console.log
+
+        a função gets é implementada internamente para auxiliar a entrada dos dados.
+
+        Exemplo:
+
+            let line = gets(); // Lê a linha de entrada
+
+            console.log(line); // Imprime o dado
+
+
+    - Linguagem Python
+
+        Em Python existe várias formas de implementar o STDIN e STDOUT
+        recomendamos utilizar
+
+            sys.stdin.readline para o STDIN 
+            print para o STDOUT.
+
+        Exemplo:
+
+            import sys
+
+            a = int(sys.stdin.readline()) // Lê a linha de entrada
+
+            print(a); // Imprime o dado
+
+
+------------------------------------------------------------------
+
+
+3   Dúvidas
+===========
+
+    -Realizar desafio de código
+        - praticar / aplicar conceitos
+        - amadurecimento profissional
+        - familiaridade com algoritmos / projetos reais
+
+    - Tirar dúvidas sobre o desafio
+        - acessar / interagir
+            - Devs da comunidade (Discord)
+                https://discord.gg/MUdRyVg
+        - Atuar em equipe
+            - atividade primordial
+            - capacidade de aprendizagem colaborativa
+                - habilidade bem reconhecida / esperada pelo mercado
+                - rápida / constante evolução tecnológica
+
+    - Os testes
+        - validam o código
+            - se atender todas as condições requeridas
+
+    - Testes abertos
+        - exemplos que podem ser usados para validar requisitos
+        - clicar no teste aberto
+            - permite verificar parâmetros esperados
+                - entrada
+                - saída
+        - executar teste aberto
+            - clicar botão "Executar Testes"
+
+    - Testes ocultos
+        - validam se código desenvolvido atende requisitos da solução
+            - após clicar em "Entregar Desafio"
+
+    - Ganhar XP
+        - sucesso em todos os testes entregues
+        - nível dos desafios
+            - básico
+                - ganha 60XP
+            - intermediáio
+                - ganha 90XP
+            - avançado
+                - ganha 120XP
+
+    - Entrega sem sucesso
+        - em 1 ou mais testes
+            - perde um Coração
+
+    - Corações
+        - quantidade possível de entregas sem sucesso
+        - limite de 5 Corações
+        - estimulam
+            - atenção
+            - pensamento crítico
+
+    - Recuperação de Corações
+        - plano Free
+            - 2 horas para cada Coração perdido
+        - plano Pro
+            - 6 minutos
+
+    - Finalizar Bootcamp
+        - entregar todos os desafios com sucesso
+
+
+------------------------------------------------------------------
+
+4   Testes oferecidos
+=====================
+
+    Teste 3 (aberto)
+        Dado de entrada:
+            13
+        Saída esperada:
+            2
+
+    Teste 4 (aberto)
+        Dado de entrada:
+            21
+        Saída esperada:
+            3
+
+    Teste 8 (aberto)
+        Dado de entrada:
+            12
+        Saída esperada:
+            3
+
+
+------------------------------------------------------------------
+
+5   Código básico fornecido
+===========================
+
+
+// IMPORTANTE: Para ler os dados de entrada do usuário, utilize a classe Scanner, 
+// instanciando seu leitor da seguinte forma: "Scanner leitor = new Scanner(System.in);". 
+// Por outro lado, para imprimir suas saídas, utilize System.out.print ou System.out.println.
+
+    import java.util.*;
+
+    public class Desafio {
+
+        public static void main(String[] args) {
+            int n = Integer.parseInt(new Scanner(System.in).nextLine());
+
+            int[] d = new int[n + 1];
+
+            //TODO: Com base no valor total, retorne o menor número de quadrados perfeitos.
+        }
+    }
+
+
+------------------------------------------------------------------
+
+6   Resultado do desafio
 ========================
 
-    Nome Instrutor
-        Cargo
-        Empresa
+    - Código final
+    --------------
 
-------------------------------------------------------------------
-    1   Tópicos da aula
-    2   
-------------------------------------------------------------------
 
-1   Tópico da aula
-==================
+// IMPORTANTE: Para ler os dados de entrada do usuário, utilize a classe Scanner, 
+// instanciando seu leitor da seguinte forma: "Scanner leitor = new Scanner(System.in);". 
+// Por outro lado, para imprimir suas saídas, utilize System.out.print ou System.out.println.
+
+
+        import java.util.*;
+
+        public class Desafio {
+
+            public static void main(String[] args) {
+                int n = Integer.parseInt(new Scanner(System.in).nextLine());
+                int res, count, countTotal;
+                int[] d = new int[n + 1];
+
+                for (int i = 1; i < d.length; i++) {
+                    if (i * i <= n) {
+                        d[i] = i * i;
+                    } else {
+                        i = d.length - 1;
+                    }
+                }
+                countTotal = 1000;
+                // System.out.println( i +"° " + d[i]);
+                for (int i = d.length - 1; i> 0 && i <= n; i--) {
+
+                    if (i >0 && d[i] > 0) {
+
+                        res = n;
+                        count = 0;
+
+                        for (int j = i; j > 0; j--) {
+
+                            while (res > 0) {
+                                if (res >= d[j]) {
+                                    res = res - d[j];
+                                    count++;
+                                } else {
+                                    j--;
+                                }
+                                // System.out.println( i +"° " + d[i]);
+                            }
+                        }                
+
+                        if (countTotal > count) {
+                            countTotal = count;
+                        }
+
+                    }            
+                    
+                }
+
+                System.out.println(countTotal);
+
+            }
+        }
 
 
 ------------------------------------------------------------------

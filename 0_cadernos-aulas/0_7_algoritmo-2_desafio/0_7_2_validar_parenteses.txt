@@ -26,19 +26,293 @@
 ------------------------------------------------------------------
 
 07_2_validar_parenteses
+=======================
+
+        - nível intermediário
+        - matemática
+
+------------------------------------------------------------------
+    1   Descrição
+    2   Instruções
+    3   Dúvidas
+    4   Testes oferecidos
+    5   Código básico fornecido
+    6   Código final
+------------------------------------------------------------------
+
+1   Descrição
+=============
+
+   - Desafio
+        - dada String
+            - contendo apenas
+                '(',')'
+                '{','}'
+                '[',']'
+        - determine
+            - se determinada String é válida
+
+
+    - Entrada
+        - String
+            - válida se
+                - abre e fecha com mesmo caracter
+                - vazia
+
+    - Saída
+        - valor booleano
+            - true
+            - false
+
+    - Exemplos
+
+        - entrada            
+            []
+        - saída
+            true
+
+        - entrada            
+            ()
+        - saída
+            true
+
+        - entrada            
+            [)
+        - saída
+            false
+ 
+
+------------------------------------------------------------------
+
+2   Instruções
+==============
+
+    - Todas as entradas e saídas dos algoritmos
+        - Utilizar de acordo com a linguagem
+            - STDIN
+            - STDOUT
+
+    - Linguagem JAVA
+
+        - várias formas de implementar
+
+        - recomendação
+            - STDIN
+                - BufferedReader
+            - STDOUT
+                - System.out.println
+
+        - exemplo
+            
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            // Lê a linha de entrada
+
+            int a = Integer.parseInt(st.nextToken());
+            
+            System.out.println(a);
+            // Imprime o dado
+            
+
+    - Linguagem JavaScript
+
+        Em JavaScript as funções de STDIN e STDOUT respectivamente são
+
+            gets
+            console.log
+
+        a função gets é implementada internamente para auxiliar a entrada dos dados.
+
+        Exemplo:
+
+            let line = gets(); // Lê a linha de entrada
+
+            console.log(line); // Imprime o dado
+
+
+    - Linguagem Python
+
+        Em Python existe várias formas de implementar o STDIN e STDOUT
+        recomendamos utilizar
+
+            sys.stdin.readline para o STDIN 
+            print para o STDOUT.
+
+        Exemplo:
+
+            import sys
+
+            a = int(sys.stdin.readline()) // Lê a linha de entrada
+
+            print(a); // Imprime o dado
+
+
+------------------------------------------------------------------
+
+
+3   Dúvidas
+===========
+
+    -Realizar desafio de código
+        - praticar / aplicar conceitos
+        - amadurecimento profissional
+        - familiaridade com algoritmos / projetos reais
+
+    - Tirar dúvidas sobre o desafio
+        - acessar / interagir
+            - Devs da comunidade (Discord)
+                https://discord.gg/MUdRyVg
+        - Atuar em equipe
+            - atividade primordial
+            - capacidade de aprendizagem colaborativa
+                - habilidade bem reconhecida / esperada pelo mercado
+                - rápida / constante evolução tecnológica
+
+    - Os testes
+        - validam o código
+            - se atender todas as condições requeridas
+
+    - Testes abertos
+        - exemplos que podem ser usados para validar requisitos
+        - clicar no teste aberto
+            - permite verificar parâmetros esperados
+                - entrada
+                - saída
+        - executar teste aberto
+            - clicar botão "Executar Testes"
+
+    - Testes ocultos
+        - validam se código desenvolvido atende requisitos da solução
+            - após clicar em "Entregar Desafio"
+
+    - Ganhar XP
+        - sucesso em todos os testes entregues
+        - nível dos desafios
+            - básico
+                - ganha 60XP
+            - intermediáio
+                - ganha 90XP
+            - avançado
+                - ganha 120XP
+
+    - Entrega sem sucesso
+        - em 1 ou mais testes
+            - perde um Coração
+
+    - Corações
+        - quantidade possível de entregas sem sucesso
+        - limite de 5 Corações
+        - estimulam
+            - atenção
+            - pensamento crítico
+
+    - Recuperação de Corações
+        - plano Free
+            - 2 horas para cada Coração perdido
+        - plano Pro
+            - 6 minutos
+
+    - Finalizar Bootcamp
+        - entregar todos os desafios com sucesso
+
+
+------------------------------------------------------------------
+
+4   Testes oferecidos
+=====================
+
+    Teste 6 (aberto)
+        Dado de entrada:
+            (]
+        Saída esperada:
+            FALSE
+
+
+    Teste 8 (aberto)
+        Dado de entrada:
+            []
+        Saída esperada:
+            TRUE
+
+
+    Teste 9 (aberto)
+        Dado de entrada:
+            ()
+        Saída esperada:
+            TRUE
+
+
+------------------------------------------------------------------
+
+5   Código básico fornecido
+===========================
+
+
+// IMPORTANTE: Para ler os dados de entrada do usuário, utilize a classe Scanner, 
+// instanciando seu leitor da seguinte forma: "Scanner leitor = new Scanner(System.in);". 
+// Por outro lado, para imprimir suas saídas, utilize System.out.print ou System.out.println.
+
+    import java.util.*;
+
+    public class ValidParentheses {
+
+        public static void main(String[] args) {
+            Scanner scanner= new Scanner(System.in);
+
+            boolean caracter = ehValido(scanner.nextLine());
+
+            System.out.println(caracter);
+        }
+
+        public static boolean ehValido(String s) {
+            //TODO: implemente a lógica de caracteres válidos e retorne se a string é valida ou não.
+        }
+
+    }
+
+
+------------------------------------------------------------------
+
+6   Resultado do desafio
 ========================
 
-    Nome Instrutor
-        Cargo
-        Empresa
+    - Código final
+    --------------
 
-------------------------------------------------------------------
-    1   Tópicos da aula
-    2   
-------------------------------------------------------------------
 
-1   Tópico da aula
-==================
+// IMPORTANTE: Para ler os dados de entrada do usuário, utilize a classe Scanner, 
+// instanciando seu leitor da seguinte forma: "Scanner leitor = new Scanner(System.in);". 
+// Por outro lado, para imprimir suas saídas, utilize System.out.print ou System.out.println.
+
+
+        import java.util.*;
+
+        public class ValidParentheses {
+
+            public static void main(String[] args) {
+                Scanner scanner= new Scanner(System.in);
+
+               // System.out.println("Digite a string: ");
+
+                boolean caracter = ehValido(scanner.nextLine());
+                
+                System.out.println(caracter);
+            }
+
+            public static boolean ehValido(String s) {
+                String[] letras = s.split("");
+                String[] tags = {"(",")","{","}","[","]"};
+                boolean b = false;
+
+                for(int i = 0; i < tags.length; i++){
+                    if (letras[0].equals(tags[i]) && letras[letras.length-1].equals(tags[i + 1])){
+                        b = true ;
+                    } 
+                }
+                return b;
+            }
+        }
 
 
 ------------------------------------------------------------------

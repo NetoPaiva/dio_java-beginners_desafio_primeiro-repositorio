@@ -1,0 +1,930 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+05_java__programacao_orientada_objeto
+=====================================
+
+    05_1_prog_orientada_objeto
+    05_2_collections_java
+    05_3_debugging_java
+    05_4_excecoes_java
+    05_5_java_oop__abstrair_bootcamp
+
+------------------------------------------------------------------
+
+05_5_java_oop__abstrair_bootcamp
+==================================
+
+    Camila Cavalcante
+        Tech Teacher
+        DIO
+
+------------------------------------------------------------------
+    05_5_1_apresenta_desafio-projeto
+    05_5_2_configura_ambiente
+    05_5_3_abstrair_encapsular
+    05_5_4_herança_polimorfismo
+    05_5_5_concluir_classes_domínio
+    05_5_6_interligar_classes_domiínio
+    05_5_7_descrição_desafio
+    05_5_8_link_github
+    05_5_9_informações_desafio
+------------------------------------------------------------------
+
+    Interligar classes de Domínio
+    =============================
+
+    1   Comentar bloco println da classe Main
+    2   Instanciar Bootcamp
+    3   Instanciar Devs
+    4   Inscrever Devs no Bootcamp
+    5   Instanciar Conteúdos Concluídos
+    6   Exibir XP
+    7   Fazer Commit desta versão
+    8   Códigos até este ponto
+    9   Saída do programa até aqui (Run)
+
+------------------------------------------------------------------
+
+1   Comentar bloco println da classe Main
+=========================================
+
+    - lógica da regra
+    -----------------
+
+        - antes de interligar classe de domínio
+        - comentar bloco print
+        - para não ficar repetitivo
+
+
+    - implementar lógica no atributo inscreverBootcamp
+    --------------------------------------------------
+
+        - no arquivo Main.java
+        - adicionar comentário
+            - antes e depois do bloco println
+                - /* ... */
+                    - comando para comentar mais de uma linha
+                        - seleciona todo o bloco
+                        - atalho (ctrl shift /)
+                    - se fosse apenas 1 linha
+                        - //
+
+        - código 
+    -----------------------------------------------------------------
+        /*System.out.println(curso1);
+        System.out.println(curso2);
+        System.out.println(mentoria);*/
+    -----------------------------------------------------------------
+
+
+2   Instanciar Bootcamp
+=======================
+
+    - regra de negócio
+    ------------------
+
+        - instanciar (criar) objeto Bootcamp
+            - implementar os atributos
+                - nome
+                - descrição
+                - Set de conteúdos
+
+        - demais atributos serão implementados automaticamente
+            - data inicial
+                - quando instanciar Bootcamp 
+            - data final
+                - 45 dias depois do início
+            - Set de Devs
+                - quando Dev se inscrever
+
+
+    
+    - lógica desta regra
+    --------------------
+
+        - criar objeto Bootcamp
+        - chamar 0 Set Nome
+            - dar nome ao Bootcamp
+        - chamar o Set Descrição
+            - criar a descrição do Bootcamp
+        - chamar o Set Conteúdos
+            - adicionar
+                - curso1
+                - curso2
+                - mentoria
+
+
+        - atalho para duplicar linha de código
+            - cursor na linha a ser copiada
+            - ctrl + D para cada cópia
+                - cria nova linha abaixo da original
+
+
+    - implemetar lógica
+    -----------------------------------------
+
+        - Bootcamp bootcamp = new Bootcamp();
+            - cria objeto Bootcamp
+        - bootcamp.setNome("Bootcamp Java Developer");
+            - chama o Set nome e dá nome ao Bootcamp
+        - bootcamp.setDescricao("Descrição do Boocamp Java Developer");
+            - chama o Set Descrição e cria a descrição do Bootcamp
+        - bootcamp.getConteudos()
+            - chama Conteúdos 
+        - .add(curso1);
+            - adiciona o curso 1
+        - .add(curso2);
+            - adiciona o curso 2
+        - .add(mentoria);
+            - adiciona a mentoria
+
+
+        - código 
+    -----------------------------------------------------------------
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição do Bootcamp Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+    -----------------------------------------------------------------
+
+
+3   Instanciar Devs
+===================
+
+    - regra de negócio
+    ------------------
+        - criar cada Dev inscrito
+        - armazenar em uma variável própria
+        - incluir Dev no Set Nome
+
+
+    - lógica desta regra
+    --------------------
+        - chamar a classe Dev
+        - criar variável de cada Dev inscrito
+        - para armazenar o nome do Dev 
+        - criar novo objeto Dev
+        - para adicionar o nome do Dev inscrito
+
+
+    - implemetar lógica 
+    ---------------------------------
+
+        - no arquivo Main
+
+            Dev devJose = new Dev();
+                - chama a classe Dev
+                - cria a variável do Dev inscrito
+                - atribui variável ao novo objeto Dev
+
+            devJose.setNome("José");
+                - chama a variável do Dev inscrito
+                - armazena o nome do Dev no Set Nome
+
+            System.out.println("");
+                - visualizar conteúdos inscritos
+                    - aparece vazio
+                        - ainda não incluiu conteúdos
+
+
+    - código desta regra
+    ------------------------------------------
+        Dev devJose = new Dev();
+        devJose.setNome("José");
+        System.out.println();
+
+        Dev devJoao = new Dev();
+        devJoao.setNome("João");
+        System.out.println();
+    ------------------------------------------
+
+
+    - teste de impressão
+    ------------------------------------------
+        Conteúdos Inscritos José []
+        Conteúdos Inscritos João []
+
+        Process finished with exit code 0
+    ------------------------------------------
+
+
+4   Inscrever Devs no Bootcamp
+==============================
+
+    - regra de negócio
+    ------------------
+        - Matricular Dev no Bootcamp
+        - disponibilizar conteúdo do Bootcamp
+
+
+    - lógica da regra
+    -----------------
+        - incluir Dev no objeto Bootcamp
+        - visualizar conteúdo disponível
+
+
+    - implementar lógica
+    --------------------
+
+        - incluir Dev José no objeto Bootcamp
+            devJose.inscreverBootcamp(bootcamp);
+
+        - visualizar conteúdo disponível para José
+            System.out.println("Conteúdos Inscritos José " +
+                devJose.getConteudosInscritos());
+
+        - incluir Dev João no objeto Bootcamp
+            devJoao.inscreverBootcamp(bootcamp);
+
+        - visualizar conteúdo disponível para João
+            System.out.println("Conteúdos Inscritos João " +
+                devJoao.getConteudosInscritos());
+
+
+    - código desta regra
+    -------------------------------------------------------
+        devJose.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos José " +
+            devJose.getConteudosInscritos());
+
+        devJoao.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos João " +
+            devJoao.getConteudosInscritos());
+    -------------------------------------------------------
+
+
+    - teste de impressão
+    -------------------------------------------------
+        Conteúdos Inscritos José [
+            Curso{
+                titulo='curso java', 
+                descricao='descrição curso java', 
+                cargaHoraria=8
+            }, 
+
+            Curso{
+                titulo='curso poo', 
+                descricao='descrição curso poo', 
+                cargaHoraria=6
+            }, 
+
+            Mentoria{
+                titulo='mentoria Java', 
+                descricao='descrição mentoria java', 
+                data=2022-11-10
+            }
+        ]
+
+
+        Conteúdos Inscritos João [
+            Curso{
+                titulo='curso java', 
+                descricao='descrição curso java', 
+                cargaHoraria=8
+            },
+
+            Curso{
+                titulo='curso poo', 
+                descricao='descrição curso poo', 
+                cargaHoraria=6
+            }, 
+
+            Mentoria{
+                titulo='mentoria Java', 
+                descricao='descrição mentoria java', 
+                data=2022-11-10
+            }
+        ]
+
+        Process finished with exit code 0
+    -------------------------------------------------
+
+
+5   Instanciar Conteúdos Concluídos
+===================================
+
+    - regra de negócio Progredir
+    ----------------------------
+        - progredir no Bootcamp
+            - concluiu conteúdos
+
+        - visualizar
+            - o que já foi concluído
+            - o que está inscrito e falta concluir
+
+
+    - lógica da regra Progredir
+    ---------------------------
+        - depois que progredir
+            - remover de Conteúdos Inscritos
+                - armazenar em Conteúdos Concluídos
+
+        - a cada lançamento do comando progredir
+            - remove de conteúdos inscritos
+            - armazena em conteúdos concluídos
+                devJose.progredir();
+                devJoao.progredir();
+
+
+    - implementar lógica
+    --------------------
+
+        - remover de conteúdos Inscitos
+        - armazenar em Conteúdos Concluídos
+            devJose.progredir();
+            devJoao.progredir();
+
+
+    - teste de impressão de TotalXp com
+        - 2 lançamentos progredir para José
+        - 3 lançamentos progredir para João
+    ------------------------
+        XP de José: 140.0
+        XP de João: 170.0
+    ----------------------
+
+
+    Recapitulando esta etapa
+    ------------------------
+
+        Instanciar Bootcamp
+        Instanciar Devs
+        Inscrever Devs no Bootcamp
+        Instanciar Conteúdos Concluídos
+
+
+        - Instanciou o Bootcamp
+                Bootcamp bootcamp = new Bootcamp();
+
+        - Instanciou nome do Bootcamp
+                bootcamp.setNome("Bootcamp Java Developer");
+
+        - Criou descrição do Bootcamp
+                bootcamp.setDescricao
+                ("Descrição do Bootcamp Java Developer");
+
+        - Adicionou conteúdo ao Bootcamp
+                bootcamp.getConteudos().add(curso1);
+                bootcamp.getConteudos().add(curso2);
+                bootcamp.getConteudos().add(mentoria);
+
+        - Criou 2 Devs
+                Dev devJose = new Dev();
+                Dev devJoao = new Dev();
+
+        - Instanciou nome dos Devs
+                devJose.setNome("José");
+                devJoao.setNome("João");
+
+        - Inscreveu Devs no Bootcamp
+                devJose.inscreverBootcamp(bootcamp);
+                devJoao.inscreverBootcamp(bootcamp);
+
+        - Visualizou conteúdos inscritos
+                System.out.println(
+                    "Conteúdos Inscritos José " +
+                    devJose.getConteudosInscritos()
+                );
+                System.out.println(
+                    "Conteúdos Inscritos João " +
+                    devJoao.getConteudosInscritos()
+                );
+
+        - Instanciou progresso dos Devs no Bootcamp
+                devJose.progredir();
+                devJoao.progredir();
+
+        - Visualizou o progresso dos Devs
+
+            - todos os Conteúdos Inscritos
+                System.out.println
+                    ("Conteúdos Inscritos José " +
+                    devJose.getConteudosInscritos());
+                System.out.println
+                    ("Conteúdos Inscritos João " +
+                    devJoao.getConteudosInscritos());
+
+            - todos os Conteúdos Concluídos
+                System.out.println
+                ("Conteúdos Concluídos José " +
+                devJose.getConteudosConcluidos());
+                System.out.println
+                ("Conteúdos Concluídos João " +
+                devJoao.getConteudosConcluidos());
+
+
+
+6   Exibir XP
+=============
+
+    - regra de negócio XP
+    ---------------------
+        - visualizar quantidade de XP acumulada pelo Dev
+        - a cada conteúdo concluído (progredir)
+        - Dev ganha certa quantidade de XP
+
+
+    - lógica da regra Progredir
+    ---------------------------
+        - chamar o Set calcularTotalXp de cada Dev
+        - imprimir total de XP de cada Dev
+
+
+    - implementar lógica
+    --------------------
+
+        System.out.println
+            - exibe na tela
+
+        ("XP de José: " + devJose.calcularTotalXp());
+            - a quantidade de XP de José
+
+
+
+7   Fazer Commit desta versão
+=============================
+
+    - versionar etapa final do projeto
+
+    - atalho crtl + K
+        - selecionar os arquivos que serão
+        - escrever comentrio
+        - criar commit
+        - emviar commit
+
+
+
+8   Códigos até este ponto
+==========================
+
+
+    Main.java
+    --------------------------------------------------------
+
+        import br.com.dio.desafio.dominio.Bootcamp;
+        import br.com.dio.desafio.dominio.Curso;
+        import br.com.dio.desafio.dominio.Dev;
+        import br.com.dio.desafio.dominio.Mentoria;
+
+        import java.time.LocalDate;
+
+        public class Main {
+            public static void main(String[] args) {
+
+                Curso curso1 = new Curso();
+                curso1.setTitulo("curso java");
+                curso1.setDescricao("descrição curso java");
+                curso1.setCargaHoraria(8);
+
+                Curso curso2 = new Curso();
+                curso2.setTitulo("curso poo");
+                curso2.setDescricao("descrição curso poo");
+                curso2.setCargaHoraria(6);
+
+                Mentoria mentoria = new Mentoria();
+                mentoria.setTitulo("mentoria Java");
+                mentoria.setDescricao("descrição mentoria java");
+                mentoria.setData(LocalDate.now());
+
+                /*System.out.println(curso1);
+                System.out.println(curso2);
+                System.out.println(mentoria);*/
+
+                Bootcamp bootcamp = new Bootcamp();
+                bootcamp.setNome("Bootcamp Java Developer");
+                bootcamp.setDescricao("Descrição do Bootcamp Java Developer");
+                bootcamp.getConteudos().add(curso1);
+                bootcamp.getConteudos().add(curso2);
+                bootcamp.getConteudos().add(mentoria);
+
+                Dev devJose = new Dev();
+                devJose.setNome("José");
+                devJose.inscreverBootcamp(bootcamp);
+                //System.out.println("Conteúdos Inscritos José " + devJose.getConteudosInscritos());
+
+                devJose.progredir();
+                devJose.progredir();
+                System.out.println("-");
+                System.out.println("Conteúdos Inscritos José " + devJose.getConteudosInscritos());
+                System.out.println("Conteúdos Concluídos José " + devJose.getConteudosConcluidos());
+                System.out.println("XP de José: " + devJose.calcularTotalXp());
+
+                //apenas para separar as informações no terminal de saída
+                //System.out.println("-----");
+
+                Dev devJoao = new Dev();
+                devJoao.setNome("João");
+                devJoao.inscreverBootcamp(bootcamp);
+                //System.out.println("Conteúdos Inscritos João " + devJoao.getConteudosInscritos());
+
+                devJoao.progredir();
+                devJoao.progredir();
+                devJoao.progredir();
+                System.out.println("-");
+                System.out.println("Conteúdos Inscritos João " + devJoao.getConteudosInscritos());
+                System.out.println("Conteúdos Concluídos João " + devJoao.getConteudosConcluidos());
+                System.out.println("XP de João: " + devJoao.calcularTotalXp());
+                System.out.println("-");
+
+
+
+            }
+
+        }
+
+    --------------------------------------------------------
+
+
+    Bootcamp.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+        import java.util.HashSet;
+        import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Set;
+
+        public class Bootcamp {
+            private String nome;
+            private String descricao;
+            private final LocalDate dataInicial = LocalDate.now();
+            private final LocalDate dataFinal = dataInicial.plusDays(45);
+            private Set<Dev> devsInscritos = new HashSet<>();
+            private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+
+            public LocalDate getDataInicial() {
+                return dataInicial;
+            }
+
+            public LocalDate getDataFinal() {
+                return dataFinal;
+            }
+
+            public Set<Dev> getDevsInscritos() {
+                return devsInscritos;
+            }
+
+            public void setDevsInscritos(Set<Dev> devsInscritos) {
+                this.devsInscritos = devsInscritos;
+            }
+
+            public Set<Conteudo> getConteudos() {
+                return conteudos;
+            }
+
+            public void setConteudos(Set<Conteudo> conteudos) {
+                this.conteudos = conteudos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Bootcamp bootcamp = (Bootcamp) o;
+                return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Conteudo.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        public abstract class Conteudo {
+
+            protected static final double XP_PADRAO = 10d;
+
+            private String titulo;
+            private String descricao;
+
+            public abstract double calcularXP();
+
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Curso.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        public class Curso extends Conteudo {
+            private String titulo;
+            private String descricao;
+            private int cargaHoraria;
+
+            public Curso() {
+            }
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO * cargaHoraria;
+            }
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+
+            public int getCargaHoraria() {
+                return cargaHoraria;
+            }
+
+            public void setCargaHoraria(int cargaHoraria) {
+                this.cargaHoraria = cargaHoraria;
+            }
+
+            @Override
+            public String toString() {
+                return "Curso{" +
+                        "titulo='" + titulo + '\'' +
+                        ", descricao='" + descricao + '\'' +
+                        ", cargaHoraria=" + cargaHoraria +
+                        '}';
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Dev.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Optional;
+        import java.util.Set;
+
+        public class Dev {
+            private String nome;
+            private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
+            private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
+            public void inscreverBootcamp(Bootcamp bootcamp) {
+                bootcamp.getDevsInscritos().add(this);
+                this.conteudosInscritos.addAll(bootcamp.getConteudos());
+            }
+
+            public void progredir() {
+                Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
+                if(conteudo.isPresent()) {
+                    this.conteudosConcluidos.add(conteudo.get());
+                    this.conteudosInscritos.remove(conteudo.get());
+                }
+                else {
+                    System.err.println("ooooh! não há conteúdo.");
+                }
+            }
+
+            public double calcularTotalXp() {
+                return this.conteudosConcluidos
+                        .stream()
+                        .mapToDouble(Conteudo::calcularXP)
+                        .sum();
+            }
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public Set<Conteudo> getConteudosInscritos() {
+                return conteudosInscritos;
+            }
+
+            public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
+                this.conteudosInscritos = conteudosInscritos;
+            }
+
+            public Set<Conteudo> getConteudosConcluidos() {
+                return conteudosConcluidos;
+            }
+
+            public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
+                this.conteudosConcluidos = conteudosConcluidos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Dev dev = (Dev) o;
+                return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Mentoria.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+
+        public class Mentoria extends Conteudo {
+            private String titulo;
+            private String descricao;
+            private LocalDate data;
+
+            public Mentoria() {
+            }
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO + 20d;
+            }
+
+            public String getTitulo() {
+                return titulo;
+            }
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+            public String getDescricao() {
+                return descricao;
+            }
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+            public LocalDate getData() {
+                return data;
+            }
+            public void setData(LocalDate data) {
+                this.data = data;
+            }
+
+            @Override
+            public String toString() {
+                return "Mentoria{" +
+                        "titulo='" + titulo + '\'' +
+                        ", descricao='" + descricao + '\'' +
+                        ", data=" + data +
+                        '}';
+            }
+        }
+
+    --------------------------------------------------------
+
+
+9   Saída do programa até aqui (Run)
+====================================
+
+    /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java 
+    -javaagent:/usr/lib/idea-IC-222.4345.14/lib/idea_rt.jar=39751:
+    /usr/lib/idea-IC-222.4345.14/bin 
+    -Dfile.encoding=UTF-8 
+    -classpath 
+    /home/emcasa/Documentos/_cursos_hd2/dio_ifood__java_beginners
+    /0_repositorio-git/dio_java-beginners_desafio_abstrair-bootcamp
+    /desafio-bootcamp_dio/out/production/desafio-bootcamp_dio
+    Main
+
+    -
+
+    Conteúdos Inscritos José [
+
+        Mentoria{
+            titulo='mentoria Java', 
+            descricao='descrição mentoria java', 
+            data=2022-11-10
+        }
+    ]
+
+
+    Conteúdos Concluídos José [
+
+        Curso{
+            titulo='curso java', 
+            descricao='descrição curso java', 
+            cargaHoraria=8
+        }, 
+
+        Curso{
+            titulo='curso poo', 
+            descricao='descrição curso poo', 
+            cargaHoraria=6
+        }
+    ]
+
+
+    XP de José: 140.0
+
+    -
+
+    Conteúdos Inscritos João []
+
+
+    Conteúdos Concluídos João [
+
+        Curso{
+            titulo='curso java', 
+            descricao='descrição curso java', 
+            cargaHoraria=8
+        },
+
+        Curso{
+            titulo='curso poo', 
+            descricao='descrição curso poo', 
+            cargaHoraria=6
+        }, 
+
+        Mentoria{
+            titulo='mentoria Java', 
+            descricao='descrição mentoria java', 
+            data=2022-11-10
+        }
+    ]
+
+
+    XP de João: 170.0
+
+    -
+
+
+    Process finished with exit code 0
+                
+
+------------------------------------------------------------------

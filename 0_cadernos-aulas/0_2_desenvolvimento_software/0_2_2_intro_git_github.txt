@@ -49,7 +49,6 @@
     O que é Git e sua importância
     -----------------------------
 
-
     - Por que usar o Git?
 
         salvar diferentes versões do arquivo
@@ -62,7 +61,6 @@
             pastas/diretórios diferentes
 
         compilador - editor exigente
-
 
     - GIT
 
@@ -103,7 +101,6 @@
 
         - Git e GitHub não são a mesma coisa
             - tecnologias complementares / diferentes
-
 
         - Foco do curso
 
@@ -149,7 +146,7 @@
         dir             ls          listar conteúdo diretório/pasta
         mkdir           mkdir       criar diretório/pasta
         del / rmdir     rm -rf     deletar arquivo / diretório
-
+        ------------------------------------------------------------
         flags           -rf         modificam / incrementam comandos
         ------------------------------------------------------------
 
@@ -288,6 +285,7 @@
         - git-scm.com
             - dowload adequado ao sistema operacional da máquina
 
+
     Windowns
     --------
 
@@ -368,6 +366,7 @@
         - no site do Git
             - clicar na versão adequada ao sistema operacional
 
+
         - Linux
         -------
 
@@ -405,11 +404,13 @@
                         - git --version
                             - git version 2.38.1
 
-            - Mac
-                - recomenda pelo gerenciador de pacotes
-                    - Homebrew
-                        - seguir o link da página
-                        - seguir instruções de instalação pelo terminal
+        - Mac
+        -----
+
+            - recomenda pelo gerenciador de pacotes
+                - Homebrew
+            - seguir o link da página
+            - seguir instruções de instalação pelo terminal
 
 
 -----------------------------------------------------------------------
@@ -727,6 +728,7 @@
 
             ---------------------------------------------------------
 
+
     - Sistema distribuído e seguro
     ==============================
 
@@ -740,268 +742,6 @@
             - todas as versões são confiáveis
             - funcionam como backups
              
-
-
-#################################################
-#################################################
-
-
-        |   acho que todo este trecho   |
-        |        deveria ir para        |
-        |         a parte sobre         |
-        |          G I T H U B          |
-        V          ===========          v
-
--------------------------------------------------
-
-    - Chave SSh e Token (do GitHub)
-    ===================
-
-        - Alterações estruturais do Git
-
-        - Autenticação no GitHub
-            - usuário / senha
-                - obsoleto
-            - nova autenticação
-                - SSH
-                - Token
-
-    - Chave SSH
-    ===========
-
-        - Conexão segura/encriptada
-        - entre duas máquinas
-            - máquina pessoal
-            - servidor GitHub
-        - utiliza duas chaves
-            - pública
-                - fica no GitHub
-                    - identifica máquina pessoal
-                        - assinatura da máquina
-            - privada
-                - fica na máquina
-        - máquina fica configurada com autenticação segura
-            - não precisa login e senha para acessar GitHub
-
-    - Gerar chaves SSH
-    ------------------
-
-        - no Mac
-            - acessar GitHub Docs
-                - Gerar nova chave SSH
-                    - Selecionar a versão Mac
-                        - seguir a documentação
-
-        - Linux / Windos
-            - comandos/passos semelhantes
-            - via terminal/GitBash
-
-        - Linux
-            - Abrir o terminal
-            - digitar o comando
-                - ssh-keygen -t ed25519 -C email
-                    - ssh-keygen
-                        - comando para gerar chave ssh
-                    - -t
-                        - flag
-                    - ed25519
-                        - tipo de criptografia da chave
-                    - -C
-                        - flag
-                    - email
-                        - login do GitHub
-            - enter
-            - Bash informa
-                - que está gerando o par de chaves
-                - local onde as chaves serão armazenadas
-                    - /home/.../.ssh/id_ed25519
-            - enter
-            - pede senha 2 vezes
-            - pronto
-            - informa
-                - local onde salvou 
-                    - a identificação
-                    - a chave pública
-                        - mesmo nome da chave privada + extensão ".pub"
-                - identidade da chave (fingerprint)
-                - tipo de criptografia usada
-                    - ed25519 256
-                - nome da criptografia
-                    - SHA256
-
-    - Visualizar chave gerada
-    -------------------------
-        - navegar até local onde salvou as chaves
-            - comando
-                - cd /home/.../.ssh/
-        - listar conteúdo da pasta
-            - comando ls
-        - visualizar contéudo do arquivo da chave pública
-            - comando
-                - cat id_nome-do-arquivo.pub
-            - enter
-        - copiar a chave pública
-
-    - Informar chave no GitHub
-    --------------------------
-        - entrar no GitHub
-        - Menu pessoal (foto)
-        - Settings
-            - SSH and GPG keys
-                - New SSH key
-                    - preencher os campos
-                        - Title
-                            - identificar qual é a chave
-                                - "emcasa"
-                        - Key type
-                            - Authentication Key
-                        - Key
-                            - colar a chave copiada no terminal
-                    - Add SSH key
-                    - vai pedir senha de login na plataforma
-                    - gerou a autenticação da chave
-                    - fornece algumas informações sobre a chave
-                        - quando foi criada
-                        - quando foi usada
-                        - se supeitar de uso indevido
-                            - basta deletar a chave
-
-    - Inicializar o SSH Agent
-    -------------------------
-        - entidade encarregada de lidar com as chaves
-        - no terminal do computador
-        - dentro da pasta onde estão os arquivos das chaves
-            - digitar o comando
-                - eval $(ssh-agent -s)
-            - enter
-        - informa o identificar do processo de autenticação
-            - Agent pid *****
-        - entregar a chave privada para este agente gerado
-            - digitar comando
-                - ssh-add id_ed25519
-            - enter
-            - pede a senha
-            - enter
-            - informa entidade adicionada
-                - com nome do arquivo da chave
-                - e o email de login
-
-    -----------------------------------------------------------------
-    Pronto, processo de criação e ativação das chaves está finalizado
-    -----------------------------------------------------------------
-
-    Clonar repositório GitHub com SSH configurado
-    ---------------------------------------------
-
-        - é mais seguro
-        - é mais rápido
-        - tem que ser pela autenticação das chaves
-        - não pode ser pela URL do Repositório
-
-        - No botoão "Code"
-            - escolher a opção SSH
-            - copiar o direcionamento
-                - git@github.com:Usuário/nome-do-repositorio
-
-        - No terminal do computador
-            - navegar até a pasta onde irá salva os repositórios baixados
-            - comando
-                - git clone git@github.com:Usuario/nome-do-repositorio
-            - enter
-            - pergunta se quer salvar a digital de autenticação
-                - Yes
-                    - só pergunta no primeiro acesso
-            - enter
-            - vai copiar toda a estrutura do repositório do GitHub na máquina
-            - pronto, já clonou
-
-
-    - Token de acesso pessoal
-    =========================
-
-        - outra forma de segurança do GitHub
-        - também tem que gerar no GitHub
-        - semelhante ao processo de login
-        - não é mais seguro que a chave SSH
-            - arquivo com token fica salvo na máquina
-
-
-        - Processo de uso
-        -----------------
-
-            - Gera token no GitHub
-            - Salvar token na máquina
-            - Toda vez que fizer Commit
-            - Vai pedir usuário/senha
-                - Na hora da senha
-                    - Informar o token
-
-
-        - Gerar e salvar token
-        ----------------------
-
-            - no GitHub
-            - menu pessoal
-            - Setting
-            - Developer settings
-            - Personal access tokens
-            - Tokens (classic)
-                - Generate new token
-                    - Generate new token (classic)
-
-            - Preencher os campos / ativar opções
-                - Note
-                    - nome/descrição do token
-                - Expiration
-                    - prazo de validade e desativação do token
-                - Selecionar a opção
-                    - repo
-                        - total controle de privacidade
-                - clicar em "generate token"
-                - irá gerar token
-                - copiar o token gerado
-                    - atenção
-                        - este token não será visível novamente
-                        - copiar e salvar com segurança
-                        - caso perca, terá que gerar novo token
-                - salvar em arquivo no computador / na nuvem
-                    - garantir segurança de acesso ao arquivo
-
-
-        - Clonar Repositório com token
-        ------------------------------
-
-            - no GitHub
-                - no repositório a ser clonado
-                - botão "Code"
-                - na opção HTTPS
-                - copiar URL
-            - no terminal do computador
-                - comando
-                    - git clone URL-copiada
-                - vai pedir o token
-                    - pegar o token salvo no computador e copiar
-                    - colar o token na janela de login
-                    - enter
-                - vai mostrar mensagem de verificação realizada
-                - vai clonar o repositório na máquina
-                
-
-
--------------------------------------------------
-
-
-        ^      final do trecho que      ^
-        |        deveria ir para        |
-        |         a parte sobre         |
-        |          G I T H U B          |
-        |          ===========          |
-
-
-#################################################
-#################################################
-
-
 
 -----------------------------------------------------------------------
 
@@ -1017,11 +757,9 @@
     - comandos via terminal
     -----------------------
 
-        - sempre inicia com
-            - comando genérico
+        - sempre inicia com comando genérico
 
-        - seguido por
-            - comando específico
+        - seguido por comando específico
 
          --------------------------------------------
                git   init
@@ -1053,23 +791,33 @@
         - Criar o diretório
             - Abrir terminal (git bash)
             - onde será criado o diretório padrão
+
             - comandos
+
                 - ls
                     - visualizar conteúdo do diretório corrente
+
                 - mkdir workspace
                     - criar o diretório padrão para os repositórios
+
                 - cd workspace
                     - entrar no diretório padrão
+
                 - ls
                     - visualizar conteúdo do diretório padrão
+
                 - clear
                     - limpar a tela do terminal
+
                 - mkdir nome-novo-repositorio
                     - criar pasta para novo diretório
+
                 - ls
                     - visualizar conteúdo
+
                 - cd nome-novo-diretorio
                     - entrar no novo diretorio
+
                 - clear
                     - limpar tela do terminal
 
@@ -1079,23 +827,28 @@
 
         - ainda no terminal
         - dentro do novo diretório
-            - comandos
-                - git init
-                    - iniciar o git neste novo diretório
-                        - avisa que
-                            - iniciou repositório vazio
-                                - pasta oculta (.git)
-                                    - pasta gerencial do Git
-                            - dentro do diretório corrente
-                - ls -a
-                    - visualizar arquivos ocultos
+
+        - comandos
+
+            - git init
+                - inicia o git neste novo diretório
+                - avisa iniciou repositório "vazio"
+                    - contém pasta oculta (.git)
+                        - pasta gerencial do Git
+
+            - ls -a
+                - visualizar arquivos ocultos
+
 
         - Se for a primeira vez
             - configurar usuário/email
+
             - comandos
+
                 - git config --global user.email "digitar-email"
                     - configura login do Git de forma global
                         - email
+
                 - git config --global user.name "digitar-nome"
                     - configura login do Git de forma global
                         - usuário
@@ -1119,18 +872,22 @@
     ----------------------------------
 
         - sempre que for criar/atualizar o conteúdo do repositório
-            - comandos
-                - git add *
-                    - adiciona tudo que está no diretório corrente
-                - git status
-                    - mostra tudo que foi adicionado
-                - git commit -m "descrição da versão"
-                    - cria pacote para enviar
-                    - com a descrição desta versão
-                    - mostra informações deste commit
-                        - início da chave SHA1
-                        - descrição
-                        - arquivos modificados/inseridos
+
+        - comandos
+
+            - git add *
+                - adiciona tudo que está no diretório corrente
+
+            - git status
+                - mostra tudo que foi adicionado
+
+            - git commit -m "descrição da versão"
+                - cria pacote para enviar
+                - com a descrição desta versão
+                - mostra informações deste commit
+                    - início da chave SHA1
+                    - descrição
+                    - arquivos modificados/inseridos
 
 
 -----------------------------------------------------------------------
@@ -1146,8 +903,8 @@
         - Tracked
         ---------
             - arquivos rastreados pelo Git
-            - organizados 3 estágios diferentes e cíclicos
 
+            - organizados em 3 estágios diferentes e cíclicos
 
                 - Unmodified
                 ------------
@@ -1255,7 +1012,7 @@
         - deletado do diretório no computador
             - saiu de Unmodified
             - foi para Untracked
-???         - registra informação no Staged ????
+    ???     - registra informação no Staged ????
 
     - Commit do repositório
         - como se guardasse uma foto do diretório
@@ -1370,9 +1127,7 @@
             - mostra que está tudo atualizado
 
 
-    ----------------------------------------------------------------------------
-
-    Comandos no terminal
+    - Comandos no terminal
     --------------------
         
     1.  git status
@@ -1496,25 +1251,527 @@
 
             e73c7c0..0585cb1  main -> main  
 
-    ----------------------------------------------------------------------------
 
 -----------------------------------------------------------------------
 
 7   Introdução ao GitHub
 ========================
 
-    Trabalhando com GitHub
-    ======================
+
+        - Criar conta
+        - Criar repositório
+        - Conectar repositórios local/remoto
+        - Clonar repositório remoto
+
+
+    Criar conta
+    -----------
+
+        - No site do GitHub
+            - github.com
+        - opção "sign up"
+            - digitar email
+            - criar senha
+            - digitar usuário
+            - pergunta se quer receber comunicados por email
+                - y ou n
+        - verificação da conta
+            - enigma
+            - botão criar conta
+        - digitar código enviado por email
+        - Tela de boas-vindas
+            - Informações de uso
+                - quantas pessoas estão ligadas a esta conta
+                - perfil do usuário
+                    - estudante
+                    - professor
+            - Finalidade de uso
+                - Colaborativo
+                - Community
+                - Automação
+        - Opção de plano grátis ou pago
+        - Iniciando painel de controle
+
+        =====================================
+        - Configurar o Git no computador 
+          com mesmo usuário e email do GitHub
+        =====================================
+
+
+        Observação: verificar / reescrever usuário e email
+        --------------------------------------------------
+
+        - para verificar qual usuário do Git está registrado no computador
+            - comando no terminal
+                - git config --list
+                    - mostra todos os usuários cadastrados no computador
+
+        - Caso tenha que alterar / apagar usuário e email
+            - comando no terminal
+                - git config --global --unset user.email
+                - enter
+                - git config --global --unset user.name
+                - enter
+            - apagou cadastro do usuário e email
+
+        - Redefinir configuração de usuário e email
+            - os mesmos do perfil no Github
+            - comando no terminal
+                - git config --global user.mail "digitar@email"
+                - enter
+                - git config --global user.name "digitar-usuário"
+                - enter
+                - git config --list
+                    - mostra configuração atualizada
+
+        - Os commits já realizados não tem como alterar
+            - permanecem com mesmo usuário e email
+            - aparece no GitHub como estava
+
+
+
+    Criar repositório
+    -----------------
+
+        - Fazer login no Git Hub
+            - git.com
+
+        - Na página de perfil do usuário
+            - no menu do usuário (foto)
+                - seus repositórios
+            - na página que abrir
+                - botão "new"
+            - na página para criar novo repositório
+                - escrever nome do repositório
+                - escolher opções
+                    - público
+                    - privado
+                    - iniciar repositório com README
+                        - capa do repositório
+                - botão "create repository"
+            - página com informações dos próximos passos
+                - conectar com repositório loal
+                - enviar commits
+                - importar códigos de outros repositórios
+
+
+    Conectar repositórios local/remoto
+    ----------------------------------
+
+        - Copiar URL do repositório no GitHub
+
+        - abrir terminal do computador
+            - navegar até diretório do repositório local
+
+        - comandos para:
+
+            - conectar repositórios local/remoto
+                - git remote add origin url-repositorio-github
+                - enter
+
+            - verificar se deu certo
+                - git remote -v
+                - enter
+                    - mostra os repositórios remotos cadastrados
+
+            - verificar se há pendências no repositório local
+                - git status
+
+            - enviar commit local para repositório remoto
+                - git push origin master
+                - enter
+
+            - pede credenciais do GitHub
+                - chave SSH / login
+                - enter
+
+            - informa que enviou commits para repositório remoto
+                - contagem de objetos
+                - compressão
+                - objetos escritos
+                - total de objetos
+                - url de destino
+
+
+        - No GitHub
+
+            - repositório está
+                - visível
+                - atualiado
+                - disponível para colaboração
+                    - modo público
+
+            - mostra na página inicial
+                - README
+                - pastas do repositório com os arquivos
+                - a chave SHA1
+                    - com informações sobre o commit
+                - hitórico dos commits
+                    - título
+                    - autor
+                    - data
+                    - SHA1
+
+
+    Clonar repositório remoto
+    -------------------------
+
+        - clonar é diferente de baixar repositório
+            - fica registrado no Git
+            - informa que é repositório e não diretório comum
+                - pasta oculta ".git"
+
+        - para clonar
+
+            - no terminal
+                - abrir diretório do repositório local 
+                - comando
+                    - git clone url/repositorio-para-clonar
+
+            - transfere repositório remoto para o computador
+
+
+    --------------------------------------
+    Novas opções de autenticação no GitHub
+    --------------------------------------
+
+        - Chave SSh
+        ===========
+
+        - Token 
+        =======
+
+            - Alterações estruturais do GitHub
+
+                - Autenticação no GitHub
+
+                    - opção antiga / menos segura
+                        - usuário-senha
+
+                    - opções novas / mais seguras
+                        - SSH
+                        - Token
+
+    - Chave SSH
+    ===========
+
+        - Conexão segura/encriptada
+        - entre duas máquinas
+            - máquina pessoal
+            - servidor GitHub
+        - utiliza duas chaves
+            - pública
+                - fica no GitHub
+                    - identifica máquina pessoal
+                        - assinatura da máquina
+            - privada
+                - fica na máquina
+        - máquina fica configurada com autenticação segura
+            - não precisa login e senha para acessar GitHub
+
+
+    - Gerar chaves SSH
+    ------------------
+
+        - no Mac
+            - acessar GitHub Docs
+                - Gerar nova chave SSH
+                    - Selecionar a versão Mac
+                        - seguir a documentação
+
+        - Linux / Windos
+            - comandos/passos semelhantes
+            - via terminal/GitBash
+
+        - Linux
+            - Abrir o terminal
+            - digitar o comando
+                - ssh-keygen -t ed25519 -C email
+                    - ssh-keygen
+                        - comando para gerar chave ssh
+                    - -t
+                        - flag
+                    - ed25519
+                        - tipo de criptografia da chave
+                    - -C
+                        - flag
+                    - email
+                        - login do GitHub
+            - enter
+            - Bash informa
+                - que está gerando o par de chaves
+                - local onde as chaves serão armazenadas
+                    - /home/.../.ssh/id_ed25519
+            - enter
+            - pede senha 2 vezes
+            - pronto
+            - informa
+                - local onde salvou 
+                    - a identificação
+                    - a chave pública
+                        - mesmo nome da chave privada + extensão ".pub"
+                - identidade da chave (fingerprint)
+                - tipo de criptografia usada
+                    - ed25519 256
+                - nome da criptografia
+                    - SHA256
+
+
+    - Visualizar chave gerada
+    -------------------------
+        - navegar até local onde salvou as chaves
+            - comando
+                - cd /home/.../.ssh/
+        - listar conteúdo da pasta
+            - comando ls
+        - visualizar contéudo do arquivo da chave pública
+            - comando
+                - cat id_nome-do-arquivo.pub
+            - enter
+        - copiar a chave pública
+
+
+    - Informar chave no GitHub
+    --------------------------
+        - entrar no GitHub
+        - Menu pessoal (foto)
+        - Settings
+            - SSH and GPG keys
+                - New SSH key
+                    - preencher os campos
+                        - Title
+                            - identificar qual é a chave
+                                - "emcasa"
+                        - Key type
+                            - Authentication Key
+                        - Key
+                            - colar a chave copiada no terminal
+                    - Add SSH key
+                    - vai pedir senha de login na plataforma
+                    - gerou a autenticação da chave
+                    - fornece algumas informações sobre a chave
+                        - quando foi criada
+                        - quando foi usada
+                        - se supeitar de uso indevido
+                            - basta deletar a chave
+
+
+    - Inicializar o SSH Agent
+    -------------------------
+        - entidade encarregada de lidar com as chaves
+        - no terminal do computador
+        - dentro da pasta onde estão os arquivos das chaves
+            - digitar o comando
+                - eval $(ssh-agent -s)
+            - enter
+        - informa o identificar do processo de autenticação
+            - Agent pid *****
+        - entregar a chave privada para este agente gerado
+            - digitar comando
+                - ssh-add id_ed25519
+            - enter
+            - pede a senha
+            - enter
+            - informa entidade adicionada
+                - com nome do arquivo da chave
+                - e o email de login
+
+    -----------------------------------------------------------------
+    Pronto, processo de criação e ativação das chaves está finalizado
+    -----------------------------------------------------------------
+
+
+    Clonar repositório GitHub com SSH configurado
+    ---------------------------------------------
+
+        - é mais seguro
+        - é mais rápido
+        - tem que ser pela autenticação das chaves
+        - não pode ser pela URL do Repositório
+
+        - No botoão "Code"
+            - escolher a opção SSH
+            - copiar o direcionamento
+                - git@github.com:Usuário/nome-do-repositorio
+
+        - No terminal do computador
+            - navegar até a pasta onde irá salva os repositórios baixados
+            - comando
+                - git clone git@github.com:Usuario/nome-do-repositorio
+            - enter
+            - pergunta se quer salvar a digital de autenticação
+                - Yes
+                    - só pergunta no primeiro acesso
+            - enter
+            - vai copiar toda a estrutura do repositório do GitHub na máquina
+            - pronto, já clonou
+
+
+    - Token de acesso pessoal
+    =========================
+
+        - outra forma de segurança do GitHub
+        - também tem que gerar no GitHub
+        - semelhante ao processo de login
+        - não é mais seguro que a chave SSH
+            - arquivo com token fica salvo na máquina
+
+
+        - Processo de uso
+        -----------------
+
+            - Gera token no GitHub
+            - Salvar token na máquina
+            - Toda vez que fizer Commit
+            - Vai pedir usuário/senha
+                - Na hora da senha
+                    - Informar o token
+
+
+        - Gerar e salvar token
+        ----------------------
+
+            - no GitHub
+            - menu pessoal
+            - Setting
+            - Developer settings
+            - Personal access tokens
+            - Tokens (classic)
+                - Generate new token
+                    - Generate new token (classic)
+
+            - Preencher os campos / ativar opções
+                - Note
+                    - nome/descrição do token
+                - Expiration
+                    - prazo de validade e desativação do token
+                - Selecionar a opção
+                    - repo
+                        - total controle de privacidade
+                - clicar em "generate token"
+                - irá gerar token
+                - copiar o token gerado
+                    - atenção
+                        - este token não será visível novamente
+                        - copiar e salvar com segurança
+                        - caso perca, terá que gerar novo token
+                - salvar em arquivo no computador / na nuvem
+                    - garantir segurança de acesso ao arquivo
+
+
+        - Clonar Repositório com token
+        ------------------------------
+
+            - no GitHub
+                - no repositório a ser clonado
+                - botão "Code"
+                - na opção HTTPS
+                - copiar URL
+            - no terminal do computador
+                - comando
+                    - git clone URL-copiada
+                - vai pedir o token
+                    - pegar o token salvo no computador e copiar
+                    - colar o token na janela de login
+                    - enter
+                - vai mostrar mensagem de verificação realizada
+                - vai clonar o repositório na máquina
 
 
 -----------------------------------------------------------------------
 
-8   Resovendo conflitos
-=======================
+8   Resolvendo conflitos
+========================
 
-    Como acontecem conflitos e como resolver
-    ========================================
+    Como acontece conflito
+    ----------------------
+
+        - Código já está no GitHub
+            - commitado
+            - disponível para colaboração
+
+        - Arquivos local / remoto são idênticos
+
+        - Respositório foi clonado por outra pessoa
+            - baixou para computador da pessoa
+
+        - Código sofre alterações
+            - do autor
+            - do colaborador
+
+        - Arquivo não está sincronizado / idêntico
+            - versões diferentes
+                - no repositório local
+                    - do autor
+                    - do colaborador
+                - no repositório remoto
+
+        - Colaborador faz commit
+            - sincromiza versão local com remota
+            - versão local do autor está desatualizada
+
+        - Autor tenta fazer commit
+            - GitHub avisa versão desatualizada 
+                - conflito de merge
+
+        - Antes de enviar commit
+            - autor deve baixar versão
+            - juntar as alterações
+            - enviar versão atualizada / sem conflitos
 
 
+    Como solucionar conflito
+    ------------------------
+
+        - baixar versão para reositório local
+
+
+        - comandos no terminal
+        ------------------------------------
+            pull (puxar / baixar)
+
+            - git pull origin master
+                - mostra
+                    - quantidade de arquivos
+                    - arquivos em conflito
+        ------------------------------------
+
+
+        - GitHub faz marcações no arqvuivo
+            - no local onde há conflito
+                - <<<<< Head
+                    linha de texto em conflito
+                  >>>>> chave SHA1 do conflito
+
+        - editar manualmente arquivo 
+            - mesclar atualizações em conflito
+
+        - enviar nova versão para repositório remoto
+
+
+        - comandos no terminal
+        ---------------------------------------------------
+            push (empurrar / enviar)
+
+            - git status
+                - mostra estado do repositório local
+                    - arquivo modificado
+
+            - git add .
+                - adicionar arquivos editados no Staged
+
+            - git commit -m "descrição do commit"
+                - empacotar arquivos
+                - adicionar pacote no Unmodified
+
+            - git push origin master
+                - envia nova versão para repositório remoto
+                - mostra arquivos atualizados
+        ---------------------------------------------------
+
+
+        - Repositório remoto está atualizado
+            - histórico de commits
+            - arquivos atualizados
 
 -----------------------------------------------------------------------

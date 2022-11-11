@@ -14,22 +14,22 @@
                         diario_de_bordo
 ------------------------------------------------------------------
 
-04_desafio_cod__algoritmos_basicos
-==================================
+07_desafio_cod__algoritmos_intermedios
+======================================
 
-    04_1_numeros_iguais
-    04_2_soma_multiplos
-    04_3_chamada_recursiva
-    04_4_fizzbuzz
-    04_5_busca_sequencial
+    07_1_checagem_palindromo
+    07_2_validar_parenteses
+    07_3_quadrados_perfeitos
+    07_4_classificar_matrizes
+    07_5_fatorial_desejado
 
 ------------------------------------------------------------------
 
-04_3_chamada_recursiva
-======================
+07_1_checagem_palindromo
+========================
 
-        - nível básico
-        - princípios básicos
+        - nível intermediário
+        - matemática
 
 ------------------------------------------------------------------
     1   Descrição
@@ -44,31 +44,42 @@
 =============
 
    - Desafio
-        - receba número inteiro N
-        - clacule somatório
-            - todos os números entre
-                - N
-                - zero
-        - imprima na tela resultado
+        - construir função
+            - recebe String
+            - identifique se é palíndromo
+                - igual e invertida
+                    - radar
+                    - radar
+            - não é palíndromo
+                - igual
+                - laugi
+
 
     - Entrada
-        - um número inteiro
-            - N
-
+        - uma palavra
 
     - Saída
-        - retornar
-            - soma
-                - de N
-                - até zero
+        - valor booleano
+            - true
+            - false
 
     - Exemplos
 
         - entrada            
-            10
-            4
-            15
+            radar
+        - saída
+            true
 
+        - entrada            
+            digital
+        - saída
+            false
+
+        - entrada            
+            ana
+        - saída
+            true
+ 
 
 ------------------------------------------------------------------
 
@@ -210,16 +221,35 @@
 4   Testes oferecidos
 =====================
 
-    Teste 1 (fechado)
-
-    Teste 2 (aberto)
+    Teste 1 (aberto)
         Dado de entrada:
-            15
+            inovacao
         Saída esperada:
-            120
+            FALSE
 
-        Clique no botão "EXECUTAR TESTES"
-        para visulizar a saída do seu algoritmo.
+
+    Teste 2 (fechado)
+
+
+    Teste 3 (aberto)
+        Dado de entrada:
+            radar
+        Saída esperada:
+            TRUE
+
+
+    Teste 4 (aberto)
+        Dado de entrada:
+            10
+        Saída esperada:
+            12
+
+
+    Teste 5 (aberto)
+        Dado de entrada:
+            4
+        Saída esperada:
+            7
 
 ------------------------------------------------------------------
 
@@ -229,31 +259,21 @@
 
 // IMPORTANTE: Para ler os dados de entrada do usuário, utilize a classe Scanner, 
 // instanciando seu leitor da seguinte forma: "Scanner leitor = new Scanner(System.in);". 
-// Por outro lado, para imprimir suas saídas, utilize System.out.print ou System.out.println. 
- 
+// Por outro lado, para imprimir suas saídas, utilize System.out.print ou System.out.println.
 
-        import java.util.*;
+import java.util.Scanner;
 
-        public class Main {
+public class Desafio {
 
-            public static void main(String[] args) {
+    public static void main(String[] args) {
 
-                Scanner numero = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        String palavra = sc.nextLine();
 
-                //TODO: Imprima o somatório de N (utilize o método "somatorio").
-            }
+        //TODO: Retorne TRUE ou FALSE, caso a "palavra" seja ou não um Palíndromo.
+    }
+}
 
-            /**
-             * Método útil que calcula o somatório de um número usando recursividade.
-             */
-            static int somatorio(int numero) {
-                if (numero == 0) {
-                    return 0;
-                } else {
-                    return numero + somatorio(numero - 1);
-                }
-            }
-        }
 
 ------------------------------------------------------------------
 
@@ -269,29 +289,27 @@
 // Por outro lado, para imprimir suas saídas, utilize System.out.print ou System.out.println.
 
 
-        import java.util.*;
+    import java.util.Scanner;
 
-        public class Main {
+    public class Desafio {
 
-            public static void main(String[] args) {
+        public static void main(String[] args) {
 
-                Scanner numero = new Scanner(System.in);
-                int N;
+            Scanner sc = new Scanner(System.in);
+           // System.out.println("Digite a palavra: ");
+            String palavra = sc.nextLine();
 
-                //System.out.println("Digite um valor para N: ");
-                N = numero.nextInt();
-
-                System.out.println(somatorio(N));
+            String novaPalavra = "";
+            String[] letras = palavra.split("");
+            for (int i = letras.length-1; i >= 0; i--){
+                novaPalavra = novaPalavra + letras[i];
             }
 
-            static int somatorio(int numero) {
-                if (numero == 0) {
-                    return 0;
-                } else {
-                    return numero + somatorio(numero - 1);
-                }
-            }
+
+            System.out.println(novaPalavra.equals(palavra)
+            ?"TRUE":"FALSE");
         }
+    }
 
 
 ------------------------------------------------------------------

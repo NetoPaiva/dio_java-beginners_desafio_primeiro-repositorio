@@ -1,0 +1,181 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+05_java__programacao_orientada_objeto
+=====================================
+
+    05_1_prog_orientada_objeto
+    05_2_collections_java
+    05_3_debugging_java
+    05_4_excecoes_java
+    05_5_java_oop__abstrair_bootcamp
+
+------------------------------------------------------------------
+
+05_5_java_oop__abstrair_bootcamp
+==================================
+
+    Camila Cavalcante
+        Tech Teacher
+        DIO
+
+------------------------------------------------------------------
+    05_5_1_apresenta_desafio-projeto
+    05_5_2_configura_ambiente
+    05_5_3_abstrair_encapsular
+    05_5_4_herança_polimorfismo
+    05_5_5_concluir_classes_domínio
+    05_5_6_interligar_classes_domiínio
+    05_5_7_descrição_desafio
+    05_5_8_link_github
+    05_5_9_informações_desafio
+------------------------------------------------------------------
+
+    Configuração do Ambiente de Desenvolvimento
+    ===========================================
+
+        IntelliJ
+        --------
+
+    1   Criar projeto
+    2   Criar repositório no GitHub
+    3   Versionar repositório
+    4   Adicionar Readme
+
+------------------------------------------------------------------
+
+1   Criar projeto
+=================
+
+    - New Project
+        - Java
+            - Java 11
+                - Next / Next
+                    - Project name
+                        - desafio-dio-POO
+                    - Project location (diretório no computador)
+                        - ...
+                            - escolher pasta dentro do repositório
+                            - criar nova pasta
+                                - desafio-poo-dio
+                - finish
+
+
+2   Criar repositório no GitHub
+===============================
+
+    - Login no GitHUb
+    - Criar novo respositório
+        - New Repository
+            - Repository name
+                - desafio-poo-dio
+            - Description
+                - deixar em branco
+            - Readme
+                - já está pronto
+                - será versionado
+            - Add .gitignore
+                - será feito no site "gitignore.io"
+            - Choose a license
+                - deixar desmarcado
+            - Create repository
+
+
+
+3   Versionar repositório
+=========================
+
+    - no IntelliJ
+
+        - Sincronizar projeto com GitHub
+            - pasta do projeto selecionada (aba da esquerda)
+            - Menu VCS
+                - Enable Version Control Integracion
+                    - Git
+                    - OK
+
+        - Criar arquivo gitignore
+            - retira do commit arquivos desnecessários
+            - site gitignore.io
+                - digitar no campo em branco
+                    - Java
+                    - IntelliJ / Eclipse / VSCode
+                - Create
+                    - para gerar conteúdo do arquivo
+                - Aparecerá página com conteúdo do arquivo (texto)
+                - Copiar o texto
+                    - ctrl A
+                    - ctrl C
+
+
+        - Substituir arquivo do gitignore no IntelliJ
+            - seleciona arquivo gitignore
+                - dentro da pasta ".idea" do projeto (aba esquerda)
+            - cola na aba direita o conteúdo copiado do site 
+                
+
+        - Versionar o projeto (fazer commit)
+            - Menu Git
+                - Commit (ctrl K)
+                - na janela do commit
+                    - selecionar "Unversioned Files"
+                    - escrever descrição do commit
+                        - primeira versão
+                    - clicar em " Commit"
+                        - cria e envia esta versão
+                - na janela do Push
+                    - definir local do versionamento no GitHub
+                        - clica em "master - define remote"
+                            - colar url do repositório no GitHub
+                                - o link de clonar repositório
+                                - ctrl V
+                            - ok
+                    - aparece na janela do Push
+                        - o novo commit abaixo de master - origin:master
+                        - os arquivos que serão enviados
+                    - clicar em "Push"
+                        - começa a enviar commit para GitHub
+                - aparece mensagem que commit foi enviado
+
+
+4   Adicionar Readme
+====================
+
+        - Criar arquivo texto / formato markdown
+        - salvar dentro do diretório do repositório local
+        - no Intellij
+            - arquivo readme
+                - aparece dentro da estrutura de arquivos do projeto
+            - mensagem que foi adicionado arquivo externo
+            - fazer novo commit
+                - ctrl K
+                - na janela do commit
+                    - changes
+                        - Unversioned Files
+                            - selecionar o arquivo Readme
+
+                    - escrever descrição do commit
+                        - adicionado Readme.md
+
+                    - clicar em "Commit and Push"
+                    - aparece mensagem se houver problema
+
+                - na janela do Push
+                    - mostra conteúdo adicionado
+                    - clicar em "Push"
+
+
+------------------------------------------------------------------

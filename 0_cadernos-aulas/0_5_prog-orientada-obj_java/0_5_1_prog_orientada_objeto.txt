@@ -28,9 +28,9 @@
 05_1_prog_orientada_objeto
 ==========================
 
-    Nome Instrutor
-        Cargo
-        Empresa
+    Camila Cavalcante
+        Tech Teacher
+        DIO
 
 ------------------------------------------------------------------
     1   Tópicos da aula

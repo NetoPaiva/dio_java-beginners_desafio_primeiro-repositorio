@@ -1,0 +1,511 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+05_java__programacao_orientada_objeto
+=====================================
+
+    05_1_prog_orientada_objeto
+    05_2_collections_java
+    05_3_debugging_java
+    05_4_excecoes_java
+    05_5_java_oop__abstrair_bootcamp
+
+------------------------------------------------------------------
+
+05_5_java_oop__abstrair_bootcamp
+==================================
+
+    Camila Cavalcante
+        Tech Teacher
+        DIO
+
+------------------------------------------------------------------
+    05_5_1_apresenta_desafio-projeto
+    05_5_2_configura_ambiente
+    05_5_3_abstrair_encapsular
+    05_5_4_herança_polimorfismo
+    05_5_5_concluir_classes_domínio
+    05_5_6_interligar_classes_domiínio
+    05_5_7_descrição_desafio
+    05_5_8_link_github
+    05_5_9_informações_desafio
+------------------------------------------------------------------
+
+    Versão final dos códigos
+    ========================
+
+    1   Entrega do Desafio de Projeto
+    2   Main.java
+    3   Bootcamp.java
+    4   Conteudo.java
+    5   Curso.java
+    6   Dev.java
+    7   Mentoria.java
+    8   Saída do programa final (Run)
+
+------------------------------------------------------------------
+
+
+
+
+
+1   Entrega do Desafio de Projeto
+=================================
+
+        Desafio de Projeto entrege
+
+            11/11/22 - 13h
+
+            link do repositório:
+        -----------------------------------------------
+            https://github.com/NetoPaiva/dio_java-beginners_desafio_abstrair-bootcamp.git
+        -----------------------------------------------
+
+
+2   Main.java
+=============
+    --------------------------------------------------------
+
+        import br.com.dio.desafio.dominio.Bootcamp;
+        import br.com.dio.desafio.dominio.Curso;
+        import br.com.dio.desafio.dominio.Dev;
+        import br.com.dio.desafio.dominio.Mentoria;
+
+        import java.time.LocalDate;
+
+        public class Main {
+            public static void main(String[] args) {
+
+                Curso curso1 = new Curso();
+                curso1.setTitulo("curso java");
+                curso1.setDescricao("descrição curso java");
+                curso1.setCargaHoraria(8);
+
+                Curso curso2 = new Curso();
+                curso2.setTitulo("curso poo");
+                curso2.setDescricao("descrição curso poo");
+                curso2.setCargaHoraria(6);
+
+                Mentoria mentoria = new Mentoria();
+                mentoria.setTitulo("mentoria Java");
+                mentoria.setDescricao("descrição mentoria java");
+                mentoria.setData(LocalDate.now());
+
+
+                Bootcamp bootcamp = new Bootcamp();
+                bootcamp.setNome("Bootcamp Java Developer");
+                bootcamp.setDescricao("Descrição do Bootcamp Java Developer");
+                bootcamp.getConteudos().add(curso1);
+                bootcamp.getConteudos().add(curso2);
+                bootcamp.getConteudos().add(mentoria);
+
+                Dev devJose = new Dev();
+                devJose.setNome("José");
+                devJose.inscreverBootcamp(bootcamp);
+                //System.out.println("Conteúdos Inscritos José " + devJose.getConteudosInscritos());
+
+                devJose.progredir();
+                devJose.progredir();
+                System.out.println("-");
+                System.out.println("Conteúdos Inscritos José " + devJose.getConteudosInscritos());
+                System.out.println("Conteúdos Concluídos José " + devJose.getConteudosConcluidos());
+                System.out.println("XP de José: " + devJose.calcularTotalXp());
+
+                //apenas para separar as informações no terminal de saída
+                System.out.println("-----");
+
+                Dev devJoao = new Dev();
+                devJoao.setNome("João");
+                devJoao.inscreverBootcamp(bootcamp);
+                //System.out.println("Conteúdos Inscritos João " + devJoao.getConteudosInscritos());
+
+                devJoao.progredir();
+                devJoao.progredir();
+                devJoao.progredir();
+                System.out.println("-");
+                System.out.println("Conteúdos Inscritos João " + devJoao.getConteudosInscritos());
+                System.out.println("Conteúdos Concluídos João " + devJoao.getConteudosConcluidos());
+                System.out.println("XP de João: " + devJoao.calcularTotalXp());
+                System.out.println("-");
+
+            }
+
+        }
+
+    --------------------------------------------------------
+
+
+3   Bootcamp.java
+=================
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+        import java.util.HashSet;
+        import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Set;
+
+        public class Bootcamp {
+            private String nome;
+            private String descricao;
+            private final LocalDate dataInicial = LocalDate.now();
+            private final LocalDate dataFinal = dataInicial.plusDays(45);
+            private Set<Dev> devsInscritos = new HashSet<>();
+            private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+
+            public LocalDate getDataInicial() {
+                return dataInicial;
+            }
+
+            public LocalDate getDataFinal() {
+                return dataFinal;
+            }
+
+            public Set<Dev> getDevsInscritos() {
+                return devsInscritos;
+            }
+
+            public void setDevsInscritos(Set<Dev> devsInscritos) {
+                this.devsInscritos = devsInscritos;
+            }
+
+            public Set<Conteudo> getConteudos() {
+                return conteudos;
+            }
+
+            public void setConteudos(Set<Conteudo> conteudos) {
+                this.conteudos = conteudos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Bootcamp bootcamp = (Bootcamp) o;
+                return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+            }
+        }
+
+    --------------------------------------------------------
+
+
+4   Conteudo.java
+=================
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        public abstract class Conteudo {
+
+            protected static final double XP_PADRAO = 10d;
+
+            private String titulo;
+            private String descricao;
+
+            public abstract double calcularXP();
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+        }
+
+    --------------------------------------------------------
+
+
+5   Curso.java
+==============
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        public class Curso extends Conteudo {
+            private int cargaHoraria;
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO * cargaHoraria;
+            }
+
+            public Curso() {
+            }
+
+            public int getCargaHoraria() {
+                return cargaHoraria;
+            }
+
+            public void setCargaHoraria(int cargaHoraria) {
+                this.cargaHoraria = cargaHoraria;
+            }
+
+            @Override
+            public String toString() {
+                return "Curso{" +
+                        "titulo='" + getTitulo() + '\'' +
+                        ", descricao='" + getDescricao() + '\'' +
+                        ", cargaHoraria=" + cargaHoraria +
+                        '}';
+            }
+        }
+
+    --------------------------------------------------------
+
+
+6   Dev.java
+============
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        /*import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Optional;
+        import java.util.Set;*/
+        import java.util.*;
+
+        public class Dev {
+            private String nome;
+            private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
+            private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
+            public void inscreverBootcamp(Bootcamp bootcamp) {
+                bootcamp.getDevsInscritos().add(this);
+                this.conteudosInscritos.addAll(bootcamp.getConteudos());
+            }
+
+            public void progredir() {
+                Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
+                if(conteudo.isPresent()) {
+                    this.conteudosConcluidos.add(conteudo.get());
+                    this.conteudosInscritos.remove(conteudo.get());
+                }
+                else {
+                    System.err.println("ooooh! não há conteúdo.");
+                }
+            }
+            // este metodo estava ativo no repositório da Camila
+
+            /*public double calcularTotalXp() {
+                Iterator<Conteudo> iterator = this.conteudosConcluidos.iterator();
+                double soma = 0;
+                while(iterator.hasNext()){
+                    double next = iterator.next().calcularXp();
+                    soma += next;
+                }
+                return soma;*/
+
+            /*    o método abaixo estava comentado no repositório da Camila,
+                  mas é o que foi demonstrado em aula */
+            public double calcularTotalXp() {
+                return this.conteudosConcluidos
+                        .stream()
+                        .mapToDouble(Conteudo::calcularXP)
+                        .sum();
+            }
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public Set<Conteudo> getConteudosInscritos() {
+                return conteudosInscritos;
+            }
+
+            public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
+                this.conteudosInscritos = conteudosInscritos;
+            }
+
+            public Set<Conteudo> getConteudosConcluidos() {
+                return conteudosConcluidos;
+            }
+
+            public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
+                this.conteudosConcluidos = conteudosConcluidos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Dev dev = (Dev) o;
+                return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+            }
+        }
+
+    --------------------------------------------------------
+
+
+7   Mentoria.java
+=================
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+
+        public class Mentoria extends Conteudo {
+
+            private LocalDate data;
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO + 20d;
+            }
+
+            public Mentoria() {
+            }
+
+            public void setData(LocalDate data) {
+                this.data = data;
+            }
+
+            @Override
+            public String toString() {
+                return "Mentoria{" +
+                        "titulo='" + getTitulo() + '\'' +
+                        ", descricao='" + getDescricao() + '\'' +
+                        ", data=" + data +
+                        '}';
+            }
+        }
+
+    --------------------------------------------------------
+
+
+8   Saída do programa final (Run)
+=================================
+    --------------------------------------------------------
+
+    /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java 
+    -javaagent:/usr/lib/idea-IC-222.4345.14/lib/idea_rt.jar=35447:
+    /usr/lib/idea-IC-222.4345.14/bin 
+    -Dfile.encoding=UTF-8 
+    -classpath 
+    /home/emcasa/Documentos/ _cursos_hd2/dio_ifood__java_beginners
+    /0_repositorio-git/dio_java-beginners_desafio_abstrair-bootcamp
+    /desafio-bootcamp_dio/out/production/desafio-bootcamp_dio 
+    Main
+
+    -
+
+    Conteúdos Inscritos José [
+
+        Mentoria{
+            titulo='mentoria Java', 
+            descricao='descrição mentoria java', 
+            data=2022-11-11
+        }
+    ]
+
+    Conteúdos Concluídos José [
+
+        Curso{
+            titulo='curso java', 
+            descricao='descrição curso java', 
+            cargaHoraria=8
+        }, 
+
+        Curso{
+            titulo='curso poo', 
+            descricao='descrição curso poo', 
+            cargaHoraria=6
+        }
+    ]
+
+    XP de José: 140.0
+
+
+    -----
+
+    -
+
+    Conteúdos Inscritos João []
+
+    Conteúdos Concluídos João [
+
+        Curso{
+            titulo='curso java', 
+            descricao='descrição curso java', 
+            cargaHoraria=8
+        }, 
+
+        Curso{
+            titulo='curso poo', 
+            descricao='descrição curso poo', 
+            cargaHoraria=6
+        }, 
+
+        Mentoria{
+            titulo='mentoria Java', 
+            descricao='descrição mentoria java', 
+            data=2022-11-11
+        }
+    ]
+
+    XP de João: 170.0
+
+    -
+
+    Process finished with exit code 0
+
+    --------------------------------------------------------
+
+
+------------------------------------------------------------------

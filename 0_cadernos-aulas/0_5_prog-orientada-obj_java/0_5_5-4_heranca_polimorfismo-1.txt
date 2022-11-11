@@ -1,0 +1,589 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+05_java__programacao_orientada_objeto
+=====================================
+
+    05_1_prog_orientada_objeto
+    05_2_collections_java
+    05_3_debugging_java
+    05_4_excecoes_java
+    05_5_java_oop__abstrair_bootcamp
+
+------------------------------------------------------------------
+
+05_5_java_oop__abstrair_bootcamp
+==================================
+
+    Camila Cavalcante
+        Tech Teacher
+        DIO
+
+------------------------------------------------------------------
+    05_5_1_apresenta_desafio-projeto
+    05_5_2_configura_ambiente
+    05_5_3_abstrair_encapsular
+    05_5_4_herança_polimorfismo
+    05_5_5_concluir_classes_domínio
+    05_5_6_interligar_classes_domiínio
+    05_5_7_descrição_desafio
+    05_5_8_link_github
+    05_5_9_informações_desafio
+------------------------------------------------------------------
+
+    Herança e Polimorfismo
+    ======================
+
+        Refaturar as Classes Curso e Mentoria
+
+    1   Versionar código
+    2   Refatorar Curso e Mentoria
+    3   Como fazer Herança
+        3.1 Criar classe Conteúdo
+        3.2 Editar Mentoria / Curso
+    4   Exemplo de Polimorfismo
+    5   Códigos até este ponto
+    6   Saída do programa até aqui (Run)
+
+------------------------------------------------------------------
+
+1   Versionar o código
+======================
+
+    - ctrl + K (commit)
+    - selecionar os arquivos
+    - escrever a descrição
+    - commit
+    - push (agora ou depois)
+
+
+2   Refatorar Curso e Mentoria
+==============================
+
+    - aplicar conceito de Herança
+    -----------------------------
+
+        - melhorar o código
+        - evitar repetiçao
+            - Curso e Mentoria
+                - atributos / métodos em comum
+
+    - conforme a regra de negócio / aplicação
+        - criar uma classe mais genérica
+            - Classe Conteudo
+                - classe mãe
+        - irá conter as classes filhas
+            - Curso
+            - Mentoria
+
+        - Conceito de herança
+            - as classes filhas
+                - herdam a lógica da classe mãe
+                    - obrigadas a implementar a lógica
+
+        - objetivo
+            - simplificar o código e evitar repetição
+            - iniciar atributos / métodos das classes filhas
+                - titulo
+                - descrião
+                - cargaHoraria
+                - data
+                - calcularXP (método)
+
+    - regra de negócio
+        - todo Bootcamp tem conteúdos
+        - Curso ou Mentoria são conteúdos
+
+
+3.   Como fazer Herança
+=======================
+
+
+3.1. Criar classe Conteúdo
+==========================
+
+    - no pacote ...desafio.dominio
+    - classe Conteudo
+
+
+    - criar a constante de pontuação do Bootcamp
+    --------------------------------------------
+
+        protected static final double XP_PADRAO = 10d;
+
+        - constante XP_PADRAO
+            - nome da constante com letras maiúsculas
+            - todo conteúdo já será criado com XP Padrão
+
+        - atribuir valor inicial 10
+            - = 10d;
+
+        - informar que é constante
+            - final
+
+        - definir o tipo de dado
+            - double
+
+        - modificador de acesso
+            - protegido
+                - só classes filhas podem acessar
+            - estático
+                - pode ser acessado fora da classe Conteudo
+
+
+    - criar atributos / métodos da classe Conteudo
+    ----------------------------------------------
+
+        - atributos
+            private String titulo;
+            private String descricao;
+
+        - método
+            public abstract double calcularXP();
+
+            - se este método é abstrato
+            - a classe Conteudo
+                - também tem que ser abstrata
+            - classe abstrata
+                - não pode ser instanciada
+                    - não pode criar objeto Conteudo
+                - precisa relacionar com
+                    - atributos / método da Classe
+
+
+    - criar getter / setter (ALT + Insert)
+    --------------------------------------
+            - dos atributos
+                - titulo
+                - descricao
+
+    -------------------------------------------------------
+
+        - codigo Conteúdo até aqui
+        --------------------------
+
+                package br.com.dio.desafio.dominio;
+
+                public abstract class Conteudo {
+
+                    protected static final double XP_PADRAO = 10d;
+
+                    private String titulo;
+                    private String descricao;
+
+                    public abstract double calcularXP();
+                    
+
+                    public String getTitulo() {
+                        return titulo;
+                    }
+
+                    public void setTitulo(String titulo) {
+                        this.titulo = titulo;
+                    }
+
+                    public String getDescricao() {
+                        return descricao;
+                    }
+
+                    public void setDescricao(String descricao) {
+                        this.descricao = descricao;
+                    }
+                }
+
+    -------------------------------------------------------
+
+
+3.2. Editar classe Mentoria / Curso
+===================================
+
+    - transformar Mentoria / Curso em filhas de Conteudo
+    ----------------------------------------------------
+
+        - classes filhas extendem da classe mãe
+
+            public class Mentoria extends Conteudo { }
+
+            public class Curso extends Conteudo { }
+
+        - incluir após nome da classe Mentoria / Curso
+            - a palavra reservada
+                - extends
+            - seguida do nome da classe mãe
+                - Conteudo
+
+        - conceito de herança
+            - tudo que tem em Conteudo terá em Mentoria
+            - nem tudo que tem em Mentoria terá em Conteúdo
+                - a classe filha pode ter funções próprias
+
+
+    - limpar código
+    ---------------
+
+        - deletar no arquivo da classe Mentoria / Curso
+
+            - as declarações relacionadas aos atributos
+                - titulo
+                - descricao
+            - já estão declarados na classe mãe
+
+            - os atributos
+                - priavte String titulo;
+                - private String descricao;
+
+            - os getter and setter
+                - getTitulo
+                - setTitulo
+                - getDescricao
+                - setDescricao
+
+        - atributo Data permanece em Mentoria
+            - não está declarado na classe mãe
+                private LocalDate data;
+
+        - atributo cargaHoraria permanece em Curso
+            - não está declarado na classe mãe
+                private int cargaHoraria;
+
+
+    - implementar método abstrato calcularXP
+    ----------------------------------------
+
+        - na delcaração da classe extendida
+
+            public class Mentoria extends Conteudo { }
+
+            public class Curso extends Conteudo { }
+
+        - a IDE já avisa que método abstrato não está implementado
+            - sublinha em vermelho a declaração
+
+        - ao passar o cursos sobre a declaração sublinhada
+            - IDE mostra mensagem
+            - sugeri implementação
+                Implement methods (alt shift enter)
+
+            - clicar na sugestão para aplicar
+                - abre janela para selecionar método
+                    - calcularXP():double
+                    - ok
+                - inclui declaração no final do arquivo
+
+        - mover declaração Overdide calcularXP
+            - para ficar acima de
+                - public Mentoria() { }
+                - public Curso() { }
+
+            - seleciona toda esta declaração
+
+                    @Override
+                    public double calcularXP() {
+                        return 0;
+                    }
+
+
+    - ajustar valor de XP da mentoria
+    ---------------------------------
+
+        - conforme a regra do negócio
+            - ao iniciar uma mentoria
+                - usuário ganha mais 20 XP
+                    - XP padrão + 20
+
+        - incluir na declaração de Override de XP
+            - novo valor de retorno:
+
+                @Override
+                public double calcularXP() {
+                    return XP_PADRAO + 20d;
+                }
+
+
+    - ajustar valor de XP do curso
+    ------------------------------
+
+        - conforme a regra do negócio
+            - usuário ao finalizar um curso
+                -  multiplica XP pela carga horária
+                    - XP padrão * cargaHoraria
+
+        - incluir na declaração de Override de XP
+            - novo valor de retorno:
+
+                @Override
+                public double calcularXP() {
+                    return XP_PADRAO * cargaHoraria;
+                }
+
+
+    - corrigir alterações em "toString"
+    -----------------------------------
+
+        - por declarar atributos na classe mãe
+            - está dando erro no retorno de
+                - titulo / descricao
+        - IDE mostra erro sublinhando a palavra
+        
+        - para corrigir
+            - transformar em "getTitulo()"
+            - substituir a palavra
+                - titulo por getTitulo
+                - descricao por getDescricao
+
+
+4   Exemplo de Polimorfismo
+===========================
+
+    - editar classe Main
+
+    - não é possível criar o objeto Conteúdo
+
+        Conteudo conteudo = new Conteudo() { }
+
+        - dá erro
+        - automaticamente IDE cria método abstrato
+
+    - também não pode ser classe
+
+        Conteudo conteudo = new Conteudo();
+
+        - dá erro
+        - IDE diz que é uma classe abstrata
+            - não pode ser instaciada
+
+    - mas é possível criar Curso /mentoria
+        - a partir da classe Conteudo
+
+        Conteudo conteudo = new Curso();
+        Conteudo conteudo = new Mentoria();
+
+    - comentar as duas linhas de código
+        - não será interpretada pelo compilador
+        - assim não perde o exemplo
+
+        - isto é Polimorfismo
+            - instanciar um objeto
+            - a partir de uma classe
+
+        - Polimorfismo mantém o conceito de Herança
+            - tudo que tem dentro da classe
+                - terá neste novo objeto
+            - mas nem tudo do objeto
+                - terá na classe
+
+
+5   Códigos até este ponto
+==========================
+
+    
+    código Main.java
+    ----------------
+
+        import br.com.dio.desafio.dominio.Conteudo;
+        import br.com.dio.desafio.dominio.Curso;
+        import br.com.dio.desafio.dominio.Mentoria;
+
+        import java.time.LocalDate;
+
+        public class Main {
+            public static void main(String[] args) {
+
+                Curso curso1 = new Curso();
+                curso1.setTitulo("curso java");
+                curso1.setDescricao("descrição curso java");
+                curso1.setCargaHoraria(8);
+
+                Curso curso2 = new Curso();
+                curso2.setTitulo("curso poo");
+                curso2.setDescricao("descrição curso poo");
+                curso2.setCargaHoraria(6);
+
+                // exemplo de polimorfismo
+                // Conteudo conteudo = new Curso();
+                // Conteudo conteudo = new Mentoria();
+
+                Mentoria mentoria = new Mentoria();
+                mentoria.setTitulo("mentoria Java");
+                mentoria.setDescricao("descrição mentoria java");
+                mentoria.setData(LocalDate.now());
+
+                System.out.println(curso1);
+                System.out.println(curso2);
+                System.out.println(mentoria);
+            }
+
+        }
+
+
+
+    código Curso.java
+    -----------------
+
+        package br.com.dio.desafio.dominio;
+
+        public class Curso extends Conteudo {
+
+            private int cargaHoraria;
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO * cargaHoraria;
+            }
+
+            public Curso() {
+            }
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO * cargaHoraria;
+            }
+
+            public int getCargaHoraria() {
+                return cargaHoraria;
+            }
+
+            public void setCargaHoraria(int cargaHoraria) {
+                this.cargaHoraria = cargaHoraria;
+            }
+
+            @Override
+            public String toString() {
+                return "Curso{" +
+                        "titulo='" + getTitulo() + '\'' +
+                        ", descricao='" + getDescricao() + '\'' +
+                        ", cargaHoraria=" + cargaHoraria +
+                        '}';
+            }
+
+        }
+
+
+
+    código Conteudo.java
+    --------------------
+
+        package br.com.dio.desafio.dominio;
+
+        public abstract class Conteudo {
+
+            protected static final double XP_PADRAO = 10d;
+
+            private String titulo;
+            private String descricao;
+
+            public abstract double calcularXP();
+
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+        }
+
+
+
+    código Mentoria.java
+    --------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+
+        public class Mentoria extends Conteudo {
+
+            private LocalDate data;
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO + 20d;
+            }
+
+            public Mentoria() {
+            }
+
+            @Override
+            public double calcularXP() {
+                return XP_PADRAO + 20d;
+            }
+
+            public LocalDate getData() {
+                return data;
+            }
+            public void setData(LocalDate data) {
+                this.data = data;
+            }
+
+            @Override
+            public String toString() {
+                return "Mentoria{" +
+                        "titulo='" + getTitulo() + '\'' +
+                        ", descricao='" + getDescricao() + '\'' +
+                        ", data=" + data +
+                        '}';
+            }
+
+        }
+
+    
+
+
+6   Saída do programa até aqui (Run)
+====================================
+                
+    /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java 
+    -javaagent:/usr/lib/idea-IC-222.4345.14/lib/idea_rt.jar=45163:
+    /usr/lib/idea-IC-222.4345.14/bin 
+    -Dfile.encoding=UTF-8 
+    -classpath 
+    /home/emcasa/Documentos/ _cursos_hd2/dio_ifood__java_beginners
+    /0_repositorio-git/dio_java-beginners_desafio_abstrair-bootcamp
+    /desafio-bootcamp_dio/out/production/desafio-bootcamp_dio
+    Main
+
+    Curso{
+        titulo='curso java',
+        descricao='descrição curso java', 
+        cargaHoraria=8
+    }
+
+    Curso{
+        titulo='curso poo', 
+        descricao='descrição curso poo', 
+        cargaHoraria=6
+    }
+
+    Mentoria{
+        titulo='mentoria Java', 
+        descricao='descrição mentoria java', 
+        data=2022-11-09
+    }
+
+    Process finished with exit code 0
+
+
+------------------------------------------------------------------

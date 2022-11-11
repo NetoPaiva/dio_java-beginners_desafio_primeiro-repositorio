@@ -21,24 +21,504 @@
     03_2_java_ambiente_dev
     03_3_java_sintaxe
     03_4_java_logica_condicional_controle_fluxo
-    03_5_java_entender_metodos
+    03_5_java_estruturas_repeticao_arrays
+    03_6_java_entender_metodos
 
 ------------------------------------------------------------------
 
 03_2_java_ambiente_dev
 ======================
 
-    Nome Instrutor
-        Cargo
-        Empresa
+    Gleyson Sampaio
+        @glysns
+        Instrutor Java
+        Dio
 
 ------------------------------------------------------------------
-    1   Tópicos da aula
-    2   
+
+Ambiente de Desenvolvimento
+===========================
+
+    1. Introdução IDEs
+    2. Configuração do Ambiente
+    3. Instalação VSCode Windows
+    4. Instalação Eclipse
+    5. Instalação IntelliJ
+    6. Configurar VSCode com GitHub
+
 ------------------------------------------------------------------
 
-1   Tópico da aula
+1. Introdução IDEs
 ==================
+
+    - Linguagem Java
+        - código
+            - arquivo comum de texto com extensão ".java"
+            - pode ser escrito em qualquer editor de texto
+            - editor especial para programação (IDE)
+                - facilidades
+                - atalhos
+                - formatação
+
+    - Integrated Development Environment
+      (Ambiente de Desenvolvimento Integrado)
+
+    - Software
+        - recursos auxiliares ao desenvolvimento do código
+            - aceleração da escrita
+                - Auto-complete
+                    - completa palavra enquanto digita
+                - IntelliSense
+                    - completa bloco de código
+            - formatação
+                - palavras
+                - blocos de código
+                    - identação
+                    - letras coloridas
+            - análise de erros de sintaxe
+                - alerta sobre erros
+                    - digitação
+                    - sintaxe
+            - compilação de programa
+                - automatizada
+            - depuração/acompanhamento de execução do programa
+                - análise de cada etapa executada da aplicação
+
+
+    - IDEs recomendadas
+    -------------------
+
+        - Eclipse
+        - IntelliJ
+        - Visual Studio Code
+        - NetBeans
+
+
+    - Eclipse
+    ---------
+        - Interface simples/interativa
+            tecnologia Swing
+        - Plugins para recursos adicionais
+        - Atalhos para operações de menus  de escrita
+        - WindowBuilder
+            - interface gráfica
+            - cria telas
+            - gera código do layout
+        - Muito utilizada em ambiente corporativo
+
+
+    - IntelliJ
+    ----------
+        - Plataforma de código aberto
+            - alguns recursos gratuitos
+                - versão Community
+        - não tão simples
+        - Ambiente inteligente
+            - aprende com interação do usuário
+            - sugere ações mais assertivas
+            - agilidade no desenvolvimento
+        - Automação
+            - salvar arquivo
+            - UTF-8 como encode padrão
+
+
+    - Visual Studio Code
+    --------------------
+        - Editor de texto simples e interativo
+            - Desenvolvido pela Microsoft
+        - versão free
+            - oferece
+                - extensões
+                - temas
+                - integração com diversas tecnologias
+                - grande desenpenho
+                    - inicialização
+                    - codificação
+                    - execução dos programas desenvolvidos
+        - Muito utilizada por desenvolvedores
+            - NodeJs
+            - Front-end
+
+
+    - NetBeans
+    ----------
+        - Utilizada mais em ambiente acadêmico
+        - Idioma Português
+            - menus
+            - assistentes
+
+
+    - Maximizar o desenvolvimento com IDEs
+
+        - Configurar Workspaces
+            - organização dos arquivos e pacotes desenvolvidos
+        - Definir JDK
+        - Dominar funções
+            - criar / abrir projetos Java
+            - cirar / importar projeto Maven
+                - forma de empacotamento / compilação
+            - principais atalhos
+            - Code Snippet
+                - retalhos de código
+                    - módulos pré-fabricados
+                    - parametrizáveis
+                    - inserir na aplicação
+            - executar / depurar programa desenvolvido
+
+
+    Demonstração de instalação do VSCode
+    ( https://youtu.be/vim1bTa-Bkc )
+
+
+------------------------------------------------------------------
+
+2. Configuração do Ambiente
+===========================
+
+    - Linguagem Java
+        - composta por duas ferramentas básicas
+            - JDK
+            - JRE
+
+    - JDK
+        - instalar no computador
+        - contém a JRE
+        - baixar no site da Oracle
+            - versão mais atualizada
+            - arquvo executável adequado 
+                - sistema operacional
+                - arquitetura do computador
+            - login no site
+
+    - Instalar JDK
+        - algumas IDEs já instalam e configuram JDK
+            - versões específicas para JAVA
+        - instalador original Java
+            - instalação simples
+                - next / next / next ...
+                - seguir as sugestões de instalção
+
+    - Após instalação
+        - localizar no computador
+            - JDK
+            - JRE 
+
+    - Configurar variável de ambiente
+        - IDEs já configuram automaticamente
+        - permite executar Java pelo terminal
+
+    - Saber se Java está instalado e qual a versão
+        - abrir o terminal
+        - executar o comando
+            java -version
+                - mostra a versão do Java instalado
+
+            ----------------------------------------------------
+            $ java -version
+                openjdk version "11.0.16" 2022-07-19
+                OpenJDK Runtime Environment
+                    (build 11.0.16+8-post-Ubuntu-0ubuntu122.04)
+                OpenJDK 64-Bit Server VM
+                    (build 11.0.16+8-post-Ubuntu-0ubuntu122.04, 
+                    mixed mode, sharing)
+            ----------------------------------------------------
+
+    Baixar / instalar JDK
+    ---------------------
+
+        - busca pela versão mais atual adequada ao Sistema/Computador
+            - JDK 19
+                - x64 Debian Package
+                     -------------------------------------------
+                    -| https://download.oracle.com/            |
+                     | java/19/latest/jdk-19_linux-x64_bin.deb |
+                     -------------------------------------------
+
+        - salvar arquivo executável
+
+        - localizar arquivo no computador
+
+        - instalar JDK
+            - next / next / next / ...
+            - pede para instalar a JRE
+                - versão para disponibilizar aplicação para cliente
+                    - cliente não precisa ter JDK instalada
+                        - basta a JRE
+
+        - validar instalação JDK no computador
+            - localizar os arquivos de programas
+                - localizar a pasta Java
+            - realizar comandos Java direto no terminal
+
+
+------------------------------------------------------------------
+
+3. Instalação VSCode Windows
+============================
+
+    - IDE versátil
+        - diversas linguagens
+        - integração Git/GitHub
+        - facilidades gerenciamento de projeto
+
+    - baixar VSCode for Java
+        - .deb package (64-bit)
+            https://code.visualstudio.com/docs/setup/linux
+
+    - instalação padrão
+        - executar o programa de instalação
+        - instala JDK se não estiver instalado no compuador
+
+    - ou baixar e instalar pelo terminal
+        - sudo apt install ./vscode_1.72.2-1665614327_amd64.deb
+        - instalar repositório e chave do programa
+
+    - Abrir VSCode
+        - Criar projeto simples Java 
+            - create Java
+                - oferece opções
+            - determinar diretório do projeto no computador
+            - nomear projeto
+        - Estrutura do projeto
+            - aparece na aba esquerda da IDE
+        - Arquivo aberto
+            - aparece na aba principal
+        - Configurar
+            - tamanho de fonte
+                - controle o tamanho da fonte
+            - JDK já está configurado automaticamente
+    - Testar funcionamento
+        - executar um progama simples
+            - imprimir "Olá mundo!"
+
+
+------------------------------------------------------------------
+
+4. Instalação Eclipse
+=====================
+
+    - Baixar / instalar primeiro o JDK
+        - site da Oracle
+        - baixar versão mais atual adequada ao Sistema/Computador
+        - manter as opções padrão de instalação
+            - next / next
+
+    - baixar Eclipse versão adequada
+        - site da Eclipse
+        - for Java Dev
+            - básica para desenvolvimento Java
+        - for Java/Web
+            - mais recursos
+
+    - Instalar Eclipse
+        - escolher
+            - versão
+            - diretório de trabalho
+
+    - Testar funcionamento
+        - abrir Eclipse
+        - pede para selecionar local de trablaho
+            - workspace
+                - manter organização
+                - nomear conforme o projeto
+        - criar projeto Java
+            - janela para configurar novo projeto
+                - nome
+                - local para salvar
+                    - ideal fora da workspace
+                - usar JDk e versão
+        - editar projeto
+            - criar nova classe
+                - src
+                - botão direito
+                - criar classe
+                    - definir
+                        - pacote como "aula"
+                        - name como "Hello"
+                    - finish
+
+            - digitar "main" + ctrl-espaço
+                - autocompleta código do método
+            - digitar "sout" + control-espaço
+                - autocompleta código da função
+            - preencher atributo dentro dos ()
+                - "Olá mundo!"
+            - rodar programa
+                - clicar botão direito na classe
+                    - run as
+                        - Java applicantion
+            - aparece no console a mensagem
+
+
+            código de exemplo:
+            -----------------------------------------------------
+                package aula;
+
+                public class Hello {
+
+                    public static void main (String[] args) {
+                        System.out.println("Olá, mundo!");
+                    }
+
+                }
+            -----------------------------------------------------
+
+    - Executando o programa Hello.java no terminal Linux
+
+        --------------------------------------------------------
+        $ /usr/lib/jvm/java-11-openjdk-amd64/bin/java Hello.java
+
+        Olá, mundo!
+        --------------------------------------------------------
+
+
+------------------------------------------------------------------
+
+5. Instalação IntelliJ
+======================
+
+	- Site Jet Brains
+		- baixar versão IntelliJ Community (free)
+			- suficiente para iniciar
+
+	- Instalação
+		- localizar arquivo no computador
+		- extrair e executar arquivo de instalação
+		- manter local de instalção
+		- marcas opções de associações de linguagens
+			- java
+		- next/next/finish
+
+	- Abrir programa
+		- aceitar termos de uso
+		- não importar configuração anterio
+
+	- Criar novo projeto
+		- aba direita
+			- New Project
+			- configurar
+				- versão Java a usar
+				- next
+				- nome do projeto
+				- local para salvar no computador
+					- create
+		- carrega e sincroniza projeto com JDK
+		- fornece dicas
+		- faz indexação da JDK
+			- apenas na primeira vez
+		- aba esquerda
+			- pasta src / clica com botão direito
+				- new
+					- Java Class
+						- nomea a classe
+							- já cria arquivo
+
+	- Editar arquivo
+		- aba esquerda / seleciona arquivo criado
+		- abre arquivo para edição na aba direita
+		- digitar "main" + ctrl-espaço
+			- IDE autocompleta o comando
+				- public static void main(String[] args) {
+		- digitar "sout"
+			- IDE autocompleta
+				- System.out.println();
+		- digitar o conteúdo que será mostrado (printado)
+			- System.out.println("Hello world!");
+		- salva arquivo automaticamente
+			- não precisa ficar salvando
+		- sinaliza com "seta verde" ao lado do número da linha
+			- pode executar o código
+		- clicar para executar o código
+			- abre o console
+			- mostra resultado
+				 
+---------------------------------------
+	    - dicas iniciais sobre IntelliJ
+
+	    https://www.alura.com.br/artigos/dicas-e-truques-de-intellij-idea-para-quem-esta-comecando
+---------------------------------------
+
+
+------------------------------------------------------------------
+
+6. Configurar VSCode com GitHub
+===============================
+
+	- Manter backup dos códigos
+		- repositório no GitHub
+			- armazenamento remoto dos projetos
+			- organiza projetos em repositórios
+
+	- Criar repositório para o projeto
+		- nomear
+		- público
+		- readme
+		- gitignore
+			- quais arquivos não serão sincronizados
+			- marcar a linguagem de uso
+				- JAVA
+		- create
+
+	- Integração da IDE com GitHub
+		- abrir a IDE no computador
+			- clica no ícone do usuário
+			- entrar em configurações
+			- sincronização de configurações
+				- selecionar "entrar com GitHub"
+			- abre página na web
+				- faz login
+				- autoriza sincronização
+		- já está conectado
+			- conta de usuário aparece a do GitHub
+
+	- Clonar repositório do GitHub na IDE
+		- (ctr+shift+P)
+			- Git clonar
+				- clonar do GitHub
+					- permitir
+		- inicia clonagem
+		- pede autorização
+		- mostra todos os repositórios públicos desta conta
+			- selecionar o repositório a ser clonado
+		- escolher local no computador para salvar
+		- pede para abrir repositório local na IDE
+
+	- Editar arquivo do repositório local
+		- seleciona arquivo na aba esquerda da IDE
+			- readme.md
+		- edita na aba direita
+			- escreve atualização
+		- IDE sinaliza Git com alteração (menu lateral esquerdo)
+			- clicar
+			- escrever descrição do commit
+			- pergunta se quer enviar para repositório remoto
+			- envia atualização
+			- repositórios já estão sincronizados novamente
+
+	- Criar novo projeto na IDE e sincronizar com GitHub
+		- ctrl+shift+P ou digitar java no espaço superior
+			- Java Create Java Project
+				- no build tools
+			- abre janela de navegação do computador
+				- escolher local
+			- no espaço superior da aba direita
+				- nomear projeto
+			- abre nova janela da IDE
+				- pode fechar a outra
+		- mostra toda estrutura do projeto na aba esquerda
+			- pastas
+				- lib
+					- bibliotecas
+				- src
+					- códigos.java
+			- arquivos
+				- códigos
+				- readme
+		- fazer as alterações
+		- salvar
+		- executar código
+		- commitar alterações
+		- sincronizar com GitHub
 
 
 ------------------------------------------------------------------

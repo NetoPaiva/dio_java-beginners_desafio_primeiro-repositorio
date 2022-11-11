@@ -1,0 +1,804 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+03_java_conhecer_linguagem_programacao
+=======================================
+
+    03_1_java_intro_plataforma
+    03_2_java_ambiente_dev
+    03_3_java_sintaxe
+    03_4_java_logica_condicional_controle_fluxo
+    03_5_java_entender_metodos
+
+------------------------------------------------------------------
+
+03_3_java_sintaxe
+=================
+
+    Gleyson Sampaio
+        @glysns
+        Instrutor Java
+        Dio
+
+------------------------------------------------------------------
+    1   Anatomia das Classes
+    2   Tipos e Variáveis
+    3   Operadores
+    4   Métodos
+    5   Escopo
+    6   Palavras reservadas
+    7   Documentação
+    8   Terminal e Argumentos
+------------------------------------------------------------------
+
+    Pré-requisitos
+        - JDK instalado
+        - IDE instalada
+        - Diretórios do projeto definido
+
+------------------------------------------------------------------
+
+1   Anatomia das Classes
+========================
+
+    - Estrutura inicial
+    - Padrão de nomenclatura
+    - Declaração de variáveis / métodos
+    - Identação
+    - Oraganização de aqruivos
+    - Java Beans
+
+
+- Estrutura inicial
+===================
+    [ aula 03-3_2-1 ]
+
+
+    - Escrita de código
+    -------------------
+
+        - expressões
+            - composição de palavras pré-definidas da linguagem
+
+        - convenções de escrita
+            - para nomear
+                - arquivos
+                - classes
+                - métodos
+                - atributos
+            - boas práticas
+                - usar idioma inglês (preferencialmente)
+                    - manter idioma para mesmo elementos
+
+
+    - Ponto inicial
+        - criar aqruivo (.java)
+            - dentro do diretório "src"
+        - padrão para nomear arquivo
+            - nome do arquivo 
+                - mesmo nome da classe
+                - letra inicial em Maiúscula
+                - palavra composta
+                    - IniciaisEmMaiusculas
+
+
+    - Estrutura de declaração da classe principal
+    ---------------------------------------------
+
+
+              |-------------------------> tipo da classe (pública) 
+              | 
+              |          |--------------> nome da classe
+              |          |                mesmo nome do arquivo (.java)
+              |          |
+              |          |       |------> abre conteúdo da classe
+        ------------ ----------- -
+        public class MinhaClasse {
+                                        -|
+            // todo código aqui          |---> bloco do código
+                                        -|
+        }
+        -
+        |
+        |-------------------------------> fecha conteúdo da classe
+
+
+    - Padrão de sintaxe da Classe principal
+    ---------------------------------------
+
+        - maioria absoluta inicia com
+            public class
+
+        - todas precisam de nome
+            MinhaClasse
+
+        - nome do arquivo
+            - deve ser idêntico ao da classe pública
+            - alusivo com a função da classe
+                - ex.: Calculadora
+
+        - após nome
+            - definir corpo da classe entre colchetes
+                {  }
+                - espaço de composição do código com
+                    - atributos
+                    - métodos
+
+        - recomendação
+            - apenas a classe principal deve possuir o método main
+
+        - método main
+            - para classes executáveis
+                - inicia tarefa principal
+            - método principal de execução
+                - inicia todo o programa
+            - sempre terá visibilidade
+                - public
+            - definido como
+                - static
+            - não retornará nenhum valor
+                - void
+            - receberá parâmentro 
+                - do tipo String[]
+                    - array de caracteres
+                        - args
+            - método também terá um corpo
+                - deve estar entre colchetes
+                    - { }
+
+    - Estrutura de declaração da classe principal com método main
+    -------------------------------------------------------------
+
+            public class HelloWorld {
+
+                public static void main (String [] args) {
+
+                    // conteúdo do método main
+
+                    System.out.println ("Hello, world!");
+
+                }
+
+            }
+
+    -------------------------------------------------------------
+    - Resumo da Classe:
+        - precisa existir dentro do diretório "src"
+          na estrutura de orgranização dos arquivos do projeto
+        - nome com Iniciais Maísculas, mesmo em PalavrasComposta
+        - nome do arquivo deve ter a extenção (.java)
+        - terá um bloco geral de código entre colchetes "{ }"
+        - este código terá métodos e funções específicas
+    -------------------------------------------------------------
+            
+
+- Padrão de nomenclatura
+========================
+    [ aula 03-3_2-2 ]
+
+
+    - Nomenclatura
+        - existe padrão de escrita para a linguagem Java
+        - é tão importante quanto o algoritmo a ser implementado
+
+
+    - Convenções de escrita
+    -----------------------
+
+        - Arquivo
+        ---------
+
+            - NomeArquivo.java
+                - Inicias em maiúsculas
+                - ter a extensão ".java"
+                - alusivo à função do código
+                - não ter acentos/caracteres especiais
+                    - Calculadora.java
+                    - CalculadoraCientifica.java
+
+
+        - Classe principal
+        ------------------
+
+            - mesmo nome do Arquivo (sem a extensão ".java")
+
+
+        - Variáveis
+        -----------
+
+            - declaração de variável
+                - pode ter qualquer identificação
+            - é uma referência do valor que está na memória
+
+            - escrita com letra minúscula
+                - ano
+
+            - se for palavra composta
+                - escrita em estilo camelCase
+                    - anoFabricacao
+
+            - deve conter apenas
+                - letras
+                - underscore (_)
+                - $
+                - números de 0 a 9
+
+            - deve iniciar com
+                - letra minúscula
+                - $
+                - nunca por número
+
+            - nome deve ser único dentro do escopo
+
+            - não pode
+                - conter espaços
+                - usar palavras reservadas da linguagem
+
+            - se variável não sofrerá alteração
+                - escrita toda em maiúscula
+                - conter a tag "final" no início da linha
+                    - final String BR = "Brasil"
+                - se for nome composto
+                    - separado por underscore (_)
+                        - final int ESTADOS_BRASILEIROS = 27
+                        - final int ANO_2000 = 2000
+
+
+            - exemplos:
+            -------------------------------------------------------------
+
+                int numero$um = 1;
+
+                int numero2 = 4;
+
+                int numero_tres = 25;
+
+                int numeroquatro = 12;
+
+                int longo = 2;
+
+                final String BR = "Brasil"
+
+                final int ESTADOS_BRASILEIROS = 27
+
+                final int ANO_2000 = 2000
+
+            -------------------------------------------------------------
+
+
+- Declaração de Variáveis e Métodos
+===================================
+    [ aula 03-3_2-3 ]
+
+
+    - Variável
+    ==========
+
+        - armazena dados na memória
+        - diversos tipos de dados
+
+        - estrutura padronizada
+
+            1. o tipo de variável
+            2. o nome com boa definição da variável em CamelCase
+            3. símbolo de atribuição é o sinal de igual " = "
+            4. a atribuição da variável pode ser opcional em alguns casos
+            5. finaliza com ponto-vírgula " ; "
+            6. se for do tipo String (texto)
+                - o valor atriuído deve vir entre aspas
+            7. se for do tipo boolean (verdadeiro / falso)
+                - pode ou não atribuir valor
+                    - true
+                    - false
+            8. alterar valor da variável
+                - não precisa incluir o tipo
+                - muda penas o valor
+
+
+        - exemplo da estrutura:
+
+            tipo NomeBemDefinido = Atribuição;
+
+
+        - exemplo de declaração de Variável
+
+                int idade = 23;
+                --- ----- - --
+                 |    |   |  |--> atribuição (valor da variável)
+                 |    |   |
+                 |    |   |------> símbolo de atribuição
+                 |    |   
+                 |    |----------> nome da variável
+                 |    
+                 |---------------> tipo da variável
+
+
+                idade = 65;
+                ----- - --
+                  |   |  |--> atribuição (novo valor da variável)
+                  |   |
+                  |   |-----> símbolo de atribuição
+                  |   
+                  |---------> nome da variável que mudou de valor
+                              não declara o tipo da variável ao reatribuir valor
+                 
+                 
+
+                double altura = 1.62;
+                ------ ------ - ----
+                  |       |   |  |--> atribuição (valor da variável)
+                  |       |   |
+                  |       |   |-----> símbolo de atribuição
+                  |       |
+                  |       |---------> nome da variável
+                  |
+                  |-----------------> tipo da variável
+
+
+                Dog spike;
+                --- -----
+                  |   |----------> a variável "spike" não tem valor
+                  |                não está apontada para nenhum objeto
+                  |
+                  |--------------> classe Dog
+
+
+                String meuNome = "Neto";
+                ------ ------- - ------
+                  |       |    |   |--> atribuição (valor da variável)
+                  |       |    |
+                  |       |    |------> símbolo de atribuição
+                  |       |
+                  |       |-----------> nome da variável
+                  |
+                  |-------------------> tipo da variável
+
+
+                booblean verdadeira = true
+                -------- ---------- - ----
+                  |           |     |  |--> atribuição (valor da variável)
+                  |           |     |
+                  |           |     |-----> símbolo de atribuição
+                  |           |
+                  |           |-----------> nome da variável
+                  |
+                  |-----------------------> tipo da variável
+
+
+
+    - Método
+    ========
+
+        - classe pode ter diversos métodos
+
+        - estrutura padronizada em CamelCase
+
+            1. o tipo de retorno do método
+                TipoRetorno
+
+            2. o nome bem objetivo e no infinitivo
+                NomeObjetivoNoInfinitivo
+
+            3. os parâmetros do método
+                - podem exixtir ou não
+                - entre parentêses
+                - separados por virgulas
+                    (parametro1, parametroDois)
+
+            - exemplo da estrutura:
+
+                TipoRetorno nomeObjetivoNoInfinitivo Parametro(s)
+
+
+        - exemplo da estrutura da declaração do método
+
+            int somar (int numeroUm, int numero2)
+            --- -----  ------------  -----------
+             |    |   |     |      |     |-------> segundo parâmentro
+             |    |   |     |      |
+             |    |   |     |      |-------------> separados por vígula
+             |    |   |     |
+             |    |   |     |--------------------> primeiro parâmetro
+             |    |   |
+             |    |   |--------------------------> parâmetros entre parênteses
+             |    |
+             |    |------------------------------> nome do método no ifinitivo
+             |
+             |-----------------------------------> tipo de retorno do método
+
+
+            String formatarCep (long cep)
+            ------ -----------  ---- ---
+              |         |      |  |   |----> atribuição do parâmetro
+              |         |      |  |
+              |         |      |  |--------> tipo do parâmetro
+              |         |      |
+              |         |      |-----------> parâmetro entre parênteses
+              |         |
+              |         |------------------> nome composto do método no infinitivo
+              |
+              |----------------------------> tipo de retorno do método
+
+
+    - exemplo prático de declaração de métodos
+    ------------------------------------------
+
+01        public class NomeCompleto {
+02
+03            public static void main (String [] args) {
+04
+05                String primeiroNome = "Neto";
+06                String segundoNome = "Paiva";
+07
+08                String nomeCompleto = nomeCompleto (primeiroNome,segundoNome);
+09                System.out.println(nomeCompleto);
+10
+11            }
+12
+13            public static String nomeCompleto 
+                    (String primeiroNome, String segundoNome) {
+
+14                return  "Resultado do método " 
+                    + primeiroNome
+                    .concat(" ")
+                    .concat(segundoNome);
+15
+16            }
+17
+18        }
+
+
+    - descrição do exemplo prático
+    ------------------------------
+
+        - linha 01
+
+            public class NomeCompleto {
+            
+                - declaração da classe principal
+                - mesmo nome do arquivo
+                - com a chave de abertura da classe {
+                - classe possui dois métodos
+                    - método principal
+                        - main
+                    - segundo método
+                        - nomeCompleto
+            
+
+        - linha 03
+
+            public static void main (String [] args) {
+            
+                - declaração do método principal
+                - com a chave de abertura do método {
+
+        - linha 05
+
+            String primeiroNome = "Neto";
+            
+                - está no método principal
+                - variável do primeiro nome
+                - com símbolo de atribuição =
+                - valor "Neto" entre aspas
+                - finaliza com ponto-vírgula ;
+
+        - linha 06
+
+            String segundoNome = "Paiva";
+            
+                - está no método principal
+                - variável do segundo nome
+                - com símbolo de atribuição =
+                - valor "Paiva" entre aspas
+                - finaliza com ponto-vírgula ;
+
+        - linha 08
+
+            String nomeCompleto = nomeCompleto (primeiroNome,segundoNome);
+            
+                - está no método principal
+                - variável do nome completo
+                - com símbolo de atribuição =
+                - tem como valor atribuído um método
+                    - armazena o método nomeComlpeto (linha 13)
+                - finalizada com ponto-virgula ;
+
+
+        - linha 09
+
+            System.out.println(nomeCompleto);
+            
+                - instrução de saída do código
+                    - mostra na tela
+                        - valor atribuído ao método nomeCompleto
+
+        - linha 11
+
+            }
+            -
+                - chave de fechamento do método main
+                    - método principal
+
+        - linhas 13
+
+            public static String nomeCompleto 
+                (String primeiroNome, String segundoNome) {
+            
+                - declaração do segundo método do código
+                    - nome do método
+                        - nomeCompleto
+                - vai retornar uma String
+                    - tipo de dado em forma de texto
+                - recebe dois parâmetros
+                    - (String primeiroNome, String segundoNome)
+                        - os valores das variáveis
+                            - primeiroNome
+                            - segundoNome
+                        - entre parênteses
+                        - separados por vírgula
+                - com a chave de abertura do método {
+                - este método também precisará de um corpo/conteúdo
+
+        - linha 14
+
+            return primeiroNome.concat(" ").concat(segundoNome);
+            
+                - conteúdo do método nomeCompleto
+                    - return
+                        - expressão que retorna os valores do método nomeCompleto
+                    - .concat
+                        - concatena (unifica) os valores das variáveis
+                            - primeiroNome
+                            - segundoNome
+                    - (" ")
+                        - separa os valores com um espaço
+                    - ;
+                        - finaliza expressão com ponto-vírgula
+
+        - linha 14 (opção)
+        
+            return  "Resultado do método " + primeiroNome.concat(" ").concat(segundoNome);
+
+                - adiciona a frase e inclui um espaço antes do resultado
+                    - "Resultado do método "
+                - símbolo de concatenação (+)
+                    - outra forma de unir valores das variáveis
+
+        - linha 16
+
+            }
+            -
+                - chave de fechamento do método nomeCompleto
+
+        - linha 18
+
+            }
+            -
+                - chave de fechamento da classe NomeCompleto
+
+
+- Visibilidade
+==============
+
+
+    - faz parte da estrutura de declaração
+
+    - determina limites de acesso à declaração
+        - classes
+        - métodos
+        - atributos
+
+    - tipos de visibilidade
+        - public
+            - de uso geral no código
+        - private
+            - restrito à classe onde foi declarado
+        - protected
+            - também acessível às subclasses
+
+    - exemplo
+
+          |-----------------------------------> visibilidade pública da classe
+          |
+        ------
+        public class BoletimEstudantil {
+
+            public static void main(String[] args) {
+            ------
+              |
+              |-------------------------------> visibilidade pública do método
+
+
+- Identação
+===========
+    [ aula 03-3_2-4 ]
+
+    - espaço padronizado no início da linha
+    - representa a hierarquia dos elementos do código
+    - facilitação visual
+        - leitura
+        - entendimento
+
+    - exemplo sem identação
+    -----------------------
+
+        // arquivo BoletimEstudantil.java
+
+        public class BoletimEstudantil {
+
+        public static void main(String[] args) {
+
+        int mediaFinal = 6;
+
+        if(mediaFinal<6)	
+
+        System.out.println("REPROVADO"); 
+
+        else if(mediaFinal==6)
+
+        System.out.println("PROVA MINERVA"); 
+
+        else
+
+        System.out.println("APROVADO"); 		
+
+        }
+
+        }
+
+
+    - exemplo com identação
+    -----------------------
+
+        // arquivo BoletimEstudantil.java
+
+        public class BoletimEstudantil {
+
+            public static void main(String[] args) {
+
+	            int mediaFinal = 6;
+
+	            if (mediaFinal < 6)
+
+		            System.out.println("REPROVADO");
+
+	            else if (mediaFinal == 6)
+
+		            System.out.println("PROVA MINERVA");
+
+	            else
+
+		            System.out.println("APROVADO");
+
+            }
+
+        }
+
+
+- Organização dos arquivos
+==========================
+    [ aula 03-3_2-5 ]
+
+
+    - estrutura de arquivos do projeto
+        - códigos fonte
+        - organizados em pacotes (packaes)
+            - as pastas do computador
+
+    - tipos de nomeação dos pacotes (pastas
+
+        - simples
+            - apenas com o nome do arquivo
+                - ContaBanco.java
+
+        - qualificado
+            - nome do pacote
+            - nome do arquivo
+                - com.nomebanco.ContaBanco.java
+
+    - exemplo
+
+        - pacotes
+            - pacotes de codigos-fonte
+                - com.pimenta.modelo
+                    - Cliente.java
+                    - funcionario.java
+                - com.pimenta.pacotes
+                    - inicio.java
+                - com.pimenta.util
+                    - ValidarCPF.java
+                    - ValidarEmail.java
+            - bibliotecas
+
+
+- JavaBeans
+===========
+    [ aula 0-3_2-6 ]
+
+    - algoritmos legíveis por qualquer pessoa
+    - escrita universal
+        - classes
+        - atributos
+        - métodos
+        - pacotes
+
+
+    - Variáveis
+    -----------
+        - nome claro / sem abreviatura
+        - sempre no singular
+            - exceto se referir a
+                - array
+                - coleção
+        - idioma único para todas
+        - exemplos:
+            - double
+            - String
+
+    - Métodos
+    ---------
+        - nome verbo no infinitivo
+        - letras em camelCase
+        - exemplos:
+            - somar
+            - abrirConexao
+
+
+
+
+------------------------------------------------------------------
+
+2   Tipos e Variáveis
+=====================
+
+
+------------------------------------------------------------------
+
+3   Operadores
+==============
+
+
+------------------------------------------------------------------
+
+4   Métodos
+===========
+
+
+------------------------------------------------------------------
+
+5   Escopo
+==========
+
+
+------------------------------------------------------------------
+
+6   Palavras reservadas
+=======================
+
+
+------------------------------------------------------------------
+
+7   Documentação
+================
+
+
+------------------------------------------------------------------
+
+8   Terminal e Argumentos
+=========================
+
+
+------------------------------------------------------------------

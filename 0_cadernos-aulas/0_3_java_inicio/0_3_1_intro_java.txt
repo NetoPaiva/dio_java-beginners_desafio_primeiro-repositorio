@@ -1,0 +1,349 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+03_java_conhecer_linguagem_programacao
+=======================================
+
+    03_1_java_intro_plataforma
+    03_2_java_ambiente_dev
+    03_3_java_sintaxe
+    03_4_java_logica_condicional_controle_fluxo
+    03_5_java_estruturas_repeticao_arrays
+    03_6_java_entender_metodos
+
+------------------------------------------------------------------
+
+03_1_java_intro_plataforma
+==========================
+
+    Gleyson Sampaio
+        @glysns
+        Instrutor Java
+        Dio
+
+------------------------------------------------------------------
+
+Introdução a Plataforma Java
+============================
+
+    1. Introdução
+    2. O que é Java
+    3. História
+
+------------------------------------------------------------------
+
+1. Introdução
+=============
+
+    - Java básico
+        - explorar linguagem
+        - conhecer
+            - principais fundamentos
+            - estruturas
+            - história de criação/evolução
+            - plataformas desenvolvimento
+                - instalação
+                - utilização
+                - produtividade
+
+    - Material de apoio
+        - apresentação do gitbook
+            https://felipe-silva-aguiar.gitbook.io/dio-java/gitbook/summary
+
+
+------------------------------------------------------------------
+
+2. O que é Java
+===============
+
+    - Linguagem de programação orientada a objetos
+        - tudo é escrito em termos de
+            - classes
+            - objetos
+
+        - na linguagem Java tudo é objeto 
+            - exceto os tipos primitivos
+
+        - linguagem escrita em Classes
+            - estrutura para construir os objetos
+
+    - Programar em Java
+        - conhecimento básico em
+            - lógica de programação
+            - algoritmos
+            - modelagem de dados
+            - conjunto de funcionalidades Java
+
+    - Linguagem composta por Features
+        - conjunto bem definido de funcionalidades
+
+        - 12 funcionalidades
+        --------------------
+
+            - Simples
+            - Orientada a objetos
+            - Plataforma independente
+            - Portátil
+            - Robusta
+            - Segura
+            - Interpretada
+            - Multi-thread
+            - Arquitetura neutra
+            - Dinâmica
+            - Alta performance
+            - Distribuída
+
+
+    As principais funcionalidades Java
+    ==================================
+
+    Simples
+    =======
+
+        - Fácil de entender
+            - sem complexidade das outras linguagens
+
+        - Objetivos da linguagem
+            - simplicidade
+            - multifuncional
+                - rodar em diversos dispositivos eletrônicos
+                    - geladeira
+                    - televisão
+                    - grandes sistemas computacionais
+            - minimizar
+                - consumo de memória
+                - recursos do aparelho
+
+
+    Orientada a Objeto
+    ==================
+
+        - Desenvolvimento Orientado a Objetos
+
+            - dominar 
+                - o que é classe
+                - como projetar objetos de acordo com as classes
+
+            - Noções dos Pilares da Programação Orientada a Objetos (POO)
+                - encapsulamento
+                - abstração
+                - herança
+                - polimorfismo
+
+
+    Plataforma independente
+    =======================
+
+        - Objetivo
+            - funcionar em qualquer plataforma/aparelho
+
+        - Plataforma
+            - ambiente que executa um programa
+                - hardware / dispositivos
+                - software
+
+        - Código multiplataforma
+            - Código-fonte Java
+                - é compilado para bytecode
+                    - não está vinculado a nenhum sistema operacional
+
+
+    Portátil
+    ========
+
+        - Bases da portabilidade da linguagem
+            - independência de plataforma 
+            - Conceito WORA
+                - Write Once Run Anywhere
+                    - escreva uma vez, execute em qualquer lugar
+
+        - Única versão do código
+            - roda em diferentes máquinas / dispositivos
+                - escreve apenas uma vez
+                - roda em diversas plataformas
+
+        - Recursos da linguagem que garantem portabilidade
+            - Bytecode
+            - JVM
+                - Java Virtual Machine
+                    - Máquina Virtual Java
+                    - lê o bytecode
+                    - precisa estar instalada em cada dispositivo
+
+
+    Robusta
+    =======
+
+        - Capacidade em lidar com travamentos e consumo de memória
+            - encerramento inesperado do programa
+            - gerenciamento de memória forte
+            - coleta de lixo automática
+            - tratamento e mecanismo de verificação de tipo
+
+
+    Segura
+    ======
+
+        - A linguagem faz 
+            - pré-análise de todas as rotinas em execução
+            - busca por violações de instruções após compilação
+            - evita comprometimento da aplicação
+
+        - Algoritmo trata e minimiza ameças
+            - vírus
+            - adulteração
+            - espionagem
+            - representação
+
+        - Proteção Web
+            - criptografia
+            - decriptografia 
+
+        - Fortalece segurança
+            - no desenvolvimento do código
+            - na execução do programa
+
+
+    Interpretada
+    ============
+
+        - Java é compilada e interpretada
+
+        - Compilador
+            - programas são compilados
+                - convertidos de uma estrutura para outra
+            - gera arqvuivos bytecode
+
+        - Interpretdor
+            - JVM interpreta bytecode
+                - compreende todo o código para rodar o programa
+            - durante execução
+
+
+    Multi-thread
+    ============
+
+        - Processo de vários threads simultâneos
+
+            - Thread
+                - Subprocesso de programa em execução
+                    - leve
+                    - independente
+                - compartilha recursos
+
+        - Proporciona alta perfomance de execução
+
+
+------------------------------------------------------------------
+
+3. História
+===========
+
+    - Sun Microsystems
+        - interesse em dispositivos eletrônicos
+            - Pesquisa "Green"
+
+        - 1991
+            - desenvolvem linguagem
+                - com base em C e C++
+                - nomeada de Oak (carvalho)
+                    - por causa da árvore vista pela janela do escritóio
+                - já existia outra linguagem com nome Oak
+                - visita a cafeteria
+                    - surge nome Java
+                        - ilha da Indonésia produtora de café
+
+            - dificuldades do mercado
+                - baixo consumo de dispositivos eletrônicos inteligentes
+
+            - redução da verba de pesquisa
+
+        - 1993
+            - Boom da Internet
+
+            - potencializa uso do Java
+                - criação de páginas dinâmicas
+                    - applets java
+
+        - 1995
+            - conferência onde Sun anuncia o Java
+            - forte interesse por causa dos recursos Web
+
+        - 2010
+            - Oracle compra a Sun
+                - mantém a linguagem Java
+                - implementa novos recursos
+
+        - 2021
+            - 25 anos da linguagem
+
+        - 2022
+            - linguagem está na maioria dos dispositivos
+                - aplicações Web
+                - aplicações de grande porte
+                - softwares comerciais (de consumo final)
+                - app para TV e celulares
+
+
+        - a cada nova versão
+            - melhorias em diversos recursos
+                - corrigidos
+                - adicionados
+
+            - Java2
+                - J2SE 5.0
+                - 30/09/2004
+                - adiciona recursos muito utilizados hoje
+                    - generics
+                    - enumeração
+                    - auto-boxing
+                    - for-each
+
+            - Java8
+                - JAVA SE 8 
+                - 18/03/2014
+                - recursos
+                    - Lambdas
+                    - forEach
+                    - Consumer
+                    - interface java.util.functions
+                    - Default methods
+                    - Method references
+
+            - Java11
+                - JAVA SE 11
+                - 25/09/2018
+                - recursos
+                    - readString()
+                    - writeString()
+                    - repeat
+                    - strip
+                    - stripLeading
+                    - stripTailing
+                    - lines
+                    - isBlank
+                    - utilização de variáveis por inferência
+
+            - Versões mais recentes
+
+                - Oracle JDK 18
+                    - 22/03/2022
+
+                - Oracle JDK 19
+                    - 20/09/2022
+
+
+------------------------------------------------------------------

@@ -1,0 +1,659 @@
+##################################################################
+#                                                                #
+#                        _potenciaTech                           #
+#                                                                #
+#                        _iFood                                  #
+#                                                                #
+#                        _javaBeginners                          #
+#                                                                #
+#                        _bootcamp_by_dio                        #
+#                                                                #
+##################################################################
+
+------------------------------------------------------------------
+                        diario_de_bordo
+------------------------------------------------------------------
+
+05_java__programacao_orientada_objeto
+=====================================
+
+    05_1_prog_orientada_objeto
+    05_2_collections_java
+    05_3_debugging_java
+    05_4_excecoes_java
+    05_5_java_oop__abstrair_bootcamp
+
+------------------------------------------------------------------
+
+05_5_java_oop__abstrair_bootcamp
+==================================
+
+    Camila Cavalcante
+        Tech Teacher
+        DIO
+
+------------------------------------------------------------------
+    05_5_1_apresenta_desafio-projeto
+    05_5_2_configura_ambiente
+    05_5_3_abstrair_encapsular
+    05_5_4_herança_polimorfismo
+    05_5_5_concluir_classes_domínio
+    05_5_6_interligar_classes_domiínio
+    05_5_7_descrição_desafio
+    05_5_8_link_github
+    05_5_9_informações_desafio
+------------------------------------------------------------------
+
+    Concluir Classes de Domínio
+    ===========================
+
+        Implementar a lógica / regra de negócio
+
+    1   Inscrição no Bootcamp
+    2   Método progredir
+    3   Comparação no método progredir
+    4   Calcular XP
+    5   Códigos até este ponto
+    6   Saída do programa até aqui (Run)
+
+------------------------------------------------------------------
+
+1   Inscrição no Bootcamp
+=========================
+
+    - regra de negócio
+    ------------------
+
+        - ao se inscrever
+            - dev é matriculado no Bootcamp
+            - e todo conteúdo do Bootcamp
+                - é armazenado em um Set (grupo de dados)
+                    - conteúdos inscritos
+
+        - ao concluir conteúdos
+            - cada conteúdo concluído
+                - é transferido de conteúdos inscritos
+                - para conteúdos concluídos
+
+
+    - lógica da regra
+    -----------------
+
+        - Dev ao se inscrever no Bootcamp
+            - é matriculado no Bootcamp
+            - é inscrito nos conteúdos
+                - cursos
+                - mentorias
+
+
+    - implementar lógica no atributo inscreverBootcamp
+    --------------------------------------------------
+
+        - arquivo Dev.java
+            - corpo do atributo inscreverBootcamp
+
+
+            - matricular Dev no Bootcamp
+
+            bootcamp.getDevsInscritos().add(this);
+
+                - bootcamp
+                    - chama o Bootcamp
+                - .add(this)
+                    - adiciona o Dev inscrito
+                - getDevsInscritos()
+                    - no grupo de Devs inscritos
+
+
+            - adicionar conteúdos inscritos ao Dev:
+
+            this.conteudosIncritos.addAll(bootcamp.getConteudos());
+
+                - this.conteudosInscritos
+                    - pega o Set de conteúdos inscritos
+                - .addAll()
+                    - adiciona todos
+                - (bootcamp.getConteudos());
+                    - os conteúdos do Bootcamp
+
+        - código do atribuito com a lógica implementada
+    -----------------------------------------------------------------
+        public void inscreverBootcamp(Bootcamp bootcamp) {
+            bootcamp.getDevsInscritos().add(this);
+            this.conteudosIncritos.addAll(bootcamp.getConteudos());
+        }
+    -----------------------------------------------------------------
+
+
+2   Método progredir
+====================
+
+    - regra de negócio
+    ------------------
+
+        - progredir no Bootcamp
+            - concluir conteúdos
+                - na ordem estabelecida pela plataforma
+    
+    - lógica desta regra
+    --------------------
+
+        - transferir os valores
+            - do Set conteudosInscritos
+            - para o Set conteudosConcluidos
+
+
+    - implemetar lógica no método "progredir"
+    -----------------------------------------
+
+        - arquivo Dev.java
+            - corpo do método progredir
+
+            - this.conteudosInscritos
+                - pega o Set de conteúdos inscritos
+
+            - .stream().findFirst();
+                - pega o conteúdo na ordem estabelecida
+                    - independente se é
+                        - mentoria
+                        - curso
+
+            - Optional<Conteudo> conteudo =
+                - adiciona tudo na variável conteudo
+                    - comando da IDE
+                        - Introduce local variable
+                            - atalho (ctrl alt V)
+
+            - observação:
+                - método .findFirst()
+                    - retorna um tipo Optinal
+                        - resolve retornos nulos
+
+
+        - código do método com a lógica
+    -----------------------------------------------------------------
+        public void progredir() {
+            Optional<Conteudo> conteudo = 
+                this.conteudosInscritos.stream().findFirst();
+        }
+    -----------------------------------------------------------------
+
+
+3   Comparação no método progredir
+==================================
+
+    - regra de negócio
+    ------------------
+        - transferir os valores
+            - de conteudosInscritos
+            - para conteudosConcluidos
+        - comparando os dados
+
+
+    - implemetar lógica de comparação
+    ---------------------------------
+
+        - arquivo Dev.java
+            - corpo do método progredir
+
+            - if(conteudo.isPresent())
+                - se conteúdo está presente
+                    - existe dentro do Set conteudosInscritos
+                        - pegará o primeiro conteúdo (findFirst)
+
+            - this.conteudosConcluidos.add(conteudo.get());
+                - se existir
+                    - colocar o primeiro conteúdo
+                        - dentro do Set conteúdos concluídos
+
+            - this.conteudosInscritos.remove(conteudo.get());
+                - depois de colocar em conteúdos concluídos
+                    - remover de conteúdos inscritos
+
+            - System.err.println("não há conteúdo");
+                - caso esteja vazio o Set conteudosInscritos
+                    - mostrar mensagem (de erro) no terminal
+                        - não há conteúdo
+
+                -----------------------------------------
+                  o grupo de consteúdos incritos
+                  só estará vazio se o Dev:
+                    - já concluiu todos os conteúdos
+                    - ou não está inscrito no Bootcamp
+                -----------------------------------------
+
+
+        - código completo do método com a lógica de comparação
+    -----------------------------------------------------------------
+        public void progredir() {
+
+            Optional<Conteudo> conteudo =
+                this.conteudosInscritos.stream().findFirst();
+
+            if(conteudo.isPresent()) {
+                this.conteudosConcluidos.add(conteudo.get());
+                this.conteudosInscritos.remove(conteudo.get());
+            }
+
+            else {
+                System.err.println("ooooh! não há conteúdo.");
+            }
+
+        }
+    -----------------------------------------------------------------
+
+
+4   Calcular XP
+===============
+
+    - código inicial
+    -----------------------------------------------------------------
+
+            public double calcularTotalXp() {}
+
+    -----------------------------------------------------------------
+
+
+    - regra de negócio
+    ------------------
+        - Como total de XP será calculado
+            - Dev ganha quantidades de XP
+                - ao se matricular no Bootcamp
+                - ao concluir conteúdos
+
+
+    - lógica da regra
+    -----------------
+
+        - chamar Set de conteúdos concluídos
+        - pegar cada conteúdo deste Set
+        - identificar XP de cada conteúdo concluído
+        - calcular o total de XP
+
+
+    - implementar lógica
+    --------------------
+
+        - return this.conteudosConcluidos
+            - chama os conteúdos concluídos
+        - .stream()
+            - retorna fluxo de dados
+        - .mapToDouble(Conteudo::calcularXP)
+            - método
+                - mapeia cada conteúdo dentro do Set
+                - pega o  XP de cada conteúdo
+        - .sum();
+            - soma todos os XPs
+
+
+        - código final do método com a lógica de comparação
+    -----------------------------------------------------------------
+            public double calcularTotalXp() {
+                return this.conteudosConcluidos
+                        .stream()
+                        .mapToDouble(Conteudo::calcularXP)
+                        .sum();
+    -----------------------------------------------------------------
+
+
+5   Códigos até este ponto
+==========================
+
+
+    Main.java
+    --------------------------------------------------------
+
+        import br.com.dio.desafio.dominio.Curso;
+        import br.com.dio.desafio.dominio.Mentoria;
+
+        import java.time.LocalDate;
+
+        public class Main {
+            public static void main(String[] args) {
+
+                Curso curso1 = new Curso();
+                curso1.setTitulo("curso java");
+                curso1.setDescricao("descrição curso java");
+                curso1.setCargaHoraria(8);
+
+                Curso curso2 = new Curso();
+                curso2.setTitulo("curso poo");
+                curso2.setDescricao("descrição curso poo");
+                curso2.setCargaHoraria(6);
+
+                Mentoria mentoria = new Mentoria();
+                mentoria.setTitulo("mentoria Java");
+                mentoria.setDescricao("descrição mentoria java");
+                mentoria.setData(LocalDate.now());
+
+                System.out.println(curso1);
+                System.out.println(curso2);
+                System.out.println(mentoria);
+            }
+
+        }
+
+    --------------------------------------------------------
+
+
+    Bootcamp.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+        import java.util.HashSet;
+        import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Set;
+
+        public class Bootcamp {
+            private String nome;
+            private String descricao;
+            private final LocalDate dataInicial = LocalDate.now();
+            private final LocalDate dataFinal = dataInicial.plusDays(45);
+            private Set<Dev> devsInscritos = new HashSet<>();
+            private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+
+            public LocalDate getDataInicial() {
+                return dataInicial;
+            }
+
+            public LocalDate getDataFinal() {
+                return dataFinal;
+            }
+
+            public Set<Dev> getDevsInscritos() {
+                return devsInscritos;
+            }
+
+            public void setDevsInscritos(Set<Dev> devsInscritos) {
+                this.devsInscritos = devsInscritos;
+            }
+
+            public Set<Conteudo> getConteudos() {
+                return conteudos;
+            }
+
+            public void setConteudos(Set<Conteudo> conteudos) {
+                this.conteudos = conteudos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Bootcamp bootcamp = (Bootcamp) o;
+                return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Conteudo.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        public abstract class Conteudo {
+
+            protected static final double XP_PADRAO = 10d;
+
+            private String titulo;
+            private String descricao;
+
+            public abstract double calcularXP();
+
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Curso.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        public class Curso {
+            private String titulo;
+            private String descricao;
+            private int cargaHoraria;
+
+            public Curso() {
+            }
+
+            public String getTitulo() {
+                return titulo;
+            }
+
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+
+            public String getDescricao() {
+                return descricao;
+            }
+
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+
+            public int getCargaHoraria() {
+                return cargaHoraria;
+            }
+
+            public void setCargaHoraria(int cargaHoraria) {
+                this.cargaHoraria = cargaHoraria;
+            }
+
+            @Override
+            public String toString() {
+                return "Curso{" +
+                        "titulo='" + titulo + '\'' +
+                        ", descricao='" + descricao + '\'' +
+                        ", cargaHoraria=" + cargaHoraria +
+                        '}';
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Dev.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.util.LinkedHashSet;
+        import java.util.Objects;
+        import java.util.Optional;
+        import java.util.Set;
+
+        public class Dev {
+            private String nome;
+            private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
+            private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
+            public void inscreverBootcamp(Bootcamp bootcamp) {
+                bootcamp.getDevsInscritos().add(this);
+                this.conteudosInscritos.addAll(bootcamp.getConteudos());
+            }
+
+            public void progredir() {
+                Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
+                if(conteudo.isPresent()) {
+                    this.conteudosConcluidos.add(conteudo.get());
+                    this.conteudosInscritos.remove(conteudo.get());
+                }
+                else {
+                    System.err.println("ooooh! não há conteúdo.");
+                }
+            }
+
+            public double calcularTotalXp() {
+                return this.conteudosConcluidos
+                        .stream()
+                        .mapToDouble(Conteudo::calcularXP)
+                        .sum();
+            }
+
+            public String getNome() {
+                return nome;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public Set<Conteudo> getConteudosInscritos() {
+                return conteudosInscritos;
+            }
+
+            public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
+                this.conteudosInscritos = conteudosInscritos;
+            }
+
+            public Set<Conteudo> getConteudosConcluidos() {
+                return conteudosConcluidos;
+            }
+
+            public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
+                this.conteudosConcluidos = conteudosConcluidos;
+            }
+
+            @Override
+            public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Dev dev = (Dev) o;
+                return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+            }
+
+            @Override
+            public int hashCode() {
+                return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+            }
+        }
+
+    --------------------------------------------------------
+
+
+    Mentoria.java
+    --------------------------------------------------------
+
+        package br.com.dio.desafio.dominio;
+
+        import java.time.LocalDate;
+
+        public class Mentoria {
+            private String titulo;
+            private String descricao;
+            private LocalDate data;
+
+            public Mentoria() {
+            }
+            public String getTitulo() {
+                return titulo;
+            }
+            public void setTitulo(String titulo) {
+                this.titulo = titulo;
+            }
+            public String getDescricao() {
+                return descricao;
+            }
+            public void setDescricao(String descricao) {
+                this.descricao = descricao;
+            }
+            public LocalDate getData() {
+                return data;
+            }
+            public void setData(LocalDate data) {
+                this.data = data;
+            }
+
+            @Override
+            public String toString() {
+                return "Mentoria{" +
+                        "titulo='" + titulo + '\'' +
+                        ", descricao='" + descricao + '\'' +
+                        ", data=" + data +
+                        '}';
+            }
+        }
+
+    --------------------------------------------------------
+
+
+6  Saída do programa até aqui (Run)
+====================================
+
+    /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java 
+    -javaagent:/usr/lib/idea-IC-222.4345.14/lib/idea_rt.jar=41697:
+    /usr/lib/idea-IC-222.4345.14/bin 
+    -Dfile.encoding=UTF-8 
+    -classpath 
+    /home/emcasa/Documentos/_cursos_hd2/dio_ifood__java_beginners
+    /0_repositorio-git/dio_java-beginners_desafio_abstrair-bootcamp
+    /desafio-bootcamp_dio/out/production/desafio-bootcamp_dio
+    Main
+
+    Curso{
+        titulo='curso java',
+        descricao='descrição curso java', 
+        cargaHoraria=8
+    }
+
+    Curso{
+        titulo='curso poo', 
+        descricao='descrição curso poo', 
+        cargaHoraria=6
+    }
+
+    Mentoria{
+        titulo='mentoria Java', 
+        descricao='descrição mentoria java', 
+        data=2022-11-09
+    }
+
+    Process finished with exit code 0
+                
+
+------------------------------------------------------------------
